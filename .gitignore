@@ -14,3 +14,4 @@ build/
 #이 폴더만 git 허용
 !/.gitignore
 !/src
+!/index.html
