@@ -1,0 +1,88 @@
+#menu{
+    @include transition();
+    background-color: $white;
+    box-shadow: rgba($black,0.16) 3px 0 15px;
+    position: fixed;
+    width: 100%;
+    top: 42px;
+    padding: 15px 10px 45px;
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9;
+
+    h2{
+        @include blind();
+    }
+
+    .btn-menuclose{
+        display: block;
+        position: absolute;
+        width: 27px;
+        height: 27px;
+        bottom: 16px;
+        right: 14px;
+        overflow: hidden;
+
+        span{
+            @include ir();
+            display: block;
+            width: 19px;
+            height: 19px;
+            margin: auto;
+            background: url('../images/common/close.png') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    @at-root .menu-open &{
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+
+        @include mq('deskTop'){
+            display: none;
+        }
+    }
+}
+
+.mo-gnb{
+    display: flex;
+    flex-wrap: wrap;
+
+    & > li{
+        flex: 0 0 (100%/3);
+        margin-bottom: 25px;
+        
+        & > a{
+            @include marginCenter();
+            border: 1px solid $gray2;
+            box-shadow: rgba($black,0.15) 3px 0 15px;
+            display: block;
+            padding-top: 12px;
+            width: 75px;
+            height: 75px;
+            border-radius: 12px;
+            overflow: hidden;
+
+            p{
+                margin-top: 3px;
+                font-size: 0.875rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .ico{
+        @include marginCenter();
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+
+        @for $n from 1 through 6{
+            &.ic#{$n}{
+                background-image: url('../images/common/gnb_#{$n}.png');
+            }
+        }
+    }
+}

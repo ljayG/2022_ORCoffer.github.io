@@ -1,0 +1,103 @@
+@mixin clearfix(){
+    &::after{
+        content:'';
+        display:block;
+        float:none;
+        clear:both;
+        height:0;
+        font-size:0;
+        line-height:0;
+        visibility:hidden;
+    }
+}
+
+@mixin blind(){
+    position:absolute;
+    left:-9999px;
+    top:0;
+    height:0;
+    font-size:1px;
+    line-height:0;
+    @include ir;
+}
+
+@mixin ir(){
+    text-indent:-9999em;
+    overflow:hidden;
+}
+
+@mixin marginCenter(){
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin posiCenter($areaPosi) {
+    @if $areaPosi == 'va' {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $areaPosi == 'a' {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    } @else if $areaPosi == 'v' {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin transition($time: 0.3s, $type: linear) {
+    transition: all $time $type;
+}
+
+@mixin textOverflow() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin mq($screen-width) {
+    @if $screen-width == 'deskTop-superWide' {
+        @media screen and (min-width: 1470px) {
+            @content;
+        }
+    } @else if $screen-width == 'deskTop-wide' {
+        @media screen and (min-width: 1410px) {
+            @content;
+        }
+    } @else if $screen-width == 'deskTop-anoter' {
+        @media screen and (min-width: 1300px) {
+            @content;
+        }
+    } @else if $screen-width == 'deskTop' {
+        @media screen and (min-width: 1024px) {
+            @content;
+        }
+    } @else if $screen-width == 'tablet' {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    } @else if $screen-width == 'tabletLte' {
+        @media screen and (max-width: 1023px) {
+            @content;
+        }
+    } @else if $screen-width == 'mobile-anoter' {
+        @media screen and (min-width: 380px) {
+            @content;
+        }
+    } @else if $screen-width == 'onlyMobile-small' {
+        @media screen and (max-width: 380px) {
+            @content;
+        }
+    } @else if $screen-width == 'onlyMobile' {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    } @else if $screen-width == 'onlyTablet' {
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            @content;
+        }
+    }
+}

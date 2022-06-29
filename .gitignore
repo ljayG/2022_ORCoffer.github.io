@@ -1,0 +1,16 @@
+node_modules
+
+
+# dotenv enviroment variable file
+.env
+
+# next.js bulid output
+.next
+build/
+
+# 모든 것을 제외
+/*
+
+#이 폴더만 git 허용
+!/.gitignore
+!/src

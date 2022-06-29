@@ -1,0 +1,217 @@
+#header{
+    @include transition();
+    background-color: $navy;
+    position: fixed;
+    width: 100%;
+    height: 42px;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+
+    .logo{
+        a{
+            color: $white;
+            position: absolute;
+            display: block;
+            height: 100%;
+            line-height: 42px;
+            font-weight: 400;
+            
+            &::before{
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 22px;
+                margin-right: 3px;
+                vertical-align: middle;
+                background: url('../images/common/logo.png') no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    
+    .nav{
+        display: none;
+    }
+
+    @include mq('deskTop'){
+        height: 80px;
+
+        .logo{
+            a{
+                font-size: 1.5rem;
+                line-height: 80px;
+
+                &::before{
+                    width: 33px;
+                    height: 37px;
+                }
+            }
+        }
+
+        .nav{
+            display: block;
+            justify-content: space-between;
+            position: absolute;
+            left: 310px;
+            right: 0;
+
+            .gnb{
+                position: absolute;
+                display: flex;
+                top: 25px;
+                left: 0;
+                
+                & > li{
+                    flex: 0 0 82px;
+                    margin-right: 6px;
+                    
+                    & > a{
+                        color: $skyBlue;
+                        border: 1px solid $skyBlue;
+                        font-size: 1.125rem;
+                        display: block;
+                        height: 34px;
+                        text-align: center;
+                        border-radius: 20px;
+                    }
+
+                    &.mn2{
+                        & > a{
+                            color: $violet;
+                            border-color: $violet;
+                        }
+                    }
+
+                    &.mn3{
+                        & > a{
+                            color: $orange;
+                            border-color: $orange;
+                        }
+                    }
+                }
+            }
+
+            .mymenu{
+                position: absolute;
+                top: 25px;
+                right: 0;
+                display: flex;
+                
+                & > li{
+                    position: relative;
+                    flex: 0 0 auto;
+                    padding-left: 11px;
+                    margin-left: 10px;
+                    font-size: 1.125rem;
+                    
+                    &::before{
+                        @include posiCenter('v');
+                        background-color: rgba($white, 0.6);
+                        content: '';
+                        display: block;
+                        left: 0;
+                        width: 1px;
+                        height: 16px;
+                    }
+
+                    &:first-of-type{
+                        padding-left: 0;
+                        margin-left: 0;
+
+                        &::before{
+                            display: none;
+                        }
+                    }
+
+                    & > a{
+                        color: $gray;
+                        display: block;
+                    }
+                }
+
+                .myface{
+                    display: flex;
+                }
+
+                .face{
+                    position: relative;
+                    flex:  0 0 33px;
+                    width: 33px;
+                    height: 33px;
+                    margin-right: 7px;
+                    border-radius: 50%;
+                    background: url('../images/common/noface.png') no-repeat;
+                    background-size: cover;
+                    overflow: hidden;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .name{
+                    color: $gray;
+                    flex:  0 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.hinner{
+    position: relative;
+    height: 100%;
+    margin: 0 12px;
+    
+    @include mq('deskTop'){
+        width: (1840/1900)*100%;
+        margin: 0 auto;
+    }
+}
+
+.btn-menu{
+    position: absolute;
+    display: block;
+    width: 34px;
+    height: 42px;
+    top: 0;
+    right: 0;
+
+    span{
+        @include ir();
+        background-color: $orange;
+        right: 4px;
+    }
+
+    span,
+    &::before,
+    &::after{
+        position: absolute;
+        display: block;
+        width: 6px;
+        height: 6px;
+        top: 50%;
+        margin-top: -3px;
+        border-radius: 50%;
+    }
+
+    &::before,
+    &::after{
+        content: '';
+        background-color: $gray;
+    }
+
+    &::before{
+        left: 4px;
+    }
+
+    &::after{
+        left: 50%;
+        margin-left: -3px;
+    }
+
+    @include mq('deskTop'){
+        display: none;
+    }
+}

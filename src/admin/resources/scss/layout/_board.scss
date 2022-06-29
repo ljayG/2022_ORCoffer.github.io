@@ -1,0 +1,107 @@
+.ulist{
+    & > li{
+        border-top: 2px dotted $gray;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0 6px 4px;
+        font-size: 0.75rem;
+
+        &:first-of-type{
+            border-top: none;
+        }
+
+        .tit,
+        .tit2{
+            @include textOverflow();
+            display: block;
+            flex: 0 0 72%;
+        }
+
+        .receipt,
+        .name{
+            flex: 0 0 25%;
+            text-align: right;
+
+            strong{
+                color: $orange;
+                font-size: 0.875rem;
+            }
+        }
+
+        .noti{
+            color: $white;
+            display: inline-block;
+            height: 18px;
+            padding: 0 4px;
+            margin-left: 3px;
+            border-radius: 10px;
+            line-height: 16px;
+
+            &.a{
+                background-color: $orange;
+            }
+            &.d{
+                background-color: $violet;
+            }
+            &.y{
+                background-color: $skyBlue;
+            }
+        }
+
+        .date{
+            flex: 0 0 100%;
+            margin-top: 3px;
+            font-size: 0.68rem;
+            order: 3;
+        }
+
+        @include mq('deskTop'){
+            padding: 8px 0 8px 8px;
+            font-size: 1rem;
+
+            .tit{
+                flex: 0 0 75%;
+
+                .year{
+                    margin-right: 30px;
+                }
+            }
+
+            .tit2{
+                flex-basis: 50%;
+                order: 2;
+            }
+
+            .receipt{
+                flex: 0 0 22%;
+    
+                strong{
+                    font-size: 1.625rem;
+                }
+            }
+
+            .noti{
+                height: 20px;
+                line-height: 18px;
+                font-size: 0.875rem;
+            }
+
+            .date{
+                flex-basis: 28%;
+                margin-top: 3px;
+                font-size: 1rem;
+                order: 1;
+            }
+
+            .name{
+                flex-basis: 20%;
+                order: 3;
+            }
+    
+        }
+    }
+}
+
+

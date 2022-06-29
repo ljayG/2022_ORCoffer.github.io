@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사랑의 헌금 관리시스템</title>
+  <link rel="stylesheet" href="../resources/css/styles.min.css">
+  <script src="../resources/js/lib/jquery-3.6.0.min.js"></script>
+  <!-- JQ ui-->
+  <link rel="stylesheet" href="../resources/plugins/ui/jquery-ui.css">
+  <link rel="stylesheet" href="../resources/plugins/ui/jquery-ui.theme.css">
+  <link rel="stylesheet" href="../resources/plugins/ui/jquery-ui.structure.css">
+  <script src="../resources/plugins/ui/jquery-ui.js"></script>
+  <script src="../resources/plugins/pop/jquery.popupoverlay.js"></script>
+</head>
+<body>
+  <!-- skip Navigation(s) -->
+  <div id="skipNavigation">
+    <ul>
+        <li>
+            <a href="#contents">본문바로가기</a>
+        </li>
+    </ul>
+  </div>
+  <!--// skip Navigation(e) -->
+  <div id="wrapper">
+    <!-- Header Area(s) -->
+    <header id="header">
+      <div class="hinner">
+        <h1 class="logo">
+          <a href="#">
+            <strong>사랑의 헌금</strong> 관리시스템
+          </a>
+        </h1>
+        <div class="nav">
+          <ul class="gnb">
+            <li><a href="#">신청서</a></li>
+            <li class="mn2"><a href="#">접수</a></li>
+            <li class="mn3"><a href="#">통계</a></li>
+          </ul>
+          <ul class="mymenu">
+            <li class="myface">
+              <div class="face">
+                <img src="../resources/images/temp/face.jpg" alt="">
+              </div>
+              <div class="name">
+                <span>운영간사</span>
+                <strong>홍길동</strong>
+              </div>
+            </li>
+            <li>
+              <a href="#">로그아웃</a>
+            </li>
+            <li>
+              <a href="#">마이페이지</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn-menu btn-nav-position"><span>메뉴</span></button>
+      </div>
+    </header>
+    <!--// Header Area(e) -->
+    <!-- Mobile Navigation(s) -->
+    <nav id="menu">
+      <h2>메뉴</h2>
+      <ul class="mo-gnb">
+        <li>
+          <a href="#">
+            <div class="ico ic1"></div>
+            <p>HOME</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="ico ic2"></div>
+            <p>신청서</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="ico ic3"></div>
+            <p>접수</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="ico ic4"></div>
+            <p>통계</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="ico ic5"></div>
+            <p>회원관리</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="ico ic6"></div>
+            <p>로그아웃</p>
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="btn-menuclose btn-nav-position"><span>닫기</span></button>
+    </nav>
+    <!--// Mobile Navigation(e) -->
+    <main id="contents">
+      <div class="inner type2">
+        <div class="flexwrap">
+          <div class="flexl">
+            <section class="sect1">
+              <h3 class="stit1">진행중</h3>
+              <div class="roundbox">
+                <ul class="ulist">
+                  <li>
+                    <a href="#" class="tit">
+                      <span class="year">2022</span>
+                      <span>사랑의 헌금</span>
+                      <span class="noti a">상시</span> <!-- 상시: a, 청단: y, 다니엘: d-->
+                    </a>
+                    <div class="receipt">접수 <strong>350</strong>명</div>
+                  </li>
+                  <li>
+                    <a href="#" class="tit">
+                      <span class="year">2022</span>
+                      <span>사랑의 헌금사랑의 헌금사랑의 헌금사랑의 헌금사랑의 헌금</span>
+                      <span class="noti a">상시</span>
+                    </a>
+                    <div class="receipt">접수 <strong>55</strong>명</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-space">
+                <a href="#" class="btn-more" title="더보기"><span>List</span></a>
+              </div>
+            </section>
+
+            <section class="sect1">
+              <h3 class="stit1">최근 접수</h3>
+              <div class="roundbox">
+                <ul class="ulist">
+                  <li>
+                    <a href="#" class="tit2">
+                      <span>2022 사랑의 헌금</span>
+                      <span class="noti a">상시</span> <!-- 상시: a, 청단: y, 다니엘: d-->
+                    </a>
+                    <div class="date">22-01-13 12:09</div>
+                    <div class="name">홍길동</div>
+                  </li>
+                  <li>
+                    <a href="#" class="tit2">
+                      <span>사랑의 헌금</span>
+                      <span class="noti y">청단</span>
+                    </a>
+                    <div class="date">22-01-13 12:09</div>
+                    <div class="name">홍길동</div>
+                  </li>
+                  <li>
+                    <a href="#" class="tit2">
+                      <span>2022 사랑의 헌금</span>
+                      <span class="noti d">다니엘</span>
+                    </a>
+                    <div class="date">22-01-13 12:09</div>
+                    <div class="name">홍길동</div>
+                  </li>
+                  <li>
+                    <a href="#" class="tit2">
+                      <span>2022 사랑의 헌금 사랑의 헌금 사랑의 헌금 사랑의 헌금 사랑의 헌금</span>
+                      <span class="noti d">다니엘</span>
+                    </a>
+                    <div class="date">22-01-13 12:09</div>
+                    <div class="name">홍길동</div>
+                  </li>
+                  <li>
+                    <a href="#" class="tit2">
+                      <span>2022 헌금 사랑의 헌금 사랑의 헌금 사랑의 헌금 사랑의 헌금</span>
+                      <span class="noti a">상시</span>
+                    </a>
+                    <div class="date">22-01-13 12:09</div>
+                    <div class="name">홍길동</div>
+                  </li>
+                  <li>
+                    <a href="#" class="tit2">
+                      <span>2022 사랑의 헌금</span>
+                      <span class="noti a">상시</span>
+                    </a>
+                    <div class="date">22-01-13 12:09</div>
+                    <div class="name">홍길동</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-space">
+                <a href="#" class="btn-more" title="더보기"><span>List</span></a>
+              </div>
+            </section>
+          </div>
+
+          <div class="flexr">
+            <section class="sect1">
+              <h3 class="stit1">22년 지원 현황 <span class="stit-intxt">(2022.6.10 기준)</span></h3>
+              <div class="roundbox type2">
+                <ul class="rnd-grp">
+                  <li>
+                    <div class="round fir">
+                      <div class="pos">
+                        <p class="num">35</p>명
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="round sec">
+                      <div class="pos">
+                        <p class="num">130,000</p>천원
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="line-grp">
+                  <li class="line1">
+                    <div class="part">목회자</div>
+                    <div class="line">
+                      <span style="width: 30%;"></span> <!-- (!개발) 그래프 개발 style="width: 30%; 수치를 백분률로 넣어주세요. -->
+                    </div>
+                    <div class="mem">
+                      <strong>9</strong>명
+                    </div>
+                  </li>
+                  <li class="line2">
+                    <div class="part">선교사</div>
+                    <div class="line">
+                      <span style="width: 82%;"></span> <!-- (!개발) 그래프 개발 style="width: 30%; 수치를 백분률로 넣어주세요. -->
+                    </div>
+                    <div class="mem">
+                      <strong>18</strong>명
+                    </div>
+                  </li>
+                  <li class="line3">
+                    <div class="part">선교사</div>
+                    <div class="line">
+                      <span style="width: 71%;"></span> <!-- (!개발) 그래프 개발 style="width: 30%; 수치를 백분률로 넣어주세요. -->
+                    </div>
+                    <div class="mem">
+                      <strong>12</strong>명
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="sect1">
+              <h3 class="stit1">월별 지원 현황</h3>
+              <!-- 탭 메뉴(s) -->
+              <div class="tab-menu tit-in">
+                <ul class="list" role="tablist">
+                  <li class="current" id="tab01" role="tab" aria-controls="tab-panel01"><a href="#tab-panel01" class="tab-btn" role="button"><span>인원</span></a></li>
+                  <li id="tab02" role="tab" aria-controls="tab-panel02"><a href="#tab-panel02" class="tab-btn" role="button"><span>지원금</span></a></li>
+                </ul>
+              </div>
+              <!--// 탭 메뉴(e) -->
+              <div class="roundbox type3">
+                <div class="tab-view">
+                  <section class="tab-cont active" id="tab-panel01" role="tabpanel">
+                    <h4 class="blind">인원</h4>
+                    <div class="graph-paper">
+                      <div class="grp-item">
+                        <p class="month">1월</p>
+                        <span style="height: 80%"></span> <!-- (!개발) 그래프 개발 style="height: 80%; 수치를 백분률로 넣어주세요. -->
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">2월</p>
+                        <span style="height: 77%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">3월</p>
+                        <span style="height: 67%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">4월</p>
+                        <span style="height: 32%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">5월</p>
+                        <span style="height: 98%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">6월</p>
+                        <span style="height: 62%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">7월</p>
+                        <span style="height: 48%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">8월</p>
+                        <span style="height: 72%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">9월</p>
+                        <span style="height: 12%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">10월</p>
+                        <span style="height: 0%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">11월</p>
+                        <span style="height: 0%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">12월</p>
+                        <span style="height: 0%"></span>
+                      </div>
+                      <div class="line lin-1"></div>
+                      <div class="line lin-2"></div>
+                      <div class="line lin-3"></div>
+                      <div class="line lin-4"></div>
+                    </div>
+                  </section>
+                  <section class="tab-cont" id="tab-panel02" role="tabpanel">
+                    <h4 class="blind">지원금</h4>
+                    <div class="graph-paper">
+                      <div class="grp-item">
+                        <p class="month">1월</p>
+                        <span style="height: 18%"></span> <!-- (!개발) 그래프 개발 style="height: 80%; 수치를 백분률로 넣어주세요. -->
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">2월</p>
+                        <span style="height: 100%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">3월</p>
+                        <span style="height: 46%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">4월</p>
+                        <span style="height: 76%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">5월</p>
+                        <span style="height: 55%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">6월</p>
+                        <span style="height: 28%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">7월</p>
+                        <span style="height: 91%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">8월</p>
+                        <span style="height: 76%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">9월</p>
+                        <span style="height: 61%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">10월</p>
+                        <span style="height: 0%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">11월</p>
+                        <span style="height: 0%"></span>
+                      </div>
+                      <div class="grp-item">
+                        <p class="month">12월</p>
+                        <span style="height: 0%"></span>
+                      </div>
+                      <div class="line lin-1"></div>
+                      <div class="line lin-2"></div>
+                      <div class="line lin-3"></div>
+                      <div class="line lin-4"></div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="text/javascript" src="../resources/js/common.js"></script>
+  <script type="text/javascript" src="../resources/js/gnb.js"></script>
+</body>
+</html>
