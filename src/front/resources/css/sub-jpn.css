@@ -1,0 +1,1065 @@
+@charset "utf-8";
+.visual_space .vsattfixed{
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover
+}
+.visual_space .about_sub01{
+	background-image: url('../images/about/sub01.jpg')
+}
+.visual_space .about_sub02{
+	background-image: url('../images/about/sub02.jpg')
+}
+.visual_space .about_sub03{
+	background-image: url('../images/about/sub03.jpg')
+}
+.visual_space .about_sub04{
+	background-image: url('../images/about/sub04.jpg')
+}
+.visual_space .about_sub06{
+	background-image: url('../images/about/sub06.jpg')
+}
+.visual_space .about_sub07{
+	background-image: url('../images/about/sub07.jpg')
+}
+.visual_space .dtv_sub02{
+	background-image: url('../images/danielTV/sub02.jpg')
+}
+.visual_space .dtv_sub03{
+	background-image: url('../images/danielTV/sub03.jpg')
+}
+.visual_space .network_sub01{
+	background-image: url('../images/network/sub01.jpg')
+}
+.visual_space .network_sub02{
+	background-image: url('../images/network/sub02.jpg')
+}
+.visual_space .donation_sub01{
+	background-image: url('../images/donation/sub01.jpg')
+}
+.visual_space .area_isa01{
+	background-image: url('../images/network/area01.jpg')
+}
+.visual_space .area_isa02{
+	background-image: url('../images/network/area02.jpg')
+}
+.visual_space .area_isa03{
+	background-image: url('../images/network/area03.jpg')
+}
+.visual_space .area_isa04{
+	background-image: url('../images/network/area04.jpg')
+}
+.visual_space .area_isa05{
+	background-image: url('../images/network/area05.jpg')
+}
+.visual_space .area_isa06{
+	background-image: url('../images/network/area06.jpg')
+}
+.visual_space .area_isa07{
+	background-image: url('../images/network/area07.jpg')
+}
+.visual_space .area_isa08{
+	background-image: url('../images/network/area08.jpg')
+}
+.visual_space .area_isa09{
+	background-image: url('../images/network/area09.jpg')
+}
+.visual_space .area_isa10{
+	background-image: url('../images/network/area10.jpg')
+}
+.visual_space .area_isa11{
+	background-image: url('../images/network/area11.jpg')
+}
+.visual_space .area_isa12{
+	background-image: url('../images/network/area12.jpg')
+}
+.visual_space .area_isa13{
+	background-image: url('../images/network/area13.jpg')
+}
+.visual_space .area_isa14{
+	background-image: url('../images/network/area14.jpg')
+}
+.visual_space .area_isa15{
+	background-image: url('../images/network/area15.jpg')
+}
+.visual_space .area_isa16{
+	background-image: url('../images/network/area16.jpg')
+}
+.visual_space .area_isa17{
+	background-image: url('../images/network/area17.jpg')
+}
+.visual_space .area_isa18{
+	background-image: url('../images/network/area18.jpg')
+}
+.visual_space .area_isa19{
+	background-image: url('../images/network/area19.jpg')
+}
+.visual_space .area_isa20{
+	background-image: url('../images/network/area20.jpg')
+}
+.visual_space .area_isa21{
+	background-image: url('../images/network/area21.jpg')
+}
+.visual_space .area_isa22{
+	background-image: url('../images/network/area22.jpg')
+}
+.visual_space .prayer_sub01{
+	background-image: url('../images/prayer/sub01.jpg')
+}
+.visual_space .prayer_sub02{
+	background-image: url('../images/prayer/sub02.jpg')
+}
+.visual_space .prayer_sub03{
+	background-image: url('../images/prayer/sub03.jpg')
+}
+.visual_space .prayer_sub04{
+	background-image: url('../images/prayer/sub04.jpg')
+}
+.visual_space .prayer_sub05{
+	background-image: url('../images/prayer/sub05.jpg')
+}
+.visual_space .members_sub01{
+	background-image: url('../images/board/sub_join.jpg')
+}
+.visual_space .members_sub02{
+	background-image: url('../images/members/sub02.jpg')
+}
+.visual_space .board_sub01{
+	background-image: url('../images/board/sub_notice.jpg')
+}
+.visual_space .board_sub02{
+	background-image: url('../images/board/sub_question.jpg')
+}
+.visual_space .board_sub03{
+	background-image: url('../images/board/sub_grace.jpg')
+}
+.visual_space .board_sub04{
+	background-image: url('../images/board/sub_gallery.jpg')
+}
+.visual_space .board_sub05{
+	background-image: url('../images/board/sub_opinion.jpg')
+}
+.visual_space .board_sub06{
+	background-image: url('../images/board/sub_newsletter.jpg')
+}
+.visual_space .board_sub07{
+	background-image: url('../images/board/sub_media.jpg')
+}
+.visual_space .board_sub08{
+	background-image: url('../images/board/sub_sharing.jpg')
+}
+.visual_space .board_sub09{
+	background-image: url('../images/board/sub_data.jpg')
+}
+.visual_space .apply_sub01{
+	background-image: url('../images/apply/sub01.jpg')
+}
+.visual_space .apply_sub02{
+	background-image: url('../images/apply/sub02.jpg')
+}
+.visual_titmid1{
+	position: absolute;
+	width: 80%;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	text-align: center;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 2
+}
+.visual_titmid2{
+	position: absolute;
+	width: 80%;
+	max-width: 1005px;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	text-align: center;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 2
+}
+.bgcover{
+	background-repeat: no-repeat;
+	background-size: cover
+}
+.about_grtbg01{
+	padding-bottom: 0;
+	background-image: url('../images/about/greeting_bg_mobile.jpg');
+	background-position: center bottom
+}
+.about_grtbg01 .revposition{
+	height: 297px;
+	text-align: right
+}
+.about_grtbg01 .revposition .revimg{
+	position: relative;
+	display: inline-block;
+	height: 100%
+}
+.about_grtbg01 .revposition .revimg img{
+	height: 100%
+}
+.about_grtbg01 .revposition .revimg p{
+	position: absolute;
+	bottom: 37px;
+	font-size: 0.75rem;
+	text-shadow: rgba(255,255,255,0.3) 0 0 3px;
+	-webkit-transform: translateX(-105%);
+	-ms-transform: translateX(-105%);
+	-o-transform: translateX(-105%);
+	transform: translateX(-105%);
+	z-index: 3
+}
+.about_grtbg01 .revposition .revimg p strong{
+	font-family: 'M PLUS 1p';
+	font-size: 0.938rem;
+	color: #232937
+}
+.embed-container + .videolist01{
+	margin-top: 24px
+}
+.values_list > li{
+	margin-top: 20px;
+	text-align: center
+}
+.values_list > li:first-of-type{
+	margin-top: 0
+}
+.values_list .valueimg{
+	height: 133px
+}
+.values_list .valueimg img{
+	height: 100%
+}
+.values_list > li p{
+	margin-top: 7px;
+	font-weight: 300
+}
+.values_list > li p strong{
+	display: block
+}
+.visionsdlr .item{
+	margin: 0 5px;
+	background-color: #fff;
+	box-shadow: rgba(0,0,0,0.1) 4px 4px 5px
+}
+.visionsdlr .itemimg img{
+	width: 100%
+}
+.visionsdlr .itemtext{
+	height: 78px;
+	padding: 12px 15px 10px;
+	overflow: hidden
+}
+.visionsdlr .itemtext h4{
+	margin-bottom: 5px;
+	font-size: 0.813rem;
+	color: #373737
+}
+.visionsdlr .itemtext p{
+	font-size: 0.688rem
+}
+.visionsdlr.restoration_slider .itemtext{
+	height: 93px
+}
+.dan_telbg{
+	display: table;
+	width: 100%;
+	height: 183px;
+	background-image: url('../images/network/dan_midbg.jpg');
+	background-size: cover;
+	background-position: 20% center
+}
+.dan_telbg .dan_telbox{
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center
+}
+.dan_telbg .danicon{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto 10px;
+	background-color: #fff;
+	border-radius: 50%;
+	overflow: hidden
+}
+.dan_telbg .danicon .ispicto{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 2
+}
+.dan_telbg .dan_telbox > p{
+	font-size: 0.688rem;
+	color: #fff
+}
+.dan_telbg .dan_telbox .telephone a{
+	font-size: 1.563rem;
+	font-weight: 700;
+	color: #fff
+}
+.dan_telbg.supportersbg{
+	margin-bottom: 45px;
+	height: 220px;
+	background-image: url('../images/prayer/mid_subimg04.jpg');
+}
+.supportersbg .support_ea{
+	font-size: 0.938rem;
+	color: #222;
+	text-align: center;
+}
+.supportersbg .support_ea > strong{
+	font-size: 1.563rem
+}
+.dan_telbg.supportersbg .dan_telbox > p,
+.dan_telbg.supportersbg .dan_telbox .telephone a{
+	color: #222
+}
+
+.historyarea{
+	position: relative;
+	margin-top: 40px
+}
+.historyarea .historyimg{
+	margin-bottom: 19px;
+	height: 110px;
+	text-align: center
+}
+.historyarea .historyimg img{
+	height: 100%
+}
+.historyarea .historycont{
+	position: relative
+}
+.historyarea .historycont dl dt{
+	float: left;
+	width: 80px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.188rem;
+	font-weight: 700;
+	color: #cdd1dd;
+	text-align: center
+}
+.historyarea .historycont dl dd{
+	position: relative;
+	width: auto;
+	padding-top: 18px;
+	margin-left: 94px;
+	font-size: 0.75rem
+}
+.historyarea .historycont dl dd .year{
+	position: absolute;
+	width: 50px;
+	left: 0;
+	font-weight: 700;
+	color: #232937
+}
+.historyarea .historycont dl dd .episode{
+	width: auto;
+	margin-left: 55px;
+	font-weight: 300
+}
+.historyarea.modentime .historycont dl dt{
+	color: #53658d;
+	line-height: 1
+}
+.historyarea.modentime.pervyear .historycont dl dt{
+	color: #232937
+}
+.historyarea.modentime .historycont dl dd{
+	padding-top: 0;
+	margin-top: 8px
+}
+.historyarea.modentime .historycont dl dd:first-of-type{
+	margin-top: 0
+}
+.historyarea .historycont:before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 1px;
+	height: 100%;
+	top: 0;
+	left: 87px;
+	background-color: #232937;
+	z-index: 2
+}
+.historyarea.posright dl dt{
+	float: right
+}
+.historyarea.posright .historycont dl dt{
+	color: #a7b1ca
+}
+.historyarea.posright .historycont dl dd{
+	margin-left: 0;
+	margin-right: 94px;
+	text-align: right
+}
+.historyarea.posright .historycont dl dd .year{
+	left: auto;
+	right: 0
+}
+.historyarea.posright .historycont dl dd .episode{
+	margin-left: 0;
+	margin-right: 55px
+}
+.historyarea.posright .historycont:before{
+	left: auto;
+	right: 87px
+}
+.reportlist li{
+	margin-bottom: 25px;
+	text-align: center
+}
+.reportlist li .roundspace1{
+	margin: 0 auto 8px;
+}
+.reportlist li .reportname{
+	margin-bottom: 3px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: #232937
+}
+.reportlist li .counterup{
+	margin-bottom: 5px;
+	font-size: 1.625rem;
+	font-weight: 700;
+	color: #232937
+}
+.reportlist li .reportment{
+	font-size: 0.75rem;
+	font-weight: 300;
+}
+.ment01 + .reportlist{
+	margin-top: 35px
+}
+.commitlist > li{
+	float: left;
+	width: 44.21768707482993%;
+	margin-bottom: 20px;
+	text-align: center
+}
+.commitlist > li .commitimg{
+	width: 110px;
+	margin: 0 auto 9px
+}
+.commitlist > li p{
+	font-size: 0.75rem;
+	font-weight: 300
+}
+.commitlist > li p strong{
+	font-size: 0.938rem;
+	color: #232937
+}
+.widlange_a1{
+	width: 35%
+}
+.widlange_a2{
+	width: 28%
+}
+.widlange_a3{
+	width: 40%
+}
+.widlange_a4{
+	width: 10%
+}
+.dtvcontents .subvis_slider{
+	text-align: center
+}
+.dtvcontents .subvis_slider .dtvsdlr_mgt1{
+	padding-top: 30px
+}
+.dtvcontents .subvis_slider .dtvsdlr_mgt2{
+	padding-top: 95px
+}
+.vsattfixed .logform{
+	width: 264px;
+	padding-top: 40px;
+	margin: auto
+}
+.vsattfixed .logform .logfrmtit{
+	color: #fff
+}
+.vodmode1{
+	margin-bottom: 10px;
+}
+.vodwid1{
+	width: 28%
+}
+.vodwid2{
+	width: 40%
+}
+.territory01.welcomebg{
+	padding: 53px 0 132px;
+	background-image: url('../images/members/welcome_img.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+}
+.brdsearchfrm{
+	max-width: 614px;
+	margin: 0 auto 15px
+}
+.brdsearchfrm .seltype2{
+	height: 35px;
+	line-height: 35px
+}
+.vsadona_athm{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	z-index: 3
+}
+.program_prog > li{
+	margin-top: 20px;
+	text-align: center;
+}
+.program_prog > li p{
+	margin-bottom: 10px;
+	font-size: 0.875rem
+}
+.program_prog > li div img{
+	max-width: 100%
+}
+.program_prog > li:first-of-type{
+	margin-top: 0
+}
+.network_praybg{
+	background-image: url('../images/network/praybg.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: 250px auto
+}
+.cooper_bg1{
+	padding-bottom: 80px;
+	background-image: url('../images/network/coop_bg01.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain
+}
+.bgready_pray{
+	padding-bottom: 225px;
+	background-image: url('../images/prayer/ready01.png');
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain
+}
+.main_btnwrap{
+	margin-bottom: 16px;
+	text-align: center
+}
+.main_hallsilder.slick-dotted.slick-slider{
+	margin-bottom: 55px
+}
+.main_hallsilder .item,
+.main_hallsilder .item .photoitem{
+	position: relative
+}
+.main_hallsilder .item .photoitem img{
+	width: 100%
+}
+.netarea_wrap{
+	display: none
+}
+.netarea_wrap.on{
+	display: block
+}
+.netarea_wrap2{
+	display: none
+}
+.netarea_wrap2.on{
+	display: block
+}
+@media all and (max-width:424px){
+	.livevas{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		left: 0;
+		-webkit-transform: translateY(-70%);
+		-ms-transform: translateY(-70%);
+		-o-transform: translateY(-70%);
+		transform: translateY(-70%);
+		z-index: 5
+	}
+}
+@media all and (min-width:425px){
+	.livevas{
+		width: 425px;
+		margin: auto;
+		padding-top: 40px
+	}
+}
+@media all and (max-width:767px){
+	.commitlist > li:nth-child(even){
+		float: right
+	}
+	.btn_wrap .left.detail_inbody{
+		float: none;
+		position: absolute;
+		margin-bottom: 0;
+		top: 33px;
+		right: 14px;
+		z-index: 5
+	}
+}
+@media all and (min-width:768px){
+	.values_list > li{
+		float: left;
+		width: 33.33333333333333%;
+		margin-top: 0
+	}
+	.reportlist li{
+		float: left;
+		width: 33.33333333333333%;
+		height: 195px
+	}
+	.commitlist > li{
+		width: 25%
+	}
+	.visual_titmid2{
+		width: 52.811%
+	}
+}
+@media all and (max-width:1177px){
+	.donationcontents .visual_space.lovedona_space{
+		height: auto
+	}
+	.donationcontents .vsattfixed.onlymobile{
+		background-image: none
+	}
+}
+@media all and (min-width:1178px){
+	.visual_space .vsattfixed{
+		background-attachment: fixed
+	}
+	.visual_space.reduce .vsattfixed{
+		background-attachment: scroll
+	}
+	.about_grtbg01{
+		padding-bottom: 96px;
+		background-image: url('../images/about/greeting_bg.jpg')
+	}
+	.about_grtbg01 .revposition{
+		position: absolute;
+		bottom: -96px;
+		right: 0;
+		height: auto;
+		z-index: 2
+	}
+	.about_grtbg01 .revposition .revimg p{
+		bottom: 96px;
+		font-size: 1rem;
+		line-height: 1.8
+	}
+	.about_grtbg01 .revposition .revimg p strong{
+		font-size: 1.25rem
+	}
+	.embed-container + .videolist01{
+		margin-top: 38px
+	}
+	.values_list .valueimg{
+		height: auto
+	}
+	.values_list > li p{
+		margin-top: 10px;
+		line-height: 1.4
+	}
+	.values_list > li p strong{
+		font-size: 1.875rem
+	}
+	.visionsdlr{
+		position: relative
+	}
+	.visionsdlr:before,
+	.visionsdlr:after{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 300px;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		background-repeat: repeat-y;
+		z-index: 3
+	}
+	.visionsdlr:before{
+		left: 0;
+		background-image: url('../images/common/whitemask_left.png')
+	}
+	.visionsdlr:after{
+		right: 0;
+		background-image: url('../images/common/whitemask_right.png')
+	}
+	.bg_gray .visionsdlr:before{
+		background-image: url('../images/common/graymask_left.png')
+	}
+	.bg_gray .visionsdlr:after{
+		background-image: url('../images/common/graymask_right.png')
+	}
+	.visionsdlr .slick-slide{
+		opacity: 0.3
+	}
+	.visionsdlr .slick-slide.slick-active{
+		opacity: 1
+	}
+	.visionsdlr .item{
+		margin: 0 15px
+	}
+	.visionsdlr .itemtext{
+		height: 118px;
+		padding: 24px 30px 20px;
+		letter-spacing: -1px;
+		word-break: keep-all
+	}
+	.visionsdlr.restoration_slider .itemtext{
+		height: 150px
+	}
+	.visionsdlr .itemtext h4{
+		margin-bottom: 8px;
+		font-size: 1.375rem
+	}
+	.visionsdlr .itemtext p{
+		font-size: 1rem
+	}
+	.dan_telbg{
+		height: 366px;
+		background-position: center
+	}
+	.dan_telbg .danicon{
+		width: 120px;
+		height: 120px;
+		margin-bottom: 20px
+	}
+	.dan_telbg .dan_telbox > p{
+		font-size: 1.25rem
+	}
+	.dan_telbg .dan_telbox .telephone a{
+		font-size: 3.125rem
+	}
+	.dan_telbg.supportersbg{
+		height: 337px
+	}
+	.supportersbg .support_ea{
+		font-size: 1.750rem
+	}
+	.supportersbg .support_ea > strong{
+		font-size: 3.125rem
+	}
+	.dan_telbg.supportersbg .dan_telbox .telephone a{
+		font-size: 1.875rem
+	}
+	.historyarea{
+		margin-top: 64px
+	}
+	.historyarea .historyimg{
+		float: left;
+		margin-bottom: 0;
+		height: 220px
+	}
+	.historyarea .historycont{
+		float: right;
+		width: 930px
+	}
+	.historyarea .historycont dl dt{
+		width: 186px;
+		font-size: 4.375rem
+	}
+	.historyarea .historycont dl dd{
+		padding-top: 40px;
+		margin-left: 210px;
+		font-size: 1.125rem
+	}
+	.historyarea .historycont dl dd .year{
+		width: 80px
+	}
+	.historyarea .historycont dl dd .episode{
+		margin-left: 85px;
+		font-weight: 400
+	}
+	.historyarea .historycont:before{
+		left: 187px
+	}
+	.historyarea.posright .historyimg{
+		float: right
+	}
+	.historyarea.posright .historycont{
+		float: left
+	}
+	.historyarea.posright .historycont dl dd{
+		margin-right: 210px
+	}
+	.historyarea.posright .historycont dl dd .episode{
+		margin-right: 85px
+	}
+	.historyarea.posright .historycont:before{
+		right: 187px
+	}
+	.historyarea.modentime .historycont dl dd{
+		padding-top: 10px;
+		margin-top: 16px
+	}
+	.mentreport{
+		line-height: 1.3
+	}
+	.reportlist li{
+		height: 305px;
+		margin-bottom: 54px
+	}
+	.reportlist li .roundspace1{
+		margin: 0 auto 14px;
+	}
+	.reportlist li .reportname{
+		font-size: 1.25rem
+	}
+	.reportlist li .counterup{
+		margin-bottom: 8px;
+		font-size: 3.375rem;
+		line-height: 1.1
+	}
+	.reportlist li .reportment{
+		font-size: 1rem
+	}
+	.ment01 + .reportlist{
+		margin-top: 40px
+	}
+	.commitlist > li{
+		margin-bottom: 90px
+	}
+	.commitlist > li .commitimg{
+		width: 220px;
+		margin-bottom: 20px
+	}
+	.commitlist > li p{
+		font-size: 1rem;
+		font-weight: 400
+	}
+	.commitlist > li p strong{
+		font-size: 1.5rem
+	}
+	.flex_group.churchpray_mode1{
+		width: 498px
+	}
+	.flex_group.churchpray_mode2{
+		width: 310px
+	}
+	.flex_group.churchpray_mode3{
+		width: 670px
+	}
+	.widlange_a1,
+	.widlange_a3{
+		width: 195px
+	}
+	.widlange_a2{
+		width: 76px
+	}
+	.widlange_a4{
+		width: 35px
+	}
+	.widlange_a5{
+		width: 405px
+	}
+	.slideshow_btn{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 3
+	}
+	.dtvcontents .subvis_slider .dtvsdlr_mgt1{
+		padding-top: 210px
+	}
+	.dtvcontents .subvis_slider .dtvsdlr_mgt2,
+	.visoditem .dtvsdlr_mgt2{
+		padding-top: 310px
+	}
+	.vsattfixed .logform{
+		width: 528px;
+		padding-top: 256px
+	}
+	.vodmode1{
+		float: right;
+		width: 480px;
+		text-align: right;
+		margin-bottom: 24px;
+	}
+	.vodwid1,
+	.vodwid2{
+		width: 155px
+	}
+	.livevas{
+		width: 1002px;
+		padding-top: 215px
+	}
+	.territory01.welcomebg{
+		padding: 95px 0 550px
+	}
+	.brdsearchfrm{
+		margin-bottom: 38px
+	}
+	.brdsearchfrm .seltype2{
+		height: 52px;
+		line-height: 52px
+	}
+	.vsadona{
+		position: absolute;
+		width: 242px;
+		top: 166px;
+		right: 39px;
+		z-index: 5
+	}
+	.vsadona .vsadona_left{
+		float: left;
+		width: 92px;
+	}
+	.vsadona .vsadona_right{
+		float: right;
+		width: 124px
+	}
+	.vsadonaslider .item > a{
+		display: block;
+		position: relative;
+		width: 124px;
+	}
+	.vsadonaslider .item p{
+		display: table;
+		position: absolute;
+		width: 124px;
+		height: 121px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.68);
+		transition: 0.3s ease-in-out;
+		opacity: 0;
+		z-index: 4
+	}
+	.vsadonaslider .item p span{
+		display: table-cell;
+		width: 124px;
+		height: 121px;
+		padding: 0 5px;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 0.875rem;
+		color: #fff;
+		box-sizing: border-box;
+		word-break: keep-all
+	}
+	.vsadonaslider .item > a:hover p{
+		opacity: 1
+	}
+	.vsadonaslider .slick-prev,
+	.vsadonaslider .slick-next{
+		width: 124px;
+		height: 23px;
+		left: 0;
+		right: 0;
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		transform: translate(0, 0);
+		background-position: 0
+	}
+	.vsadonaslider .slick-prev{
+		top: -35px;
+		background-image: url('../images/donation/btnvsa_prev.png')
+	}
+	.vsadonaslider .slick-next{
+		top: auto;
+		bottom: -25px;
+		background-image: url('../images/donation/btnvsa_next.png')
+	}
+	.program_prog > li{
+		margin-top: 40px
+	}
+	.program_prog > li p{
+		margin-bottom: 15px;
+		font-size: 1rem
+	}
+	.network_praybg{
+		background-size: auto
+	}
+	.cooper_bg1{
+		padding-bottom: 40px;
+		background-image: url('../images/network/coop_bg02.png');
+		background-position: right bottom;
+		background-size: auto;
+	}
+	.bgready_pray{
+		padding-bottom: 355px;
+		background-image: url('../images/prayer/ready02.png')
+	}
+	.main_btnwrap{
+		margin-bottom: 20px
+	}
+	.main_hallsilder.slick-dotted.slick-slider{
+		width: 1000px;
+		margin: 34px auto 160px
+	}
+	.main_hallsilder .item .photoitem{
+		z-index: 1
+	}
+	.main_hallsilder .item .photoitem:after{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		bottom: 0;
+		background: url('../images/common/slider_bg01.png') bottom repeat-x;
+		z-index: 1
+	}
+	.main_hallsilder .item .onlydesk{
+		position: absolute;
+		left: 50px;
+		bottom: 15px;
+		color: #fff;
+		z-index: 3
+	}
+	.main_hallsilder .item .onlydesk h4{
+		font-size: 1.5rem;
+		color: #fff
+	}
+	.main_hallsilder .item .onlydesk p{
+		font-weight: bold
+	}
+	.main_hallsilder .item .onlydesk p > b{
+		font-size: 1.25rem
+	}
+}
+@media all and (min-width:1300px){
+	.visionsdlr.restoration_slider .itemtext{
+		height: 118px
+	}
+}
+.values_list:after,
+.historyarea:after,
+.historyarea .historycont dl:after,
+.reportlist:after,
+.commitlist:after,
+.vsadona:after{
+	content: '';
+	display: block;
+	float: none;
+	clear: both;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden
+}

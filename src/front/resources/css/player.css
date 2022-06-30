@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+html, body, #naroplayerWrap, #naroplayerLiveWrap{height: 100%}
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none
+}
+#naroplayerWrap{
+	position: relative;
+	background-image: url('../images/player/bg_player.png');
+	background-position: center top;
+	background-size: cover;
+}
+.playtop{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	top: 0;
+	background-color: rgba(0,0,0,0.48);
+	z-index: 9
+}
+.playtop .bookmark{
+	position: absolute;
+	top: 0;
+	left: 12px;
+	z-index: 3
+}
+.playtop .bookmark button{
+	display: block;
+	width: 20px;
+	height: 40px
+}
+.playtop .bookmark button > span{
+	display: block;
+	height: 100%;
+	text-indent: -9999em;
+	background-image: url('../images/player/bookmark_off.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top
+}
+.playtop .bookmark button.active > span{
+	background-image: url('../images/player/bookmark_on.png')
+}
+.playtop .player_select{
+	position: absolute;
+	top: 3px;
+	right: 6px;
+	z-index: 3
+}
+.playtop .player_select .playbtn button{
+	height: 32px;
+	padding: 0 8px;
+	font-size: 0.875rem;
+	background-color: transparent;
+	border: 1px solid #797a7d
+}
+.playtop .player_select .pyselect select{
+	height: 32px;
+	padding: 0 24px 0 10px;
+	font-size: 0.875rem;
+	background-color: #000;
+	background-image: url('../images/player/slt_arrow.png');
+	background-repeat: no-repeat;
+	background-position: 98% center;
+	background-size: 6px auto;
+	border: 1px solid #797a7d;
+	box-sizing: border-box;
+}
+.playsilder{
+	z-index: 8
+}
+.playsilder, .playsilder .slick-list{
+	/*height: calc(100% - 40px);*/
+	height: 100%
+}
+.playsilder .slick-track, .playsilder .slick-slide > div{
+	height: 100%
+}
+.playsilder .item{
+	position: relative;
+	height: 100%;
+	padding-left: 45px;
+	padding-right: 45px;
+	box-sizing: border-box
+}
+.playsilder .item .playtit{
+	position: absolute;
+	left: 40px;
+	right: 100px;
+	top: 8px;
+	font-weight: 700;
+	color: #fff;
+	box-sizing: border-box;
+	z-index: 11
+}
+.playsilder .item .prayer_it{
+	position: relative;
+	display: table;
+	width: 100%;
+	height: 100%;
+	padding-top: 40px;
+	box-sizing: border-box;
+	z-index: 8
+}
+.playsilder .item .prayer_it p{
+	display: table-row
+}
+.playsilder .item .prayer_it p span{
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 1.25rem;
+	color: #fff
+}
+.playsilder .slick-prev, .playsilder .slick-next{
+	width: 20px;
+	height: 36px;
+	background-size: 20px auto;
+	background-repeat: no-repeat;
+	background-position: 0;
+	z-index: 5;
+}
+.playsilder .slick-prev{
+	background-image: url('../images/player/btn_prev.png')
+}
+.playsilder .slick-next{
+	background-image: url('../images/player/btn_next.png')
+}
+.player_page{
+	position: absolute;
+	padding: 4px 10px;
+	bottom: 7px;
+	left: 50%;
+	border-radius: 12px;
+	line-height: 1.1;
+	text-align: center;
+	font-size: 0.75rem;
+	color: #111;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-color: rgba(172,172,172,0.54);
+	box-sizing: border-box;
+	z-index: 10
+}
+#naroplayerWrap .play_leftbg, #naroplayerWrap .play_rightbg{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	background-position: center top;
+	background-size: cover;
+	z-index: 1
+}
+#naroplayerWrap .play_leftbg{
+	left: 0
+}
+#naroplayerWrap .play_rightbg{
+	right: 0
+}
+#naroplayerWrap .dimmlayer{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.72);
+	z-index: 2
+}
+#naroplayerLiveWrap{
+	position: relative;
+	background-image: url('../images/player/play_body3.png');
+	background-position: center top;
+	background-size: cover;
+}
+.playtop2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 254px;
+	padding: 45px 70px 0;
+	line-height: 1.1;
+	box-sizing: border-box;
+}
+.playtop2 .plt_chuinfo{
+	width: calc(100% - 460px);
+}
+.playtop2 .plt_chuinfo .chuname{
+	margin-bottom: 24px;
+	font-size: 55px;
+	color: #66ccff
+}
+.playtop2 .plt_chuinfo h3{
+	font-size: 80px;
+	font-weight: 300;
+	color: #fff
+}
+.playtop2 .plt_chuinfo h3 span{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+.playtop2 .plt_chuinfo h3 em{
+	display: inline-block;
+	vertical-align: bottom;
+}
+.playtop2 .plt_chuinfo h3 span + span{
+	padding-left: 68px;
+	margin-left: 63px 
+}
+.playtop2 .plt_chuinfo h3 span + span:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 8px;
+	height: 73px;
+	background-color: #ccc;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 3
+}
+.playtop2 .plt_chuinfo h3 em{
+	font-size: 60px
+}
+.playtop2 .plt_pic{
+	position: absolute;
+	width: 453px;
+	right: 34px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 5
+}
+.playtop2 .plt_pic > span{
+	display: inline-block;
+	vertical-align: middle;
+	width: 203px;
+	height: 201px;
+	background-image: url('../images/player/play_picbg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius: 20px;
+}
+.playtop2 .plt_pic > span + span{
+	margin-left: 8px;
+}
+#naroplayerLiveWrap .playsilder .item .prayer_it p{
+	display: block;
+	height: 50%;
+	padding-top: 30px;
+	letter-spacing: -0.5em;
+	line-height: 1.3;
+	font-weight: 700;
+	box-sizing: border-box;
+	overflow: hidden
+}
+#naroplayerLiveWrap .playsilder .item .prayer_it p span{
+	position: relative;
+	padding-left: 50px;
+	color: #333;
+	font-size: 62px;
+	vertical-align: top;
+	box-sizing: border-box;
+    letter-spacing: -0.6px;
+}
+#naroplayerLiveWrap .playsilder .item .prayer_it p span em{
+	position: absolute;
+	left: 0;
+	color: #4067b1
+}
+#naroplayerLiveWrap .playsilder .item .prayer_it{
+	padding-top: 254px
+}
+#naroplayerLiveWrap .topbg{
+	position: absolute;
+	width: 100%;
+	height: 254px;
+	top: 0;
+	left: 0;
+	background: url('../images/player/play_head.jpg') no-repeat left center;
+	background-size: cover;
+	z-index: 1
+}
+@media all and (min-width:1024px){
+	.playtop{
+		height: 66px
+	}
+	.playsilder, .playsilder .slick-list{
+		/*height: calc(100% - 66px);*/
+		height: 100%
+	}
+	.playtop .bookmark{
+		left: 25px
+	}
+	.playtop .bookmark button{
+		width: 35px;
+		height: 66px
+	}
+	.playtop .player_select{
+		top: 13px;
+		right: 20px;
+	}
+	.playtop .player_select .playbtn button{
+		padding: 0 10px;
+		font-size: 1rem
+	}
+	.playtop .player_select .pyselect select{
+		height: 42px;
+		padding: 0 40px 0 15px;
+		font-size: 1rem;
+		line-height: 42px;
+		background-position: 94% center;
+		background-size: auto;
+	}
+	.playsilder .item{
+		padding-left: 88px;
+		padding-right: 88px
+	}
+	.playsilder .item .playtit{
+		top: 18px;
+		left: 70px;
+		right: 300px;
+		font-size: 1.25rem
+	}
+	.playsilder .item .prayer_it{
+		padding-top: 66px
+	}
+	.playsilder .item .prayer_it p span{
+		font-size: 3.125rem
+	}
+	.playsilder .slick-prev, .playsilder .slick-next{
+		width: 40px;
+		height: 71px;
+		background-size: auto
+	}
+	.playsilder .slick-prev{
+		left: 14px
+	}
+	.playsilder .slick-next{
+		right: 14px
+	}
+}

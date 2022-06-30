@@ -1,0 +1,850 @@
+@charset "utf-8";
+
+.appico,
+.appshowico,
+.appmainico{
+	display: block;
+	text-indent: -9999em;
+	background-repeat: no-repeat;
+	overflow: hidden
+}
+.appico.appshare{
+	width: 17px;
+	height: 18px;
+	background-image: url('../images/app/share01.png')
+}
+.appshowico{
+	background-image: url('../images/app/is_appcon.png')
+}
+.appmainico{
+	height: 41px;
+	background-image: url('../images/app/main_appico.png');
+	background-size: 320px auto
+}
+.appshowico.aico_reply{
+	width: 18px;
+	height: 21px;
+	background-position: 0 0; 
+}
+.active .appshowico.aico_reply{
+	width: 18px;
+	height: 21px;
+	background-position: -22px 0; 
+}
+.appshowico.aico_ilike{
+	width: 19px;
+	height: 21px;
+	background-position: -44px 0; 
+}
+.active .appshowico.aico_ilike{
+	width: 19px;
+	height: 21px;
+	background-position: -67px 0; 
+}
+.appshowico.aico_txcon1{
+	width: 27px;
+	height: 27px;
+	background-position: -90px 0; 
+}
+.appshowico.aico_txcon2{
+	width: 28px;
+	height: 27px;
+	background-position: -121px 0; 
+}
+.appshowico.aico_txcon3{
+	width: 27px;
+	height: 27px;
+	background-position: -153px 0; 
+}
+.appshowico.aico_txcon4{
+	width: 27px;
+	height: 27px;
+	background-position: -184px 0; 
+}
+.appmainico.amico01{
+	width: 40px;
+	background-position: 0 0;
+}
+.appmainico.amico02{
+	width: 29px;
+	background-position: -42px 0;
+}
+.appmainico.amico03{
+	width: 41px;
+	background-position: -73px 0;
+}
+.appmainico.amico04{
+	width: 39px;
+	background-position: -116px 0;
+}
+
+#headerApp{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 15
+}
+.appheader_wrap{
+	position: relative;
+	height: 42px;
+	background-color: #fff;
+	border-bottom:  1px solid #d1d1d1
+}
+.apptitle1{
+	width: auto;
+	height: 42px;
+	margin: 0 55px;
+	text-align: center;
+	font-size: 1.125rem;
+	color: #20232c;
+	line-height: 42px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden
+}
+.btn_headprev{
+	position: absolute;
+	display: block;
+	width: 46px;
+	height: 42px;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 3
+}
+.btn_headprev span{
+	display: block;
+	width: 23px;
+	height: 19px;
+	margin: auto;
+	background-image: url('../images/app/head_prev.png');
+	background-size: contain;
+	text-indent: -9999em;
+	overflow: hidden
+}
+.mobile-app .btn_gnbmenu{
+	display: block;
+}
+.mobile-app #gnb{
+	display: block
+}
+.mobile-app #contentsApp{
+	margin-top: 43px
+}
+.mobile-app.mainapp #contentsApp{
+	margin-top: 85px
+}
+.midbgline{
+	position: relative;
+	padding: 6px 7px;
+	background-color: #edeff3;
+	border-bottom: 1px solid #e3e3e3
+}
+.midbgline .midli_lefttotal{
+	position: absolute;
+	bottom: 6px;
+	left: 7px;
+	padding: 2px 5px;
+	border-radius: 12px;
+	font-size: 0.688rem;
+	line-height: 1;
+	text-align: center;
+	border: 1px solid #b9bfca;
+	z-index: 3
+}
+.midbgline .midli_right{
+	float: right;
+}
+.midbgline .app_spaname{
+	width: 35px
+}
+.midbgline .app_spaname .roundname{
+	width: 35px;
+	height: 35px;
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 35px;
+}
+.midbgline .app_midalld{
+	float: left;
+	padding: 8px 0 0 10px;
+	width: calc(100% - 100px);
+	font-size: 0.875rem;
+	box-sizing: border-box;
+}
+.midbgline .app_midalld strong{
+	color: #232937
+}
+.apbtn_write{
+	display: block;
+	height: 25px;
+	padding: 3px 5px;
+	text-align: center;
+	font-size: 0.75rem;
+	color: #fff;
+	background-color: #525a6c;
+	border-radius: 15px;
+	box-shadow: rgba(0,0,0,0.1) 0 0 3px;
+	box-sizing: border-box;
+}
+.apbtn_write span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.midbgline .apbtn_write{
+	position: absolute;
+	width: 60px;
+	top: 50%;
+	right: 5px;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 3
+}
+.appmainsect1 .apbtn_write{
+	position: absolute;
+	width: 75px;
+	top: 10px;
+	right: 7px;
+	z-index: 3
+}
+.applist1{
+	margin-left: 10px;
+	margin-right: 10px
+}
+.applist1 > li{
+	border-bottom: 1px solid #e3e3e3
+}
+.applist1 > li > a{
+	display: block;
+	padding: 14px 8px
+}
+.applist1 .appcontx .date{
+	margin-bottom: 8px;
+	font-size: 0.688rem;
+}
+.applist1 .apptit01{
+	margin-bottom: 8px
+}
+.applist1 .contx{
+	max-height: 37px;
+	font-size: 0.85rem;
+	overflow: hidden
+}
+.applist1 .sharbtn{
+	display: block;
+	position: absolute;
+	height: 24px;
+	padding: 0 10px;
+	top: -3px;
+	right: 10px;
+	border-radius: 12px;
+	text-align: center;
+	background-color: #edeff3;
+	font-size: 0.688rem;
+	z-index: 7
+}
+.applist1 .sharbtn > span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.applist1 .sharbtn > span + span{
+	margin-left: 5px
+}
+.apptit01{
+	font-weight: 700;
+	color: #232937
+}
+.applist1 .thumbapp{
+	width: 42px;
+	height: 42px;
+	background-image: url('../images/common/nothumb01.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%
+}
+.apptable{
+	display: table !important;
+	width: 100%
+}
+.apptable_td{
+	display: table-cell;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+.appis_box{
+	display: inline-block;
+	vertical-align: middle;
+	width: 35px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 0.688rem;
+	font-weight: 300;
+	text-align: center;
+	border: 1px solid #cdcfd5;
+	border-radius: 2px;
+	box-shadow: rgba(0,0,0,0.05) 0 0 1px
+}
+.appis_box.public{
+	color: #f6864c;
+	background-color: #fff;
+}
+.appis_box.nondisclosure{
+	color: #505561;
+	background-color: #edeff3;
+}
+.applist1.prayli > li .thumbapp{
+	float: left
+}
+.applist1.prayli > li .contside{
+	float: right;
+	width: calc(100% - 57px)
+}
+.app_spaname{
+	float: left;
+	width: 42px
+}
+.app_spaname .roundname{
+	display: block;
+	width: 42px;
+	height: 42px;
+	font-size: 0.813rem;
+	font-weight: 700;
+	color: #fff;
+	line-height: 42px;
+	text-align: center;
+	background-color: #cbcfd9;
+	border-radius: 50%
+}
+
+.app_spaname .roundname.myphoto{
+	text-indent: -9999em;
+	background-position: center;
+	background-size: cover
+}
+.app_contal1{
+	float: right;
+	width: calc(100% - 52px)
+}
+.applist1 .app_contal1 .apptit01{
+	margin-right: 40px;
+	margin-bottom: 4px
+}
+.applist1 .app_contal1 .contx{
+	margin-bottom: 5px
+}
+.applist1 .spline{
+	position: relative;
+	padding: 8px
+}
+.app_contal1 .contal_arti{
+	font-size: 1em;
+	color: #20232c;
+}
+.ap_actbtnwrap{
+	margin-top: 10px
+}
+.ap_actbtnwrap button{
+	display: inline-block;
+	min-width: 55px;
+	height: 28px;
+	padding: 0 6px;
+	text-align: left;
+	border: 1px solid #dce0ea;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+.ap_actbtnwrap button span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.688rem;
+	color: #70737b
+}
+.ap_actbtnwrap button + button{
+	margin-left: 5px
+}
+.app_contbtnrol{
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	top: 0;
+	right: 0;
+	z-index: 5
+}
+.app_contbtnrol button{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-indent: -9999em;
+	background-image: url('../images/app/btn_control.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	overflow: hidden
+}
+.app_wrtregist{
+	position: relative;
+	padding: 6px;
+	background-color: #edeff3;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #d1d1d1;
+	text-align: center
+}
+.app_wrtregist .appupfile_wrap{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 3
+}
+.appupfile_wrap label{
+	display: block;
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	background-image: url('../images/app/camera.png');
+	background-color: #525a6c;
+	background-position: center;
+	background-size: 15px auto;
+	background-repeat: no-repeat;
+	text-indent: -9999em;
+}
+.appupfile_wrap input[type="file"]{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0
+}
+.app_wrtregist .btn_regiapp{
+	display: inline-block;
+	width: 150px;
+	height: 34px;
+	background-color: #f6864c;
+	color: #fff;
+	text-align: center;
+	border-radius: 4px
+}
+.appreplylist > li{
+	position: relative;
+	padding: 10px 0 9px;
+	border-top: 1px solid #ededed;
+	background-color: #fcfcfc
+}
+.appreplylist > li:first-of-type{
+	border-top: none
+}
+.appreplylist .appico_reply{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 6
+}
+.appreplylist .apprelarea{
+	padding-left: 25px
+}
+.appreplylist .replyname{
+	margin-bottom: 5px;
+    font-size: 0.75rem;
+    font-weight: 700
+}
+.appreplylist .replycomment{
+	font-size: 0.75rem;
+}
+.appico_reply{
+	width: 10px;
+	height: 10px
+}
+.appico_reply:after,
+.appico_reply:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: #565656;
+	transform-origin: left;
+	-o-transform-origin: left;
+	-ms-transform-origin: left;
+	-moz-transform-origin: left;
+	-webkit-transform-origin: left;
+	z-index: 5;
+}
+.appico_reply:before{
+	transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg)
+}
+.apprlpwrite_area{
+	position: relative;
+	padding: 5px 10px;
+    margin-bottom: 8px;
+    background-color: #f1f1f1;
+    border: 1px solid #dedede
+}
+.apprlpwrite_area .rplinput{
+	margin-right: 90px
+}
+.apprlpwrite_area .rplinput textarea{
+	width: 100%;
+    height: 60px;
+    padding: 5px;
+    border: 1px solid #d1d1d1;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+.apprlpwrite_area .rplbutton{
+	position: absolute;
+	width: 80px;
+	height: 60px;
+	top: 5px;
+	right: 10px;
+	z-index: 2
+}
+.apprlpwrite_area .rplbutton button{
+	display: block;
+	width: 100%;
+	height: 60px;
+	background-color: #929292;
+	border-radius: 5px;
+    color: #fff
+}
+.apprlpwrite_ea{
+	margin: 8px 8px 0 0;
+	font-size: 0.688rem;
+	text-align: right;
+}
+.mobile-app.mainapp #headerApp{
+	height: 85px
+}
+.mobile-app.mainapp #headerApp .appheadmain_btn{
+	display: block;
+	width: 100%;
+	height: 32px;
+	background-color: transparent;
+	border: 1px solid #edeff3;
+	box-sizing: border-box;
+}
+.mobile-app.mainapp #headerApp .appheadmain_btn .isico{
+	margin: auto
+}
+.mobile-app.mainapp .apphead_infield{
+	padding: 5px;
+	background-color: #232937;
+	box-sizing: border-box;
+}
+.mobile-app.mainapp .apphead_infield .flex_group{
+	margin-left: 0
+}
+.appmain_slider{
+	height: 180px
+}
+.appmain_slider .item{
+	position: relative;
+	height: 180px
+}
+.appmain_slider .itemsl1,
+.appmain_slider .itemsl3{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.appmain_slider .apitemtitle{
+	padding: 10px 10px 0;
+	font-size: 1.125rem;
+	text-align: center
+}
+.appmain_slider .apitemarti{
+	max-height: 75px;
+	padding: 10px 15px 0;
+	color: #fff;
+	font-size: 0.875rem;
+	text-align: center;
+	overflow: hidden;
+	box-sizing: border-box
+}
+.appmain_slider .aptiemdate{
+	margin-top: 15px;
+	text-align: center
+}
+.appmain_slider .aptiemdate > span{
+	display: inline-block;
+	padding: 5px 10px;
+	color: #fff;
+	font-size: 0.75rem;
+	text-align: center;
+	border: 2px solid #fff;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 20px
+}
+.appmain_slider .itms_btn1{
+	display: block;
+	position: absolute;
+	width: 140px;
+	height: 33px;
+	left: 50%;
+	bottom: 20px;
+	text-align: center;
+	line-height: 33px;
+	font-weight: 700;
+	color: #f6864c;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	border: 1px solid #f6864c;
+	border-radius: 15px;
+	box-sizing: border-box;
+}
+.appmain_slider .itemsl3 a{
+	display: block;
+	height: 100%;
+	text-indent: -9999em;
+	overflow: hidden;
+}
+.appmain_slider .itemsl2{
+	background-color: #edeff3
+}
+.appmain_slider .appmainsdr_list{
+	margin: 6px 7px 0
+}
+.appmainsect1{
+	position: relative;
+	padding: 15px 0;
+	border-top: 1px solid #e3e3e3
+}
+.appmainsdr_list > li{
+	float: left;
+	width: 48.8599348534202%;
+	height: 132px;
+}
+.appmainsdr_list > li:nth-child(even){
+	float: right
+}
+.appmainsdr_list > li > a{
+	position: relative;
+	display: block;
+	height: 100%;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 4px
+}
+.appmainsdr_list .appms_wrap{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 7px;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.appmainsdr_list .appms_wrap .appmainsdrtit{
+	margin-bottom: 4px;
+	font-size: 0.875rem;
+	font-weight: 700
+}
+.appmainsdr_list .appms_wrap .lineapp1{
+	font-size: 0.688rem;
+}
+.mobile-app.mainapp .applist1{
+	padding: 2px 8px;
+	border: 1px solid #e3e3e3;
+	border-radius: 5px
+}
+.mobile-app.mainapp .applist1 .spline{
+	padding-left: 0;
+	padding-right: 0
+}
+.mobile-app.mainapp .applist1 > li:last-of-type{
+	border-bottom: none
+}
+.mobile-app.mainapp .applist1 .app_contal1{
+	display: block
+}
+.mainapp_golist{
+	margin-top: 15px;
+}
+.mainapp_golist > li{
+	float: left;
+	width: 25%
+}
+.mainapp_golist > li > a{
+	display: block;
+	width: 72px;
+	margin: auto
+}
+.mainapp_golist > li p{
+	margin-top: 3px;
+	font-size: 0.75rem;
+	color: #232937;
+	text-align: center;
+	letter-spacing: -1px
+}
+.mainapp_golist .apm_roundbox{
+	height: 72px;
+	background-color: #edeff3;
+	border-radius: 50%;
+	overflow: hidden
+}
+.mainapp_golist .apm_roundbox .appmainico{
+	margin: 15px auto
+}
+.apm_titwrap{
+	padding: 0 7px 5px;
+}
+.apm_tit{
+	display: inline-block;
+	font-size: 1.063rem;
+	font-weight: 700;
+	color: #232937
+}
+.apm_count{
+	display: inline-block;
+	vertical-align: text-bottom;
+	padding: 2px 5px;
+	margin-left: 5px;
+	font-size: 0.688rem;
+	line-height: 1;
+	text-align: center;
+	border: 1px solid #b9bfca;
+	border-radius: 12px
+}
+
+.apm_midbg > a{
+	display: block;
+	height: 100%;
+	font-size: 1.125rem;
+	color: #fff;
+	text-align: center
+}
+.apm_midbg .dplogo{
+	margin-right: 8px;
+}
+.apm_midbg .dplogo img{
+	height: 36px;
+}
+.apm_midbg span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.mobile-app.mainapp .btn_wrap{
+	padding: 10px 7px;
+	text-align: center;
+}
+.mobile-app.mainapp .btn_wrap .btn06{
+	width: 45%;
+	border-radius: 4px
+}
+.mobile-app.mainapp .btn_wrap .btn06 + .btn06{
+	margin-left: 5px
+}
+.applogo{
+	position: absolute;
+	width: 94px;
+	height: 42px;
+	top: 0;
+	left: 0;
+	z-index: 5
+}
+.applogo a{
+	display: block;
+	height: 100%;
+	text-indent: -9999em;
+	background-image: url('../images/app/naro_logo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 40px
+}
+#headerApp .btn_gnbmenu{
+	display: block;
+	position: absolute;
+	width: 46px;
+	height: 42px;
+	top: 0;
+	right: 0;
+	z-index: 3
+}
+#headerApp .btn_gnbmenu .btgnbic{
+	position: relative;
+	width: 20px;
+	height: 18px;
+	margin: 12px auto;
+	overflow: hidden
+}
+#headerApp .btn_gnbmenu .btgnbic > span{
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	right: 0;
+	background-color: #191c25;
+	transition: .3s ease-in-out;
+	z-index: 4
+}
+#headerApp .btn_gnbmenu .btgnbic > span:first-of-type{
+	top: 0
+}
+#headerApp .btn_gnbmenu .btgnbic > span:nth-child(2){
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#headerApp .btn_gnbmenu .btgnbic > span:last-of-type{
+	width: 13px;
+	bottom: 0
+}
+.app_prayimgtemp{
+	margin-top: 15px;
+	text-align: center
+}
+.app_prayimgtemp img{
+	max-width: 100%
+}
+.frmwrite_area,
+.appreply_afrm{
+	display: none
+}
+.frmwrite_area.appshow,
+.appreply_afrm.appshow{
+	display: block
+}
+.appbullet_area1{
+	padding: 8px;
+	background-color: #fafafa
+}
+.appbullet_area1 > li{
+	margin-top: 5px;
+	padding-left: 8px;
+	font-size: 0.875rem;
+	background: url('../images/common/bullet02.gif') no-repeat 0 7px;
+}
+.appbullet_area1 > li:first-of-type{
+	margin-top: 0
+}
+.applist1.prayli > li > a:after,
+.appmainsdr_list:after,
+.mainapp_golist:after{
+	content: '';
+	display: block;
+	float: none;
+	clear: both;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden
+}
