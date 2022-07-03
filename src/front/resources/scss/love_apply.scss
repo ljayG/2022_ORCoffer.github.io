@@ -20,6 +20,12 @@
   color: #222;
 }
 
+.ap_ntxt4 {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: #f6864c;
+}
+
 .ap_under1 {
   color: #de3030;
   text-decoration: underline;
@@ -55,7 +61,8 @@
     font-size: 1.125rem;
   }
 
-  .ap_ntxt3 {
+  .ap_ntxt3,
+  .ap_ntxt4 {
     font-size: 1rem;
   }
 
@@ -570,11 +577,13 @@
 .btn_aplv2 {
   display: inline-block;
   min-width: 80px;
-  padding: 7px 35px;
+  padding: 7px 30px;
   margin: 0 4px;
   text-align: center;
   font-size: 0.875rem;
-  border: 1px solid #f6864c;
+  border: 1px solid #383f4f;
+  background-color: #fff;
+  color: #383f4f;
   border-radius: 20px;
 
   &.bg1 {
@@ -586,6 +595,12 @@
   &.bg2 {
     background-color: #f6864c;
     border: 1px solid #f6864c;
+    color: #fff;
+  }
+
+  &.bg3 {
+    background-color: #383f4f;
+    border: 1px solid #383f4f;
     color: #fff;
   }
 
@@ -852,5 +867,93 @@
 
   &.center {
     text-align: center;
+  }
+}
+
+.aplv_popwrap {
+  position: relative;
+  background-color: #fff;
+
+  &.widtype1 {
+    width: 80%;
+    max-width: 545px;
+  }
+
+  .lvpop_colse {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    top: 10px;
+    right: 10px;
+
+    span {
+      display: block;
+      width: 26px;
+      height: 26px;
+      margin: auto;
+      background: url("../images/love/ico_close.png") no-repeat;
+      background-size: contain;
+      font-size: 1px;
+      color: transparent;
+      text-indent: -9999rem;
+    }
+  }
+}
+
+.lvpop_contents {
+  padding: 25px 25px 40px;
+
+  &.p_lvcenter {
+    text-align: center;
+  }
+
+  .lvpop_note {
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 30px auto 15px;
+      background: url("../images/love/ico_mark2.png") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @media all and (min-width: 1178px) {
+    .lvpop_note {
+      font-size: 1.25rem;
+
+      &::before {
+        width: 54px;
+        height: 54px;
+      }
+    }
+  }
+}
+
+.pwd_inp {
+  display: flex;
+  justify-content: center;
+
+  .item {
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+
+    input {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #d2d3d9;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #222;
+      text-align: center;
+    }
   }
 }

@@ -1370,7 +1370,7 @@
                 </div>
 
                 <div class="aplv_btm_btnwrap center">
-                  <button class="btn_aplv2 bg1" type="button">
+                  <button class="btn_aplv2 bg1 lvpopSave_open" type="button">
                     <span>임시저장</span>
                   </button>
                   <button class="btn_aplv2 bg2" type="button">
@@ -1636,6 +1636,36 @@
       </footer>
       <!--// footer area(e) -->
     </div>
+
+    <!-- 팝업(s) -->
+    <div class="aplv_popwrap widtype1" id="lvpopSave">
+      <section class="lvpop_contents p_lvcenter">
+        <div class="lvpop_note">임시저장을 위해서는 비밀번호(4자리)가 필요합니다.</div>
+        <div class="pwd_inp">
+          <div class="item"><input type="password" title="비밀번호" maxlength="1"></div>
+          <div class="item"><input type="password" title="비밀번호" maxlength="1"></div>
+          <div class="item"><input type="password" title="비밀번호" maxlength="1"></div>
+          <div class="item"><input type="password" title="비밀번호" maxlength="1"></div>
+        </div>
+        <div class="ap_ntxt4">※ 숫자, 문자, 특수기호가능</div>
+
+        <div class="aplv_btm_btnwrap center">
+          <button class="btn_aplv2 bg3" type="button">
+            <span>확인</span>
+          </button>
+          <button class="btn_aplv2 lvpopSave_close" type="button">
+            <span>취소</span>
+          </button>
+        </div>
+      </section>
+      <button class="lvpop_colse lvpopSave_close" type="button"><span>팝업닫기</span></button>
+    </div>
+    <!--// 팝업(e) -->
+
+
+
+
+
     <script src="../../resources/js/slider.js" type="text/javascript"></script>
     <script src="../../resources/js/common.js" type="text/javascript"></script>
     <script src="../../resources/js/page.js" type="text/javascript"></script>

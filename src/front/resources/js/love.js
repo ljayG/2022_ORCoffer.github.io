@@ -3,4 +3,6 @@ $(document).ready(function () {
     e.preventDefault();
     $(this).closest(".apl_textarea").toggleClass("expend");
   });
+
+  $("#lvpopSave").popup();
 });
