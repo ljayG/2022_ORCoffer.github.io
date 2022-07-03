@@ -55,6 +55,14 @@
   font-weight: 400;
 }
 
+.lvfc1 {
+  color: #f6864c;
+}
+
+.lvfs12 {
+  font-size: 0.75rem;
+}
+
 @media all and (min-width: 1178px) {
   .ap_ntxt1,
 .ap_ntxt2 {
@@ -158,7 +166,7 @@
 }
 @media all and (min-width: 1178px) {
   .appl_dl > dt {
-    flex-basis: 145px;
+    flex-basis: 172px;
     padding: 18px 5px 0 30px;
     font-size: 1rem;
   }
@@ -173,7 +181,7 @@
 }
 @media all and (min-width: 1178px) {
   .appl_dl > dd {
-    flex-basis: calc(100% - 145px);
+    flex-basis: calc(100% - 172px);
     padding: 10px 5px;
   }
 }
@@ -369,6 +377,9 @@
 .love_applywrap .wtxt_mq6 {
   width: 100%;
 }
+.love_applywrap .wtxt_mq7 {
+  width: 50%;
+}
 .love_applywrap .ftxt_mq1 {
   flex: 1;
 }
@@ -402,6 +413,9 @@
   .love_applywrap .wtxt_mq6 {
     width: 50%;
   }
+  .love_applywrap .wtxt_mq7 {
+    width: 18%;
+  }
   .love_applywrap .ftxt_mq1 {
     flex: 0 0 75px;
   }
@@ -418,6 +432,9 @@
 .love_applywrap .mr15 {
   margin-right: 15px;
 }
+.love_applywrap .mt5 {
+  margin-top: 5px;
+}
 .love_applywrap .mt8 {
   margin-top: 8px;
 }
@@ -426,6 +443,14 @@
 }
 .love_applywrap .mb8 {
   margin-bottom: 8px;
+}
+.love_applywrap .mod_mt5 {
+  margin-top: 5px;
+}
+@media all and (min-width: 1178px) {
+  .love_applywrap .mod_mt5 {
+    margin-top: 0;
+  }
 }
 
 .btn_upload {
@@ -854,4 +879,62 @@
   font-weight: 700;
   color: #222;
   text-align: center;
+}
+
+.lv_search {
+  display: flex;
+  flex-wrap: wrap;
+}
+.lv_search .ap_ntxt2 {
+  flex: 0 100%;
+}
+.lv_search .ap_searchfrm {
+  flex: 0 160px;
+  margin-bottom: 15px;
+}
+@media all and (min-width: 1178px) {
+  .lv_search {
+    flex-wrap: nowrap;
+  }
+  .lv_search .ap_ntxt2 {
+    flex: 1 auto;
+  }
+  .lv_search .ap_searchfrm {
+    margin-bottom: 0;
+  }
+}
+
+.ap_searchfrm {
+  position: relative;
+  height: 28px;
+  border: 1px solid #383f4f;
+  border-radius: 12px;
+}
+.ap_searchfrm .srcfrm {
+  width: 100%;
+  height: 28px;
+  padding: 0 34px 0 16px;
+  line-height: 28px;
+  color: #222;
+  border: none;
+  background-color: transparent;
+}
+.ap_searchfrm .srcfrm_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 28px;
+  overflow: hidden;
+}
+.ap_searchfrm .srcfrm_btn span {
+  display: block;
+  margin: auto auto auto 6px;
+  background: url("../images/love/ico_search.png") no-repeat;
+  background-size: contain;
+  font-size: 1px;
+  color: transparent;
+  text-indent: -9999rem;
+  width: 13px;
+  height: 13px;
 }
