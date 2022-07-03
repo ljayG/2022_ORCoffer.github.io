@@ -14,6 +14,12 @@
   color: #383f4f;
 }
 
+.ap_ntxt3 {
+  margin-bottom: 15px;
+  font-size: 0.75rem;
+  color: #222;
+}
+
 .ap_under1 {
   color: #de3030;
   text-decoration: underline;
@@ -24,6 +30,16 @@
   font-size: 1.125rem;
   font-weight: 700;
   color: #383f4f;
+}
+
+.aplv_tit5 {
+  margin: 30px 0 22px;
+  padding: 10px 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #383f4f;
+  border-top: 1px solid #383f4f;
+  border-bottom: 1px solid #383f4f;
 }
 
 .aplv_intxt {
@@ -37,6 +53,10 @@
   .ap_ntxt1,
   .ap_ntxt2 {
     font-size: 1.125rem;
+  }
+
+  .ap_ntxt3 {
+    font-size: 1rem;
   }
 
   .aplv_tit4 {
@@ -91,6 +111,19 @@
   border-top: 2px solid #383f4f;
   border-bottom: 1px solid #383f4f;
   box-sizing: border-box;
+
+  &.type2 {
+    background-color: #f0f2f5;
+    border-bottom-color: #dfe1e5;
+  }
+
+  .aplv_txtfield {
+    border: none;
+  }
+
+  .flwid100 {
+    flex-basis: 100%;
+  }
 }
 
 .appl_box2 {
@@ -148,8 +181,16 @@
   @media all and (min-width: 1178px) {
     flex: 0 0 (100%/3);
 
+    & > dd {
+      padding-right: 20px;
+    }
+
     &.type2 {
       flex: 0 0 100%;
+    }
+
+    &.type3 {
+      flex: 0 0 (100% /3) * 2;
     }
   }
 }
@@ -304,11 +345,18 @@
     }
   }
 
-  .size_full {
+  .size_full,
+  .size_full2 {
     width: 100%;
 
     &.lastbtn1 {
       padding-right: 40px;
+    }
+  }
+
+  @media all and (min-width: 1178px) {
+    .size_full2 {
+      width: 50%;
     }
   }
 
@@ -519,6 +567,33 @@
   }
 }
 
+.btn_aplv2 {
+  display: inline-block;
+  min-width: 80px;
+  padding: 7px 35px;
+  margin: 0 4px;
+  text-align: center;
+  font-size: 0.875rem;
+  border: 1px solid #f6864c;
+  border-radius: 20px;
+
+  &.bg1 {
+    background-color: #fff;
+    border: 1px solid #f6864c;
+    color: #f6864c;
+  }
+
+  &.bg2 {
+    background-color: #f6864c;
+    border: 1px solid #f6864c;
+    color: #fff;
+  }
+
+  @media all and (min-width: 1178px) {
+    font-size: 1.125rem;
+  }
+}
+
 .icaplv_plus {
   background: url("../images/love/ico_plus.png") no-repeat center;
 }
@@ -591,7 +666,7 @@
 
 .aplv_txtfield {
   padding: 10px;
-  background-color: #edeff2;
+  background-color: #f0f2f5;
   border: 1px solid #d2d3d9;
 
   .apl_textarea {
@@ -653,5 +728,129 @@
         height: 27px;
       }
     }
+  }
+}
+
+.aplv_argwrap {
+  margin-top: 15px;
+  font-size: 0.875rem;
+  color: #222;
+
+  .argchk {
+    margin-top: 5px;
+  }
+
+  &.type2 {
+    display: flex;
+    flex-wrap: wrap;
+    color: #666;
+
+    .argtxt {
+      flex: 0 0 100%;
+    }
+
+    .argchk {
+      flex: 0 0 100%;
+      text-align: right;
+    }
+  }
+
+  @media all and (min-width: 1178px) {
+    display: flex;
+    font-size: 1rem;
+
+    .argchk {
+      margin: 0 0 0 22px;
+    }
+
+    &.type2 {
+      .argchk {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+.appl_box3 {
+  padding: 15px;
+  background-color: #f0f2f5;
+  border-top: 2px solid #383f4f;
+  border-bottom: 1px solid #e5e6eb;
+
+  @media all and (min-width: 1178px) {
+    padding: 15px 30px 30px;
+  }
+}
+
+.ta_01 {
+  table {
+    width: 100%;
+    border-top: 1px solid #b7bec4;
+    background-color: #fff;
+
+    thead {
+      th {
+        background-color: #dfe1e5;
+        font-weight: 700;
+        color: #222;
+        text-align: center;
+      }
+    }
+
+    tbody {
+      th,
+      td {
+        color: #666;
+      }
+    }
+
+    th,
+    td {
+      padding: 8px 5px;
+      font-size: 0.75rem;
+      border-left: 1px solid #b7bec4;
+      border-bottom: 1px solid #b7bec4;
+      word-break: break-all;
+    }
+    thead tr th:first-child,
+    tbody tr th:first-child,
+    tbody tr td:first-child {
+      border-left: none;
+    }
+    thead tr th.line_on,
+    tbody tr th.line_on,
+    tbody tr td.line_on {
+      border-left: 1px solid #b7bec4;
+    }
+    .nm {
+      text-align: center;
+    }
+
+    @media all and (min-width: 1178px) {
+      th,
+      td {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.aplv_btmtxt {
+  margin-top: 30px;
+  color: #222;
+  text-align: center;
+
+  p {
+    & + p {
+      margin-top: 10px;
+    }
+  }
+}
+
+.aplv_btm_btnwrap {
+  margin-top: 25px;
+
+  &.center {
+    text-align: center;
   }
 }

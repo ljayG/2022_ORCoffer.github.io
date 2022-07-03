@@ -14,6 +14,12 @@
   color: #383f4f;
 }
 
+.ap_ntxt3 {
+  margin-bottom: 15px;
+  font-size: 0.75rem;
+  color: #222;
+}
+
 .ap_under1 {
   color: #de3030;
   text-decoration: underline;
@@ -24,6 +30,16 @@
   font-size: 1.125rem;
   font-weight: 700;
   color: #383f4f;
+}
+
+.aplv_tit5 {
+  margin: 30px 0 22px;
+  padding: 10px 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #383f4f;
+  border-top: 1px solid #383f4f;
+  border-bottom: 1px solid #383f4f;
 }
 
 .aplv_intxt {
@@ -37,6 +53,10 @@
   .ap_ntxt1,
 .ap_ntxt2 {
     font-size: 1.125rem;
+  }
+
+  .ap_ntxt3 {
+    font-size: 1rem;
   }
 
   .aplv_tit4 {
@@ -90,6 +110,16 @@
   border-top: 2px solid #383f4f;
   border-bottom: 1px solid #383f4f;
   box-sizing: border-box;
+}
+.appl_box.type2 {
+  background-color: #f0f2f5;
+  border-bottom-color: #dfe1e5;
+}
+.appl_box .aplv_txtfield {
+  border: none;
+}
+.appl_box .flwid100 {
+  flex-basis: 100%;
 }
 
 .appl_box2 {
@@ -147,8 +177,14 @@
   .appl_dl {
     flex: 0 0 33.3333333333%;
   }
+  .appl_dl > dd {
+    padding-right: 20px;
+  }
   .appl_dl.type2 {
     flex: 0 0 100%;
+  }
+  .appl_dl.type3 {
+    flex: 0 0 66.6666666667%;
   }
 }
 
@@ -281,11 +317,18 @@
     padding: 0 18px;
   }
 }
-.love_applywrap .size_full {
+.love_applywrap .size_full,
+.love_applywrap .size_full2 {
   width: 100%;
 }
-.love_applywrap .size_full.lastbtn1 {
+.love_applywrap .size_full.lastbtn1,
+.love_applywrap .size_full2.lastbtn1 {
   padding-right: 40px;
+}
+@media all and (min-width: 1178px) {
+  .love_applywrap .size_full2 {
+    width: 50%;
+  }
 }
 .love_applywrap .seltype1 {
   height: 32px;
@@ -475,6 +518,32 @@
   }
 }
 
+.btn_aplv2 {
+  display: inline-block;
+  min-width: 80px;
+  padding: 7px 35px;
+  margin: 0 4px;
+  text-align: center;
+  font-size: 0.875rem;
+  border: 1px solid #f6864c;
+  border-radius: 20px;
+}
+.btn_aplv2.bg1 {
+  background-color: #fff;
+  border: 1px solid #f6864c;
+  color: #f6864c;
+}
+.btn_aplv2.bg2 {
+  background-color: #f6864c;
+  border: 1px solid #f6864c;
+  color: #fff;
+}
+@media all and (min-width: 1178px) {
+  .btn_aplv2 {
+    font-size: 1.125rem;
+  }
+}
+
 .icaplv_plus {
   background: url("../images/love/ico_plus.png") no-repeat center;
 }
@@ -539,7 +608,7 @@
 
 .aplv_txtfield {
   padding: 10px;
-  background-color: #edeff2;
+  background-color: #f0f2f5;
   border: 1px solid #d2d3d9;
 }
 .aplv_txtfield .apl_textarea {
@@ -589,4 +658,108 @@
   .aplv_txtfield .apl_textarea .btn_txt_expend {
     height: 27px;
   }
+}
+
+.aplv_argwrap {
+  margin-top: 15px;
+  font-size: 0.875rem;
+  color: #222;
+}
+.aplv_argwrap .argchk {
+  margin-top: 5px;
+}
+.aplv_argwrap.type2 {
+  display: flex;
+  flex-wrap: wrap;
+  color: #666;
+}
+.aplv_argwrap.type2 .argtxt {
+  flex: 0 0 100%;
+}
+.aplv_argwrap.type2 .argchk {
+  flex: 0 0 100%;
+  text-align: right;
+}
+@media all and (min-width: 1178px) {
+  .aplv_argwrap {
+    display: flex;
+    font-size: 1rem;
+  }
+  .aplv_argwrap .argchk {
+    margin: 0 0 0 22px;
+  }
+  .aplv_argwrap.type2 .argchk {
+    margin-left: 0px;
+  }
+}
+
+.appl_box3 {
+  padding: 15px;
+  background-color: #f0f2f5;
+  border-top: 2px solid #383f4f;
+  border-bottom: 1px solid #e5e6eb;
+}
+@media all and (min-width: 1178px) {
+  .appl_box3 {
+    padding: 15px 30px 30px;
+  }
+}
+
+.ta_01 table {
+  width: 100%;
+  border-top: 1px solid #b7bec4;
+  background-color: #fff;
+}
+.ta_01 table thead th {
+  background-color: #dfe1e5;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+}
+.ta_01 table tbody th,
+.ta_01 table tbody td {
+  color: #666;
+}
+.ta_01 table th,
+.ta_01 table td {
+  padding: 8px 5px;
+  font-size: 0.75rem;
+  border-left: 1px solid #b7bec4;
+  border-bottom: 1px solid #b7bec4;
+  word-break: break-all;
+}
+.ta_01 table thead tr th:first-child,
+.ta_01 table tbody tr th:first-child,
+.ta_01 table tbody tr td:first-child {
+  border-left: none;
+}
+.ta_01 table thead tr th.line_on,
+.ta_01 table tbody tr th.line_on,
+.ta_01 table tbody tr td.line_on {
+  border-left: 1px solid #b7bec4;
+}
+.ta_01 table .nm {
+  text-align: center;
+}
+@media all and (min-width: 1178px) {
+  .ta_01 table th,
+.ta_01 table td {
+    font-size: 1rem;
+  }
+}
+
+.aplv_btmtxt {
+  margin-top: 30px;
+  color: #222;
+  text-align: center;
+}
+.aplv_btmtxt p + p {
+  margin-top: 10px;
+}
+
+.aplv_btm_btnwrap {
+  margin-top: 25px;
+}
+.aplv_btm_btnwrap.center {
+  text-align: center;
 }
