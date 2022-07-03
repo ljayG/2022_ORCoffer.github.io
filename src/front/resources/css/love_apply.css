@@ -259,7 +259,7 @@
     padding: 0 30px 0 17px;
   }
   .appl_dl2 > dd .input_wrtwrap {
-    flex: 1;
+    flex: 1 1 185px;
   }
   .appl_dl2 > dd .input_wrtwrap + .input_wrtwrap {
     margin: 0 0 0 30px;
@@ -659,7 +659,10 @@
   height: 55px;
   padding: 8px;
   border: none;
+  color: #222;
+  transition: 0.3s linear;
   overflow: hidden;
+  overflow-y: auto;
 }
 .aplv_txtfield .apl_textarea .btn_txt_expend {
   display: block;
@@ -680,7 +683,7 @@
   transition: 0.3s linear;
 }
 .aplv_txtfield .apl_textarea.expend textarea {
-  height: 120px;
+  height: 250px;
 }
 .aplv_txtfield .apl_textarea.expend .btn_txt_expend span {
   transform: rotate(180deg);
