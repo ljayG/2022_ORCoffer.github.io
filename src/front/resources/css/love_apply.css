@@ -59,7 +59,12 @@
   color: #f6864c;
 }
 
-.lvfs12 {
+.lvfc2 {
+  color: #222;
+}
+
+.lvfs12,
+.lvfsm12 {
   font-size: 0.75rem;
 }
 
@@ -70,7 +75,8 @@
   }
 
   .ap_ntxt3,
-.ap_ntxt4 {
+.ap_ntxt4,
+.lvfsm12 {
     font-size: 1rem;
   }
 
@@ -209,6 +215,7 @@
   margin-bottom: 8px;
   padding: 6px 0;
   font-size: 0.875rem;
+  color: #222;
   border: 1px solid #d2d3d9;
 }
 .appl_dl2.bg2 {
@@ -269,6 +276,19 @@
   }
 }
 
+.athtit1 {
+  padding: 10px 5px 0 8px;
+  color: #222;
+  font-weight: 600;
+  font-size: 0.813rem;
+}
+@media all and (min-width: 1178px) {
+  .athtit1 {
+    padding: 18px 5px 0 30px;
+    font-size: 1rem;
+  }
+}
+
 .ipt_attr {
   display: inline-block;
   vertical-align: middle;
@@ -279,6 +299,7 @@
 
 .love_applywrap {
   word-break: keep-all;
+  letter-spacing: -0.08rem;
   /* form */
 }
 .love_applywrap .input_wrtwrap {
@@ -426,6 +447,9 @@
 .love_applywrap .ml5 {
   margin-left: 5px;
 }
+.love_applywrap .ml10 {
+  margin-left: 10px;
+}
 .love_applywrap .ml35 {
   margin-left: 35px;
 }
@@ -443,6 +467,9 @@
 }
 .love_applywrap .mb8 {
   margin-bottom: 8px;
+}
+.love_applywrap .mb10 {
+  margin-bottom: 10px;
 }
 .love_applywrap .mod_mt5 {
   margin-top: 5px;
@@ -692,6 +719,9 @@
   .aplv_txtfield {
     padding: 31px 31px 32px;
   }
+  .aplv_txtfield.type2 {
+    padding-top: 10px;
+  }
   .aplv_txtfield .apl_textarea textarea {
     width: calc(100% - 32px);
     height: 60px;
@@ -772,7 +802,9 @@
 }
 .ta_01 table thead tr th:first-child,
 .ta_01 table tbody tr th:first-child,
-.ta_01 table tbody tr td:first-child {
+.ta_01 table tbody tr td:first-child,
+.ta_01 table tfoot tr th:first-child,
+.ta_01 table tfoot tr td:first-child {
   border-left: none;
 }
 .ta_01 table thead tr th.line_on,
@@ -780,13 +812,29 @@
 .ta_01 table tbody tr td.line_on {
   border-left: 1px solid #b7bec4;
 }
+.ta_01 table .tx {
+  text-align: left;
+}
 .ta_01 table .nm {
   text-align: center;
+}
+.ta_01 table .my {
+  text-align: right;
+}
+.ta_01 table .mq_colgroup_none,
+.ta_01 table .mq_mb_none {
+  display: none;
 }
 @media all and (min-width: 1178px) {
   .ta_01 table th,
 .ta_01 table td {
     font-size: 1rem;
+  }
+  .ta_01 table .mq_colgroup_none {
+    display: table-column-group;
+  }
+  .ta_01 table .mq_mb_none {
+    display: table-cell;
   }
 }
 
@@ -852,8 +900,14 @@
   width: 30px;
   height: 30px;
   margin: 30px auto 15px;
-  background: url("../images/love/ico_mark2.png") no-repeat;
+  background-image: url("../images/love/ico_mark2.png");
+  background-repeat: no-repeat;
   background-size: contain;
+}
+.lvpop_contents .lvpop_note.org::before {
+  width: 36px;
+  height: 28px;
+  background-image: url("../images/love/ico_org.png");
 }
 @media all and (min-width: 1178px) {
   .lvpop_contents .lvpop_note {
@@ -862,6 +916,10 @@
   .lvpop_contents .lvpop_note::before {
     width: 54px;
     height: 54px;
+  }
+  .lvpop_contents .lvpop_note.org::before {
+    width: 56px;
+    height: 43px;
   }
 }
 
@@ -904,6 +962,65 @@
   }
   .lv_search .ap_searchfrm {
     margin-bottom: 0;
+  }
+}
+
+.lvpop_srchwrap {
+  position: relative;
+  width: 90%;
+  max-width: 360px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #383f4f;
+  background-color: #fff;
+  overflow: hidden;
+}
+.lvpop_srchwrap input[type=text] {
+  width: 100%;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 36px 0 6px;
+  border: none;
+}
+.lvpop_srchwrap .btn_srch {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  right: 0;
+  background-color: #383f4f;
+  overflow: hidden;
+  z-index: 2;
+}
+.lvpop_srchwrap .btn_srch span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: auto;
+  background: url("../images/love/ico_search2.png") no-repeat;
+  background-size: contain;
+  font-size: 1px;
+  color: transparent;
+  text-indent: -9999rem;
+}
+@media all and (min-width: 1178px) {
+  .lvpop_srchwrap {
+    height: 40px;
+  }
+  .lvpop_srchwrap input[type=text] {
+    height: 40px;
+    line-height: 38px;
+    padding: 0 50px 0 10px;
+  }
+  .lvpop_srchwrap .btn_srch {
+    width: 40px;
+    height: 40px;
+  }
+  .lvpop_srchwrap .btn_srch span {
+    width: 17px;
+    height: 17px;
   }
 }
 

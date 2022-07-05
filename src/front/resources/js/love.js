@@ -4,5 +4,5 @@ $(document).ready(function () {
     $(this).closest(".apl_textarea").toggleClass("expend");
   });
 
-  $("#lvpopSave").popup();
+  $(".aplv_popwrap").popup();
 });
