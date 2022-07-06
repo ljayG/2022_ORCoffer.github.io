@@ -1713,6 +1713,18 @@
     </div>
     <!--// 검색결과 팝업(e) -->
 
+    <!-- 검색결과 팝업 오픈 스크립트 -->
+    <script>
+      $(document).ready(function() {
+        $('#lvpopOrgResult').popup({
+          autoopen: true,
+          scrolllock: true,
+          transition: "all 0.3s",
+        });
+      });
+    </script>
+
+
 
     <script src="../../resources/js/slider.js" type="text/javascript"></script>
     <script src="../../resources/js/common.js" type="text/javascript"></script>

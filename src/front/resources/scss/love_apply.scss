@@ -661,6 +661,28 @@
   }
 }
 
+.btn_aplv3 {
+  display: inline-block;
+  padding: 3px 10px;
+  text-align: center;
+  font-size: 0.875rem;
+
+  & > span {
+    display: inline-block;
+  }
+
+  &.bg1 {
+    color: #fff;
+    background-color: #383f4f;
+    border: 1px solid #383f4f;
+  }
+
+  @media all and (min-width: 1178px) {
+    padding: 7px 18px;
+    font-size: 1rem;
+  }
+}
+
 .icaplv_plus {
   background: url("../images/love/ico_plus.png") no-repeat center;
 }
@@ -908,23 +930,26 @@
       text-align: right;
     }
 
-    .mq_colgroup_none,
-    .mq_mb_none {
-      display: none;
-    }
-
     @media all and (min-width: 1178px) {
       th,
       td {
         font-size: 1rem;
       }
-      .mq_colgroup_none {
-        display: table-column-group;
-      }
-      .mq_mb_none {
-        display: table-cell;
-      }
     }
+  }
+}
+
+.mq_colgroup_none,
+.mq_mb_none {
+  display: none;
+}
+
+@media all and (min-width: 1178px) {
+  .mq_colgroup_none {
+    display: table-column-group;
+  }
+  .mq_mb_none {
+    display: table-cell;
   }
 }
 
@@ -951,10 +976,16 @@
 .aplv_popwrap {
   position: relative;
   background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.32) 3px 0 10px;
 
   &.widtype1 {
-    width: 80%;
+    width: 90%;
     max-width: 545px;
+  }
+
+  &.widtype2 {
+    width: 90%;
+    max-width: 615px;
   }
 
   .lvpop_colse {
@@ -1010,6 +1041,18 @@
         background-image: url("../images/love/ico_org.png");
       }
     }
+
+    &.bell {
+      &::before {
+        width: 30px;
+        height: 33px;
+        background-image: url("../images/love/ico_bell.png");
+      }
+    }
+  }
+
+  .mt15 {
+    margin-top: 15px;
   }
 
   @media all and (min-width: 1178px) {
@@ -1025,6 +1068,13 @@
         &::before {
           width: 56px;
           height: 43px;
+        }
+      }
+
+      &.bell {
+        &::before {
+          width: 47px;
+          height: 52px;
         }
       }
     }
@@ -1177,5 +1227,56 @@
       width: 13px;
       height: 13px;
     }
+  }
+}
+
+.ap_tbl1 {
+  border-top: 1px solid #383f4f;
+
+  table {
+    th,
+    td {
+      border-bottom: 1px solid #d4d5da;
+      padding: 12px 5px;
+      font-size: 0.813rem;
+      text-align: left;
+      color: #222;
+
+      &.nm {
+        text-align: center;
+      }
+    }
+
+    .orgname {
+      display: block;
+      position: relative;
+      border-right: 1px dotted #d2d3d9;
+    }
+
+    @media all and (min-width: 1178px) {
+      th,
+      td {
+        font-size: 1rem;
+      }
+
+      .orgname {
+        border-left-width: 2px;
+      }
+    }
+  }
+}
+
+.lv_btr {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #f2f4f8;
+  border: 1px solid #cacbce;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #222;
+
+  @media all and (min-width: 1178px) {
+    padding: 4px 15px;
+    font-size: 1rem;
   }
 }

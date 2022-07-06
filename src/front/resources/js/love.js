@@ -4,5 +4,8 @@ $(document).ready(function () {
     $(this).closest(".apl_textarea").toggleClass("expend");
   });
 
-  $(".aplv_popwrap").popup();
+  $(".aplv_popwrap").popup({
+    scrolllock: true,
+    transition: "all 0.3s",
+  });
 });
