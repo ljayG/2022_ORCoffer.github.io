@@ -1,470 +1,481 @@
-body{
+body {
+  background-color: $white;
+
+  .mainbody {
     background-color: $gray;
+  }
 }
 
-#wrapper{
+#wrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#contents {
+  margin-top: 42px;
+
+  .inner {
+    margin: 0 18px;
+    padding: 15px 0 50px;
+  }
+
+  @include mq("deskTop") {
+    margin-top: 80px;
+    padding: 40px 0 100px;
+
+    .inner {
+      width: (1840/1900) * 100%;
+      margin: 0 auto;
+
+      &.type2 {
+        max-width: 1252px;
+      }
+    }
+  }
+}
+
+.roundbox {
+  background-color: $white;
+  box-shadow: rgba($blue, 0.2) 3px 0 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  &.type2 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  &.type3 {
+    padding-top: 18px;
+    padding-bottom: 40px;
+  }
+
+  @include mq("deskTop") {
+    padding: 14px 22px;
+    border-radius: 16px;
+
+    &.type2 {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    &.type3 {
+      padding-top: 25px;
+    }
+  }
+}
+
+.tit-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.stit1 {
+  color: $color-primary;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+
+  &::before {
+    background-color: $color-primary;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 4px;
+    top: 6px;
+    left: 0;
+    border-radius: 4px;
+  }
+
+  @include mq("deskTop") {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+
+    &::before {
+      top: 8px;
+    }
+  }
+}
+
+.stit-intxt {
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  @include mq("deskTop") {
+    font-size: 1rem;
+  }
+}
+
+.flexwrap {
+  .flexl + .flexr {
+    margin-top: 24px;
+  }
+
+  @include mq("deskTop") {
+    display: flex;
+    justify-content: space-between;
+
+    .flexl,
+    .flexr {
+      flex: 0 0 (602/1252) * 100%;
+      overflow: hidden;
+    }
+
+    .flexl + .flexr {
+      margin-top: 0;
+    }
+  }
+}
+
+.sect1 {
+  position: relative;
+
+  & + & {
+    margin-top: 24px;
+  }
+
+  @include mq("deskTop") {
+    & + & {
+      margin-top: 45px;
+    }
+  }
+}
+
+.right-space {
+  position: absolute;
+  top: 3px;
+  right: 0;
+
+  .btn-more {
+    color: $white;
+    background-color: $color-primary;
+    display: inline-block;
+    height: 18px;
+    padding: 0 14px;
+    line-height: 18px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+
+    &::after {
+      content: "+";
+      display: inline-block;
+      margin-left: 2px;
+    }
+  }
+
+  @include mq("deskTop") {
+    top: 6px;
+
+    .btn-more {
+      height: 24px;
+      font-size: 1rem;
+      line-height: 24px;
+    }
+  }
+}
+
+.rnd-grp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & > li {
     position: relative;
-    width: 100%;
-    overflow-x: hidden;
-}
+    flex: 0 0 222px;
+    margin-bottom: 20px;
+  }
 
-#contents{
-    margin-top: 42px;
-
-    .inner{
-        margin: 0 18px;
-        padding: 15px 0 50px;
-    }
-
-    @include mq('deskTop'){
-        margin-top: 80px;
-        padding: 40px 0 100px;
-
-        .inner{
-            width: (1840/1900)*100%;
-            margin: 0 auto;
-
-            &.type2{
-                max-width: 1252px;
-            }
-        }
-    }
-}
-
-.roundbox{
+  .round {
     background-color: $white;
-    box-shadow: rgba($blue, 0.2) 3px 0 10px;
-    padding: 10px 15px;
-    border-radius: 8px;
+    box-shadow: rgba($black, 0.27) 3px 0 5px;
+    position: relative;
+    border-radius: 50%;
+    width: 172px;
+    height: 172px;
+    margin: auto;
+    text-align: center;
 
-    &.type2{
-        padding-top: 18px;
-        padding-bottom: 18px;
+    .pos {
+      @include posiCenter("va");
+
+      .num {
+        font-weight: 700;
+        font-size: 1.625rem;
+        line-height: 1.2;
+      }
     }
 
-    &.type3{
-        padding-top: 18px;
-        padding-bottom: 40px;
+    &.fir {
+      border: 9px solid $skyBlue;
+
+      .num {
+        color: $skyBlue;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 26px;
+        height: 24px;
+        top: -10px;
+        left: -20px;
+        background-image: url("../images/sub/ico_grp1.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
     }
 
-    @include mq('deskTop'){
-        padding: 14px 22px;
-        border-radius: 16px;
+    &.sec {
+      border: 9px solid $violet;
 
-        &.type2{
-            padding-top: 25px;
-            padding-bottom: 25px;
-        }
+      .num {
+        color: $violet;
+      }
 
-        &.type3{
-            padding-top: 25px;
-        }
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 26px;
+        height: 24px;
+        top: -10px;
+        right: -20px;
+        background-image: url("../images/sub/ico_grp2.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
     }
+  }
 }
 
-.stit1{
-    color: $color-primary;
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
-    font-weight: 700;
+.line-grp {
+  & > li {
+    display: flex;
+    align-items: center;
 
-    &::before{
-        background-color: $color-primary;
-        content: '';
+    .part {
+      flex: 0 0 45px;
+      font-size: 0.813rem;
+      font-weight: 700;
+    }
+
+    .line {
+      background-color: $gray;
+      position: relative;
+      flex: 0 0 calc(100% - 100px);
+      height: 4px;
+      border-radius: 2px;
+
+      span {
+        @include posiCenter("v");
+        box-shadow: rgba($black, 0.27) 3px 0 5px;
         display: block;
-        position: absolute;
-        width: 13px;
-        height: 4px;
-        top: 6px;
+        height: 8px;
         left: 0;
         border-radius: 4px;
+      }
     }
 
-    @include mq('deskTop'){
-        margin-bottom: 15px;
-        font-size: 1.5rem;
+    .mem {
+      flex: 0 0 55px;
+      text-align: right;
+      font-size: 0.813rem;
 
-        &::before{
-            top: 8px;
-        }
-    }
-}
-
-.stit-intxt{
-    font-size: 0.75rem;
-    font-weight: 400;
-
-    @include mq('deskTop'){
+      strong {
         font-size: 1rem;
+      }
     }
+
+    &.line1 {
+      .line {
+        span {
+          background-color: $skyBlue;
+        }
+      }
+
+      .mem {
+        strong {
+          color: $skyBlue;
+        }
+      }
+    }
+
+    &.line2 {
+      .line {
+        span {
+          background-color: $violet;
+        }
+      }
+
+      .mem {
+        strong {
+          color: $violet;
+        }
+      }
+    }
+
+    &.line3 {
+      .line {
+        span {
+          background-color: $orange;
+        }
+      }
+
+      .mem {
+        strong {
+          color: $orange;
+        }
+      }
+    }
+
+    @include mq("deskTop") {
+      .part {
+        flex-basis: 57px;
+        font-size: 1.125rem;
+      }
+
+      .line {
+        flex-basis: calc(100% - 137px);
+      }
+
+      .mem {
+        flex-basis: 80px;
+        font-size: 1rem;
+
+        strong {
+          font-size: 1.375rem;
+        }
+      }
+    }
+  }
 }
 
-.flexwrap{
-    .flexl + .flexr{
-        margin-top: 24px;
-    }
+.tab-menu {
+  .list {
+    & > li {
+      display: inline-block;
 
-    @include mq('deskTop'){
-        display: flex;
-        justify-content: space-between;
+      a {
+        background-color: $gray;
+        border: 1px solid $white;
+        display: block;
+        padding: 3px 10px 4px;
+        min-width: 50px;
+        font-size: 0.875rem;
+        line-height: 1;
+        text-align: center;
+        border-radius: 15px;
+      }
 
-        .flexl,
-        .flexr{
-            flex: 0 0 (602/1252)*100%;
-            overflow: hidden;
+      &.current {
+        a {
+          background-color: $white;
         }
-
-        .flexl + .flexr{
-            margin-top: 0;
-        }
+      }
     }
-}
+  }
 
-.sect1{
-    position: relative;
-
-    & + &{
-        margin-top: 24px;
-    }
-
-    @include mq('deskTop'){
-        & + &{
-            margin-top: 45px;
-        }
-    }
-}
-
-.right-space{
+  &.tit-in {
     position: absolute;
     top: 3px;
     right: 0;
 
-    .btn-more{
-        color: $white;
-        background-color: $color-primary;
-        display: inline-block;
-        height: 18px;
-        padding: 0 14px;
-        line-height: 18px;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        
-        &::after{
-            content: '+';
-            display: inline-block;
-            margin-left: 2px;
-        }
-    }
+    .list {
+      & > li {
+        margin-left: 2px;
 
-    @include mq('deskTop'){
-        top: 6px;
-
-        .btn-more{
-            height: 24px;
-            font-size: 1rem;
-            line-height: 24px;
+        &:first-of-type {
+          margin-left: 0;
         }
+      }
     }
+  }
+
+  @include mq("deskTop") {
+    .list {
+      & > li {
+        a {
+          min-width: 64px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
 
-.rnd-grp{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.tab-view {
+  .tab-cont {
+    display: none;
 
-    & > li{
-        position: relative;
-        flex: 0 0 222px;
-        margin-bottom: 20px;
+    &.active {
+      display: block;
     }
-
-    .round{
-        background-color: $white;
-        box-shadow: rgba($black, 0.27) 3px 0 5px;
-        position: relative;
-        border-radius: 50%;
-        width: 172px;
-        height: 172px;
-        margin: auto;
-        text-align: center;
-
-        .pos{
-            @include posiCenter('va');
-            
-            .num{
-                font-weight: 700;
-                font-size: 1.625rem;
-                line-height: 1.2;
-            }
-        }
-
-        &.fir{
-            border: 9px solid $skyBlue;
-
-            .num{
-                color: $skyBlue;
-            }
-
-            &::before{
-                content: '';
-                position: absolute;
-                display: block;
-                width: 26px;
-                height: 24px;
-                top: -10px;
-                left: -20px;
-                background-image: url('../images/sub/ico_grp1.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-            }
-        }
-
-        &.sec{
-            border: 9px solid $violet;
-
-            .num{
-                color: $violet;
-            }
-
-            &::before{
-                content: '';
-                position: absolute;
-                display: block;
-                width: 26px;
-                height: 24px;
-                top: -10px;
-                right: -20px;
-                background-image: url('../images/sub/ico_grp2.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-            }
-        }
-    }
+  }
 }
 
-.line-grp{
-    
-    & > li{
-        display: flex;
-        align-items: center;
+.graph-paper {
+  border: 1px solid $gray;
+  border-bottom-color: $black;
+  position: relative;
+  display: flex;
+  height: 138px;
 
-        .part{
-            flex: 0 0 45px;
-            font-size: 0.813rem;
-            font-weight: 700;
-        }
-
-        .line{
-            background-color: $gray;
-            position: relative;
-            flex: 0 0 calc(100% - 100px);
-            height: 4px;
-            border-radius: 2px;
-
-            span{
-                @include posiCenter('v');
-                box-shadow: rgba($black, 0.27) 3px 0 5px;
-                display: block;
-                height: 8px;
-                left: 0;
-                border-radius: 4px;
-            }
-        }
-
-        .mem{
-            flex: 0 0 55px;
-            text-align: right;
-            font-size: 0.813rem;
-
-            strong{
-                font-size: 1rem;
-            }
-        }
-
-        &.line1{
-            .line{
-                span{
-                    background-color: $skyBlue;
-                }
-            }
-
-            .mem{
-                strong{
-                    color: $skyBlue;
-                }
-            }
-        }
-
-        &.line2{
-            .line{
-                span{
-                    background-color: $violet;
-                }
-            }
-
-            .mem{
-                strong{
-                    color: $violet;
-                }
-            }
-        }
-
-        &.line3{
-            .line{
-                span{
-                    background-color: $orange;
-                }
-            }
-
-            .mem{
-                strong{
-                    color: $orange;
-                }
-            }
-        }
-
-        @include mq('deskTop'){
-            .part{
-                flex-basis: 57px;
-                font-size: 1.125rem;
-            }
-    
-            .line{
-                flex-basis: calc(100% - 137px);
-            }
-    
-            .mem{
-                flex-basis: 80px;
-                font-size: 1rem;
-    
-                strong{
-                    font-size: 1.375rem;
-                }
-            }
-        }
-    }
-}
-
-.tab-menu{
-    .list{
-        & > li{
-            display: inline-block;
-
-            a{
-                background-color: $gray;
-                border: 1px solid $white;
-                display: block;
-                padding: 3px 10px 4px;
-                min-width: 50px;
-                font-size: 0.875rem;
-                line-height: 1;
-                text-align: center;
-                border-radius: 15px;
-            }
-
-            &.current{
-
-                a{
-                    background-color: $white;
-                }
-            }
-        }
-    }
-
-    &.tit-in{
-        position: absolute;
-        top: 3px;
-        right: 0;
-
-        .list{
-            & > li{
-                margin-left: 2px;
-
-                &:first-of-type{
-                    margin-left: 0;
-                }
-            }
-        }
-    }
-
-    @include mq('deskTop'){
-        .list{
-            & > li{
-                a{
-                    min-width: 64px;
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-}
-
-.tab-view{
-    .tab-cont{
-        display: none;
-
-        &.active{
-            display: block;
-        }
-    }
-}
-
-.graph-paper{
-    border: 1px solid $gray;
-    border-bottom-color: $black;
+  .grp-item {
+    border-left: 1px solid $gray;
     position: relative;
-    display: flex;
-    height: 138px;
-    
-    .grp-item{
-        border-left: 1px solid $gray;
-        position: relative;
-        flex: 0 0 (100% / 12);
+    flex: 0 0 (100% / 12);
 
-        &:first-of-type{
-            border-left: none;
-        }
-
-        .month{
-            background-color: $white;
-            position: absolute;
-            height: 28px;
-            bottom: -29px;
-            padding-top: 5px;
-            left: -1px;
-            right: -1px;
-            text-align: center;
-            font-size: 0.75rem;
-
-            @include mq('deskTop'){
-                font-size: 0.875rem;
-            }
-        }
-
-        span{
-            @include posiCenter('a');
-            background: linear-gradient(to bottom, $black, $blue);
-            display: block;
-            position: absolute;
-            width: 8px;
-            bottom: 0;
-        }
+    &:first-of-type {
+      border-left: none;
     }
 
-    .line{
-        background-color: $gray;
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        left: 0;
-        z-index: 1;
+    .month {
+      background-color: $white;
+      position: absolute;
+      height: 28px;
+      bottom: -29px;
+      padding-top: 5px;
+      left: -1px;
+      right: -1px;
+      text-align: center;
+      font-size: 0.75rem;
 
-        @for $n from 1 through 4{
-            &.lin-#{$n}{
-                top: calc(#{$n} * 27px);
-            }
-    
-        }
+      @include mq("deskTop") {
+        font-size: 0.875rem;
+      }
     }
+
+    span {
+      @include posiCenter("a");
+      background: linear-gradient(to bottom, $black, $blue);
+      display: block;
+      position: absolute;
+      width: 8px;
+      bottom: 0;
+    }
+  }
+
+  .line {
+    background-color: $gray;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    z-index: 1;
+
+    @for $n from 1 through 4 {
+      &.lin-#{$n} {
+        top: calc(#{$n} * 27px);
+      }
+    }
+  }
+}
+
+.ml5 {
+  margin-left: 5px;
 }

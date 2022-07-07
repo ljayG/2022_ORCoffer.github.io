@@ -1,0 +1,15 @@
+.selector {
+  border: 1px solid $gray;
+  display: inline-block;
+  height: 25px;
+  padding: 0 10px;
+  font-size: 0.875rem;
+  line-height: 24px;
+  box-sizing: border-box;
+
+  @include mq("deskTop") {
+    height: 31px;
+    font-size: 1rem;
+    line-height: 30pc;
+  }
+}

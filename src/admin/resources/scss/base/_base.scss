@@ -1,46 +1,293 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;/*vertical-align:baseline;*/ box-sizing:border-box; word-break: keep-all;}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0; /*vertical-align:baseline;*/
+  box-sizing: border-box;
+  word-break: keep-all;
+}
 
-body, th, td, input, select, textarea, button{font-size: 100%; font-family: $fontFamily; color:$color-default; line-height: 1.5; font-weight:400; letter-spacing: -0.05rem;}
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-size: 100%;
+  font-family: $fontFamily;
+  color: $color-default;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -0.05rem;
+}
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main{display: block}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
 
-body{-webkit-text-size-adjust: none}
-h1, h2, h3, h4, h5, h6{font-size: 1rem; font-weight: 700}
-ol, ul, li ,dl, dt, dd{list-style:none outside none; padding:0; margin:0}
-hr{display:none}
-span{margin:0; padding:0; outline:0}
-fieldset, img, table, caption, tbody, tfoot, thead, tr, th, td, button, hr{border:0}
-address, caption, cite, code, dfn, em, strong, th, var{font-style: normal}
-blockquote, q{quotes:none}
-blockquote:before, blockquote:after, q:before, q:after{content: ''; content: none}
-table{width: 100%; border-collapse:separate; border-spacing:0;}
-img{vertical-align:middle}
-a{color: $color-default; text-decoration:none; cursor:pointer}
-a:active, a:hover{text-decoration: none}
-input, select, label{vertical-align:middle}
-input, select, textarea, button{font-size: 1rem; vertical-align: middle; padding: 0; margin: 0}
-input, textarea{font-family: $fontFamily; /*border-radius: 0; appearance:none; -webkit-appearance:none;*/}
-button,input[type='text'],input[type='password'],input[type='tel'],input[type='num'],input[type='button'],input[type='submit'],input[type='reset'],input[type='file']{-webkit-appearance:button; border-radius:0}
-input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none}
-textarea{resize:none; box-sizing:border-box}
-button{border: 0 none; background-color: transparent; cursor: pointer; vertical-align: middle}
-b, strong{font-weight:700}
-input[type="text"], input[type="password"], input[type="number"], input[type="tel"], input[type="email"], input[type="search"]{box-sizing: border-box}
-select{position:relative; display: block; border: 0 none; -webkit-appearance:none; -moz-appearance:none;-o-appearance:none; appearance:none; box-sizing: border-box; padding-left: 3px; background-color: transparent;}
-select::-ms-expand {display: none}
-select option{border: 0 none}
-sub{vertical-align: baseline; font-size: 0.875rem;}
-strong sub{font-weight: 700;}
+body {
+  -webkit-text-size-adjust: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+ol,
+ul,
+li,
+dl,
+dt,
+dd {
+  list-style: none outside none;
+  padding: 0;
+  margin: 0;
+}
+hr {
+  display: none;
+}
+span {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+fieldset,
+img,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+button,
+hr {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: $color-default;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:active,
+a:hover {
+  text-decoration: none;
+}
+input,
+select,
+label {
+  vertical-align: middle;
+}
+input,
+select,
+textarea,
+button {
+  font-size: 1rem;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+}
+input,
+textarea {
+  font-family: $fontFamily; /*border-radius: 0; appearance:none; -webkit-appearance:none;*/
+}
+button,
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="num"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+  box-sizing: border-box;
+}
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+  vertical-align: middle;
+}
+b,
+strong {
+  font-weight: 700;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="search"] {
+  box-sizing: border-box;
+}
+select {
+  position: relative;
+  display: block;
+  border: 0 none; /*appearance:none;*/
+  box-sizing: border-box;
+  padding-left: 3px;
+  background-color: transparent;
+}
+select::-ms-expand {
+  display: none;
+}
+select option {
+  border: 0 none;
+}
+sub {
+  vertical-align: baseline;
+  font-size: 0.875rem;
+}
+strong sub {
+  font-weight: 700;
+}
 
 /* ie Control */
-input::-ms-clear {display:none}
+input::-ms-clear {
+  display: none;
+}
 
-::-webkit-input-placeholder { /* Edge */
+::-webkit-input-placeholder {
+  /* Edge */
   color: $gray2;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: $gray2;
 }
 
@@ -49,61 +296,62 @@ input::-ms-clear {display:none}
 }
 
 /* SkipNavigation */
-#skipNavigation{
-    width:100%;
-	position:absolute;
-	top:-200px;
-	left:0;
-	margin:0 auto;
-	z-index:9999;
+#skipNavigation {
+  width: 100%;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  margin: 0 auto;
+  z-index: 9999;
 
-    a{
-        color:$white;
-        display:block;
-        height:35px;
-        background-color: $color-primary;
-        text-align:center;
+  a {
+    color: $white;
+    display: block;
+    height: 35px;
+    background-color: $color-primary;
+    text-align: center;
 
-        &:active, &:focus{
-            width:100%;
-            color:$white;
-            position:absolute;
-            left:0;
-            top:200px;
-            background: $color-primary;
-            line-height:35px;
-            text-align:center;
-            border-bottom:1px solid #dbdbdb;
-        }
+    &:active,
+    &:focus {
+      width: 100%;
+      color: $white;
+      position: absolute;
+      left: 0;
+      top: 200px;
+      background: $color-primary;
+      line-height: 35px;
+      text-align: center;
+      border-bottom: 1px solid #dbdbdb;
     }
+  }
 }
 
-caption{
-    visibility: hidden;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
+caption {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
 }
 
-legend, .blind{
-    @include blind;
+legend,
+.blind {
+  @include blind;
 }
 
-.clearfix{
-    @include clearfix();
+.clearfix {
+  @include clearfix();
 }
 
-.wid100{
-    width: 100%;
+.wid100 {
+  width: 100%;
 }
 
-img.maxw100{
-    max-width: 100%;
+img.maxw100 {
+  max-width: 100%;
 }
 
-.mgcenter{
-    @include marginCenter();
+.mgcenter {
+  @include marginCenter();
 }
-

@@ -1,0 +1,71 @@
+.btn_exc {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("../images/common/ico_exc.png") no-repeat;
+  background-size: contain;
+
+  span {
+    @include blind();
+  }
+
+  @include mq("deskTop") {
+    width: 31px;
+    height: 31px;
+  }
+}
+
+.bts {
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  background-color: $white;
+  display: inline-block;
+  margin: 2px 0;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+
+  &.btcol1 {
+    color: $skyBlue;
+    border-color: $skyBlue;
+  }
+
+  & + & {
+    margin-left: 2px;
+  }
+
+  @include mq("deskTop") {
+    padding: 3px 15px;
+    font-size: 1rem;
+  }
+}
+
+.bts2 {
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  background-color: $white;
+  display: inline-block;
+  min-width: 80px;
+  margin: 2px 0;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-align: center;
+
+  &.btcol1 {
+    color: $skyBlue;
+    border-color: $skyBlue;
+  }
+
+  &.btcol2 {
+    color: $white;
+    background-color: $skyBlue;
+    border-color: $skyBlue;
+  }
+
+  @include mq("deskTop") {
+    min-width: 134px;
+    padding: 7px 15px;
+    font-size: 1rem;
+  }
+}
