@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신청서 만들기 &gt; 사랑의 헌금 관리시스템</title>
+    <link href="../resources/css/styles.min.css" rel="stylesheet">
+    <link href="../../front/resources/css/love_apply.css" rel="stylesheet">
+    <!-- 사용자 접수 내용 상세보기 관련 css 호출 -->
+    <script src="../resources/js/lib/jquery-3.6.0.min.js"></script>
+    <!-- JQ ui-->
+    <link href="../resources/plugins/ui/jquery-ui.css" rel="stylesheet">
+    <link href="../resources/plugins/ui/jquery-ui.theme.css" rel="stylesheet">
+    <link href="../resources/plugins/ui/jquery-ui.structure.css" rel="stylesheet">
+    <script src="../resources/plugins/ui/jquery-ui.js"></script>
+    <script src="../resources/plugins/pop/jquery.popupoverlay.js"></script>
+  </head>
+  <body>
+    <!-- skip Navigation(s) -->
+    <div id="skipNavigation">
+      <ul>
+        <li>
+          <a href="#contents">본문바로가기</a>
+        </li>
+      </ul>
+    </div>
+    <!--// skip Navigation(e) -->
+    <div id="wrapper">
+      <!-- Header Area(s) -->
+      <header id="header">
+        <div class="hinner">
+          <h1 class="logo">
+            <a href="#"> <strong>사랑의 헌금</strong> 관리시스템 </a>
+          </h1>
+          <div class="nav">
+            <ul class="gnb">
+              <li class="current"><a href="#">신청서</a></li>
+              <li class="mn2"><a href="#">접수</a></li>
+              <li class="mn3"><a href="#">통계</a></li>
+            </ul>
+            <ul class="mymenu">
+              <li class="myface">
+                <div class="face">
+                  <img src="../resources/images/temp/face.jpg" alt>
+                </div>
+                <div class="name">
+                  <span>운영간사</span>
+                  <strong>홍길동</strong>
+                </div>
+              </li>
+              <li>
+                <a href="#">로그아웃</a>
+              </li>
+              <li>
+                <a href="#">마이페이지</a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn-menu btn-nav-position" type="button">
+            <span>메뉴</span>
+          </button>
+        </div>
+      </header>
+      <!--// Header Area(e) -->
+      <!-- Mobile Navigation(s) -->
+      <nav id="menu">
+        <h2>메뉴</h2>
+        <ul class="mo-gnb">
+          <li>
+            <a href="#">
+              <div class="ico ic1"></div>
+              <p>HOME</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ico ic2"></div>
+              <p>신청서</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ico ic3"></div>
+              <p>접수</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ico ic4"></div>
+              <p>통계</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ico ic5"></div>
+              <p>회원관리</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ico ic6"></div>
+              <p>로그아웃</p>
+            </a>
+          </li>
+        </ul>
+        <button class="btn-menuclose btn-nav-position" type="button">
+          <span>닫기</span>
+        </button>
+      </nav>
+      <!--// Mobile Navigation(e) -->
+      <main id="contents">
+        <div class="inner">
+          <section class="sect1">
+            <h3 class="stit1">신청서 만들기</h3>
+            <div class="tit-wrap">
+              <p>※ 필수 입력일 경우 체크해주세요.</p>
+              <div class="right">
+                <button class="bts popPrevLoad_open" type="button">이전 신청서 불러오기</button>
+              </div>
+            </div>
+            <!-- 테이블 영역(s) -->
+            <div class="ad-tbl">
+              <table>
+                <caption>
+                  신청서 만들기
+                </caption>
+                <colgroup class="mq-colgroup-none">
+                  <col style="width: 3%">
+                  <col style="width: 10%">
+                  <col style="width: auto">
+                  <col style="width: 215px">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA1" name type="checkbox" title="선택 1">
+                    </td>
+                    <td class="noneline">
+                      <label for="applyA1"><b>제목</b></label>
+                    </td>
+                    <td class="noneline">
+                      <input class="inpt1 wtxtp70" id="applyA1" name="applyA1" type="text" placeholder="신청서 제목을 입력해주세요.">
+                    </td>
+                    <td>
+                      <label class="dib1" for="applyA1_1"><b>분류</b></label>
+                      <select class="selector" id="applyA1_1">
+                        <option value="">선택</option>
+                        <option value="">상시</option>
+                        <option value="">다니엘기도회</option>
+                        <option value="">창단</option>
+                        <option value="">직접입력</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA2" name type="checkbox" title="선택 2">
+                    </td>
+                    <td class="noneline"><b>헤더이미지</b></td>
+                    <td class="noneline">
+                      <div>
+                        <button class="icobtn ic-pc" type="button">
+                          <span>PC 헤더이미지</span>
+                        </button>
+                        <button class="icobtn ic-mobile" type="button">
+                          <span>모바일 헤더이미지</span>
+                        </button>
+                      </div>
+                      <p class="mt5">
+                        PC용 1920px X 150px, 모바일용 640px X 480px 를
+                        권장합니다.
+                      </p>
+                    </td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA2_1" name="applyRadioA2" type="radio">
+                      <label for="applyRadioA2_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA2_2" name="applyRadioA2" type="radio">
+                      <label for="applyRadioA2_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA3" name type="checkbox" title="선택 3">
+                    </td>
+                    <td class="noneline">
+                      <label for="applyA3"><b>안내</b></label>
+                    </td>
+                    <td class="noneline">
+                      <textarea class="txtarea1" id="applyA3" rows="5" placeholder="안내문구 입력해주세요."></textarea>
+                      <div class="mt10">
+                        <input class="admbtn-upload" id="upload1" name="upload1" type="file">
+                        <label for="upload1"><span>첨부파일</span></label>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA3_1" name="applyRadioA3" type="radio">
+                      <label for="applyRadioA3_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA3_2" name="applyRadioA3" type="radio">
+                      <label for="applyRadioA3_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA4" name type="checkbox" title="선택 4">
+                    </td>
+                    <td class="noneline"><b>대상</b></td>
+                    <td class="noneline">
+                      <div class="dib mg-sp10">
+                        <label class="dib1" for="applyA4_1">대상 1</label>
+                        <select class="selector" id="applyA4_1">
+                          <option value="">선택</option>
+                          <option value="">목회자</option>
+                          <option value="">선교사</option>
+                          <option value="">일반</option>
+                        </select>
+                      </div>
+                      <div class="dib mg-sp10">
+                        <label class="dib1" for="applyA4_2">대상 2</label>
+                        <select class="selector" id="applyA4_2">
+                          <option value="">선택</option>
+                          <option value="">본인</option>
+                          <option value="">가족</option>
+                          <option value="">기타</option>
+                        </select>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA4_1" name="applyRadioA4" type="radio">
+                      <label for="applyRadioA4_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA4_2" name="applyRadioA4" type="radio">
+                      <label for="applyRadioA4_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA5" name type="checkbox" title="선택 5">
+                    </td>
+                    <td class="noneline"><b>기간</b></td>
+                    <td class="noneline">
+                      <div class="dib">
+                        <input class="datepicker" type="text" title="시작일" placeholder="YYYY.MM.DD">
+                      </div>
+                      <div class="dib">~</div>
+                      <div class="dib">
+                        <input class="datepicker" type="text" title="시작일" placeholder="YYYY.MM.DD">
+                      </div>
+                    </td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA5_1" name="applyRadioA5" type="radio">
+                      <label for="applyRadioA5_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA5_2" name="applyRadioA5" type="radio">
+                      <label for="applyRadioA5_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA6" name type="checkbox" title="선택 6">
+                    </td>
+                    <td class="noneline"><b>의료정보</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA6_1" name="applyRadioA6" type="radio">
+                      <label for="applyRadioA6_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA6_2" name="applyRadioA6" type="radio">
+                      <label for="applyRadioA6_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA7" name type="checkbox" title="선택 7">
+                    </td>
+                    <td class="noneline"><b>주소</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA7_1" name="applyRadioA7" type="radio">
+                      <label for="applyRadioA7_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA7_2" name="applyRadioA7" type="radio">
+                      <label for="applyRadioA7_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA8" name type="checkbox" title="선택 8">
+                    </td>
+                    <td class="noneline"><b>연락처</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA8_1" name="applyRadioA8" type="radio">
+                      <label for="applyRadioA8_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA8_2" name="applyRadioA8" type="radio">
+                      <label for="applyRadioA8_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA9" name type="checkbox" title="선택 9">
+                    </td>
+                    <td class="noneline"><b>이메일</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA9_1" name="applyRadioA9" type="radio">
+                      <label for="applyRadioA9_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA9_2" name="applyRadioA9" type="radio">
+                      <label for="applyRadioA9_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA10" name type="checkbox" title="선택 10">
+                    </td>
+                    <td class="noneline"><b>은행정보</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA10_1" name="applyRadioA10" type="radio">
+                      <label for="applyRadioA10_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA10_2" name="applyRadioA10" type="radio">
+                      <label for="applyRadioA10_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA11" name type="checkbox" title="선택 11">
+                    </td>
+                    <td class="noneline"><b>신청내용</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA11_1" name="applyRadioA11" type="radio">
+                      <label for="applyRadioA11_1">사용</label>
+                      <input class="radio ml11" id="applyRadioA11_2" name="applyRadioA11" type="radio">
+                      <label for="applyRadioA11_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA12" name type="checkbox" title="선택 12">
+                    </td>
+                    <td class="noneline">
+                      <label for="applyA12"><b>가족등록</b></label>
+                    </td>
+                    <td class="noneline">
+                      <select class="selector" id="applyA12">
+                        <option value="">선택</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                      </select>
+                    </td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA12_1" name="applyRadioA12" type="radio">
+                      <label for="applyRadioA12_1">사용</label>
+                      <input class="radio ml12" id="applyRadioA12_2" name="applyRadioA12" type="radio">
+                      <label for="applyRadioA12_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA13" name type="checkbox" title="선택 13">
+                    </td>
+                    <td class="noneline"><b>첨부파일</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA13_1" name="applyRadioA13" type="radio">
+                      <label for="applyRadioA13_1">사용</label>
+                      <input class="radio ml12" id="applyRadioA13_2" name="applyRadioA13" type="radio">
+                      <label for="applyRadioA13_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">
+                      <div class="flexbp">
+                        <dl>
+                          <dt>목회자 &middot; 일반</dt>
+                          <dd>
+                            <span class="item">
+                              3개월이내 진단서 1부
+                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
+                            </span>
+                            <span class="item">
+                              3개월간 건강보험 납입증명서 1부
+                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
+                            </span>
+                            <span class="item">
+                              최근 병원진료비 납입 영수증 1부
+                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
+                            </span>
+                            <span class="item">
+                              주민등록 등본 1부
+                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
+                            </span>
+                            <div>
+                              <button class="btn-add" type="button" title="추가"><span>+</span></button>
+                            </div>
+                          </dd>
+                        </dl>
+                        <dl>
+                          <dt>선교사</dt>
+                          <dd>
+                            <span class="item">
+                              3개월이내 진단서 1부
+                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
+                            </span>
+                            <span class="item">
+                              재직증명서
+                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
+                            </span>
+                            <span class="item">
+                              최근 병원진료비 납입 영수증 1부
+                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
+                            </span>
+                            <span class="item">
+                              주민등록 등본 1부
+                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
+                            </span>
+                            <div>
+                              <button class="btn-add" type="button" title="추가"><span>+</span></button>
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA11" name type="checkbox" title="선택 14">
+                    </td>
+                    <td class="noneline"><b>추천자</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA14_1" name="applyRadioA14" type="radio">
+                      <label for="applyRadioA14_1">사용</label>
+                      <input class="radio ml14" id="applyRadioA14_2" name="applyRadioA14" type="radio">
+                      <label for="applyRadioA14_2">미사용</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--// 테이블 영역(e) -->
+          </section>
+
+          <div class="btn-wrap">
+            <div class="right">
+              <button class="bts2 btcol2" type="button"><span>등록</span></button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- 팝업(s) -->
+    <div class="popwrap widtype1" id="popPrevLoad">
+      <section class="pop-contents">
+        <h3 class="stit2">신청서 목록</h3>
+        <ul class="list-comm btrm">
+          <li>
+            <p>22년 사랑의 헌금(상시) 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 청년다니엘기도회 1차 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 다니엘기도회 사랑의 헌금 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <button class="pop-close popPrevLoad_close" type="button"><span>팝업닫기</span></button>
+    </div>
+    <!--// 팝업(e) -->
+
+    <script src="../resources/js/common.js" type="text/javascript"></script>
+    <script src="../resources/js/gnb.js" type="text/javascript"></script>
+    <script src="../../front/resources/js/love.js"></script>
+    <!-- 사용자 접수 내용 상세보기 관련 css 호출 -->
+  </body>
+</html>

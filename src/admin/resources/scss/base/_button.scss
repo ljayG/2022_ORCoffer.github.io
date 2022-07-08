@@ -30,6 +30,18 @@
     border-color: $skyBlue;
   }
 
+  &.btcol2 {
+    color: $white;
+    background-color: $skyBlue;
+    border-color: $skyBlue;
+  }
+
+  &.btcol3 {
+    color: $white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
   & + & {
     margin-left: 2px;
   }
@@ -68,4 +80,65 @@
     padding: 7px 15px;
     font-size: 1rem;
   }
+}
+
+.icobtn {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  span {
+    @include blind();
+  }
+
+  &.ic-pc {
+    width: 28px;
+    height: 28px;
+    background-image: url("../images/btn/btn_desk.png");
+  }
+
+  &.ic-mobile {
+    width: 28px;
+    height: 28px;
+    background-image: url("../images/btn/btn_mobile.png");
+  }
+
+  & + & {
+    margin-left: 4px;
+  }
+}
+
+.admbtn-upload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+
+  & + label {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url("../images/btn/btn_upload.png") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+
+    span {
+      @include blind();
+    }
+  }
+}
+
+.btn-add {
+  background-color: $color-default;
+  color: $white;
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 6px;
 }

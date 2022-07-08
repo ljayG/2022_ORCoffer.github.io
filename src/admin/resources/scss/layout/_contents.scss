@@ -70,6 +70,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
 .stit1 {
@@ -98,6 +99,18 @@ body {
     &::before {
       top: 8px;
     }
+  }
+}
+
+.stit2 {
+  color: $color-primary;
+  border-bottom: 2px solid $color-primary;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+
+  @include mq("deskTop") {
+    font-size: 1.5rem;
   }
 }
 
@@ -476,6 +489,30 @@ body {
   }
 }
 
+.dib {
+  display: inline-block;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
 .ml5 {
   margin-left: 5px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mg-sp10 {
+  margin-bottom: 10px;
+
+  @include mq("deskTop") {
+    margin: 0 20px 0 0;
+  }
 }

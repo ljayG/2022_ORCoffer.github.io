@@ -1,0 +1,51 @@
+.popwrap {
+  background-color: $white;
+  box-shadow: rgba($black, 0.32) 3px 0 10px;
+  position: relative;
+
+  &.widtype1 {
+    width: 90%;
+    max-width: 545px;
+  }
+
+  &.widtype2 {
+    width: 90%;
+    max-width: 680px;
+  }
+
+  .pop-close {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    top: 10px;
+    right: 10px;
+
+    span {
+      @include ir();
+      display: block;
+      width: 18px;
+      height: 18px;
+      margin: auto;
+      background: url("../images/btn/close.png") no-repeat;
+      background-size: contain;
+    }
+
+    @include mq("deskTop") {
+      .lvpop_colse {
+        width: 50px;
+        height: 50px;
+
+        span {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}
+
+.pop-contents {
+  padding: 30px 25px 40px;
+}

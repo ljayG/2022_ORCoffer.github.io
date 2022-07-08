@@ -103,6 +103,64 @@
   }
 }
 
+.list-comm {
+  & > li {
+    position: relative;
+    padding-left: 8px;
+    margin-top: 15px;
+    font-size: 0.75rem;
+
+    &::before {
+      background-color: $color-default;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      top: 8px;
+      left: 0;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    @include mq("deskTop") {
+      margin-top: 35px;
+      font-size: 1rem;
+
+      &::before {
+        top: 13px;
+      }
+    }
+  }
+
+  &.btrm {
+    & > li {
+      p {
+        @include textOverflow();
+        padding-right: 140px;
+      }
+
+      .btnw-r {
+        position: absolute;
+        top: -4px;
+        right: 0;
+      }
+
+      @include mq("deskTop") {
+        p {
+          padding-right: 190px;
+        }
+
+        .btnw-r {
+          top: -6px;
+        }
+      }
+    }
+  }
+}
+
 .ad-tbl {
   border-top: 1px solid $color-primary;
   border-bottom: 1px solid $color-primary;
@@ -135,7 +193,8 @@
           left: 0;
         }
 
-        &:first-child {
+        &:first-child,
+        &.noneline {
           &::before {
             display: none;
           }
@@ -181,7 +240,7 @@
 
       th,
       td {
-        padding: 5px 8px;
+        padding: 10px;
         font-size: 1rem;
       }
     }
@@ -278,6 +337,105 @@
 
     @include mq("deskTop") {
       margin: 0 8px;
+    }
+  }
+}
+
+.btn-wrap {
+  @include clearfix();
+  margin-top: 24px;
+
+  .right {
+    float: right;
+  }
+}
+
+@include mq("deskTop") {
+  .dib1 {
+    display: inline-block;
+    width: 50px;
+  }
+}
+
+.flexbp {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+  overflow: hidden;
+
+  dl {
+    flex: 0 100%;
+
+    dt {
+      background-color: $white;
+      border-bottom: 1px solid $gray;
+      padding: 6px 0;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+
+    dd {
+      background-color: $gray3;
+      padding: 20px 6%;
+      height: 100%;
+    }
+  }
+
+  .item {
+    border: 1px solid $gray;
+    position: relative;
+    display: inline-block;
+    border-radius: 6px;
+    text-align: center;
+    padding: 3px 24px 3px 8px;
+    font-size: 0.75rem;
+    margin: 0 8px 8px 0;
+
+    .btndel {
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: url("../images/btn/btn_del.png") no-repeat center;
+      background-size: 12px;
+
+      span {
+        @include blind();
+      }
+    }
+  }
+
+  @include mq("deskTop") {
+    justify-content: stretch;
+    margin: -10px;
+
+    dl {
+      flex: 1 50%;
+
+      dt {
+        padding: 13px 0;
+        font-size: 1rem;
+      }
+
+      & + dl {
+        border-left: 1px solid $gray;
+      }
+    }
+
+    .item {
+      padding-right: 35px;
+      font-size: 1rem;
+
+      .btndel {
+        position: absolute;
+        width: 32px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: url("../images/btn/btn_del.png") no-repeat center;
+        background-size: 18px;
+      }
     }
   }
 }
