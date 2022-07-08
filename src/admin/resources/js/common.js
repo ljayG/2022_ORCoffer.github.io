@@ -71,4 +71,11 @@ $(function () {
     scrolllock: true,
     transition: "all 0.3s",
   });
+
+  $("#searchDateType").change(function () {
+    let result = $("#searchDateType option:selected").val();
+    let selector = $(".date-select");
+    selector.removeClass("on");
+    $("#" + result).addClass("on");
+  });
 });

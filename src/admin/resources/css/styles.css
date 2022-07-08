@@ -512,6 +512,22 @@ img.maxw100 {
   }
 }
 
+.bts3 {
+  color: #fff;
+  border: 1px solid #3899ec;
+  background-color: #3899ec;
+  display: inline-block;
+  padding: 2px 15px 3px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .bts3 {
+    font-size: 1rem;
+  }
+}
+
 .icobtn {
   display: inline-block;
   vertical-align: middle;
@@ -620,6 +636,30 @@ img.maxw100 {
 .inpt1.wtxtp70 {
   width: 70%;
 }
+.inpt1.wtxt1 {
+  width: 80px;
+}
+.inpt1.my {
+  text-align: right;
+}
+
+.inpt2 {
+  border: 1px solid #dfe5eb;
+  display: inline-block;
+  width: 100%;
+  height: 25px;
+  padding: 0 10px;
+  font-size: 0.75rem;
+  line-height: 24px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1024px) {
+  .inpt2 {
+    height: 31px;
+    font-size: 1rem;
+    line-height: 30px;
+  }
+}
 
 .datepicker {
   border: 1px solid #9b9b9b;
@@ -630,6 +670,10 @@ img.maxw100 {
   font-size: 0.75rem;
   box-sizing: border-box;
   border-radius: 6px !important;
+}
+.datepicker.inpt2 {
+  border: 1px solid #dfe5eb;
+  border-radius: 0 !important;
 }
 @media screen and (min-width: 1024px) {
   .datepicker {
@@ -651,6 +695,33 @@ img.maxw100 {
 @media screen and (min-width: 1024px) {
   .txtarea1 {
     font-size: 1rem;
+  }
+}
+
+.list-search {
+  margin-top: 10px;
+}
+.list-search .date-select {
+  display: none;
+}
+.list-search .date-select.on {
+  display: inline-block;
+}
+.list-search .datepicker {
+  width: 85px;
+}
+.list-search .search-inp {
+  width: 200px;
+}
+@media screen and (min-width: 1024px) {
+  .list-search {
+    margin-top: 0;
+  }
+  .list-search .datepicker {
+    width: 120px;
+  }
+  .list-search .search-inp {
+    width: 250px;
   }
 }
 
@@ -1034,6 +1105,7 @@ body .mainbody {
 .tit-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   margin-bottom: 15px;
 }
@@ -1624,7 +1696,7 @@ body .mainbody {
   .ad-tbl table th,
 .ad-tbl table td {
     padding: 10px;
-    font-size: 1rem;
+    font-size: 0.813rem;
   }
 }
 

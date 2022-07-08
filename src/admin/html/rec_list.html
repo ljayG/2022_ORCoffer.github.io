@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>접수 &gt; 사랑의 헌금 관리시스템</title>
+    <link href="../resources/css/styles.min.css" rel="stylesheet">
+    <link href="../../front/resources/css/love_apply.css" rel="stylesheet">
+    <!-- 사용자 접수 내용 상세보기 관련 css 호출 -->
+    <script src="../resources/js/lib/jquery-3.6.0.min.js"></script>
+    <!-- JQ ui-->
+    <link href="../resources/plugins/ui/jquery-ui.css" rel="stylesheet">
+    <link href="../resources/plugins/ui/jquery-ui.theme.css" rel="stylesheet">
+    <link href="../resources/plugins/ui/jquery-ui.structure.css" rel="stylesheet">
+    <script src="../resources/plugins/ui/jquery-ui.js"></script>
+    <script src="../resources/plugins/pop/jquery.popupoverlay.js"></script>
+  </head>
+  <body>
+    <!-- skip Navigation(s) -->
+    <div id="skipNavigation">
+      <ul>
+        <li>
+          <a href="#contents">본문바로가기</a>
+        </li>
+      </ul>
+    </div>
+    <!--// skip Navigation(e) -->
+    <div id="wrapper">
+      <!-- Header Area(s) -->
+      <header id="header">
+        <div class="hinner">
+          <h1 class="logo">
+            <a href="#"> <strong>사랑의 헌금</strong> 관리시스템 </a>
+          </h1>
+          <div class="nav">
+            <ul class="gnb">
+              <li><a href="app_list.html">신청서</a></li>
+              <li class="mn2 current"><a href="rec_list.html">접수</a></li>
+              <li class="mn3"><a href="list.html">통계</a></li>
+            </ul>
+            <ul class="mymenu">
+              <li class="myface">
+                <div class="face">
+                  <img src="../resources/images/temp/face.jpg" alt>
+                </div>
+                <div class="name">
+                  <span>운영간사</span>
+                  <strong>홍길동</strong>
+                </div>
+              </li>
+              <li>
+                <a href="#">로그아웃</a>
+              </li>
+              <li>
+                <a href="#">마이페이지</a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn-menu btn-nav-position" type="button">
+            <span>메뉴</span>
+          </button>
+        </div>
+      </header>
+      <!--// Header Area(e) -->
+      <!-- Mobile Navigation(s) -->
+      <nav id="menu">
+        <h2>메뉴</h2>
+        <ul class="mo-gnb">
+          <li>
+            <a href="#">
+              <div class="ico ic1"></div>
+              <p>HOME</p>
+            </a>
+          </li>
+          <li>
+            <a href="app_list.html">
+              <div class="ico ic2"></div>
+              <p>신청서</p>
+            </a>
+          </li>
+          <li>
+            <a href="rec_list.html">
+              <div class="ico ic3"></div>
+              <p>접수</p>
+            </a>
+          </li>
+          <li>
+            <a href="list.html">
+              <div class="ico ic4"></div>
+              <p>통계</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ico ic5"></div>
+              <p>회원관리</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ico ic6"></div>
+              <p>로그아웃</p>
+            </a>
+          </li>
+        </ul>
+        <button class="btn-menuclose btn-nav-position" type="button">
+          <span>닫기</span>
+        </button>
+      </nav>
+      <!--// Mobile Navigation(e) -->
+      <main id="contents">
+        <div class="inner">
+          <section class="sect1">
+            <h3 class="stit1">접수</h3>
+            <div class="tit-wrap">
+              <p>등록 : 9,836</p>
+              <div class="list-search">
+                <form>
+                  <fieldset>
+                    <legend>목록검색</legend>
+                    <button class="btn_exc" type="button">
+                      <span>엑셀파일 다운로드</span>
+                    </button>
+                    <label class="blind" for="searchDateType">기간 검색방법선택</label>
+                    <select class="selector" id="searchDateType" name="selectSrcType">
+                      <option value="srcType1">년도선택</option>
+                      <option value="srcType2">기간선택</option>
+                    </select>
+
+                    <!-- 년도선택시(Default)(s) -->
+                    <div class="dib date-select on" id="srcType1">
+                      <label class="blind" for="searchYear">년도검색</label>
+                      <select class="selector" id="searchYear">
+                        <option value="">2022</option>
+                        <option value="">2021</option>
+                        <option value="">2020</option>
+                        <option value="">2019</option>
+                      </select>
+                    </div>
+                    <!--// 년도선택시(Default)(e) -->
+
+                    <!-- 기간선택시(s) -->
+                    <div class="dib date-select" id="srcType2">
+                      <label class="blind" for="searchDate">기간검색</label>
+                      <select class="selector" id="searchDate">
+                        <option value="">전체</option>
+                        <option value="">1 주일</option>
+                        <option value="">1 개월</option>
+                        <option value="">3 개월</option>
+                        <option value="">6 개월</option>
+                        <option value="">1년</option>
+                        <option value="">직접입력</option>
+                      </select>
+                      <input class="inpt2 datepicker" type="text" title="시작일" placeholder="YYYY.MM.DD">
+                      ~
+                      <input class="inpt2 datepicker" type="text" title="시작일" placeholder="YYYY.MM.DD">
+                    </div>
+                    <!--// 기간선택시(e) -->
+
+                    <input class="inpt2 search-inp" type="text" placeholder="검색어 입력">
+                    <button class="bts3" type="button">
+                      <span>검색</span>
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <!-- 테이블 영역(s) -->
+            <div class="ad-tbl">
+              <table>
+                <caption>
+                  접수 목록
+                </caption>
+                <colgroup class="mq-colgroup-none">
+                  <col style="width: 3%">
+                  <col style="width: 3%">
+                  <col style="width: 5%">
+                  <col style="width: 5%">
+                  <col style="width: 5%">
+                  <col style="width: 4%">
+                  <col style="width: 4%">
+                  <col style="width: 8%">
+                  <col style="width: 5%">
+                  <col style="width: 5%">
+                  <col style="width: 5%">
+                  <col style="width: 5%">
+                  <col style="width: 5%">
+                  <col style="width: 5%">
+                  <col style="width: 4%">
+                  <col style="width: 10%">
+                  <col style="width: 10%">
+                  <col style="width: 6%">
+                  <col style="width: 3%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" rowspan="2">선택</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">번호</th>
+                    <th scope="col" rowspan="2">고유번호</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">분류</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">직분</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">구분</th>
+                    <th scope="col" rowspan="2">성명</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">연락처</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">나이</th>
+                    <th class="mq-mb-none" scope="colgroup" colspan="3">주소</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">등록일</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">첨부</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">추가</th>
+                    <th scope="col" rowspan="2">선정여부</th>
+                    <th scope="col" rowspan="2">지급금액</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">비고/메모</th>
+                    <th class="mq-mb-none" scope="col" rowspan="2">출력</th>
+                  </tr>
+                  <tr>
+                    <th class="mq-mb-none" scope="col">지역</th>
+                    <th class="mq-mb-none" scope="col">시</th>
+                    <th class="mq-mb-none" scope="col">군,구,읍</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id name type="checkbox" title="선택 1">
+                    </td>
+                    <td class="nm mq-mb-none">1</td>
+                    <td class="nm">AB2201</td>
+                    <td class="nm mq-mb-none">다니엘</td>
+                    <td class="nm mq-mb-none">목회자</td>
+                    <td class="nm mq-mb-none">본인</td>
+                    <td class="nm">홍길동</td>
+                    <td class="nm mq-mb-none">000-0000-0000</td>
+                    <td class="nm mq-mb-none">50</td>
+                    <td class="nm mq-mb-none">경기</td>
+                    <td class="nm mq-mb-none">하남</td>
+                    <td class="nm mq-mb-none">초월</td>
+                    <td class="nm mq-mb-none">22-02-12</td>
+                    <td class="nm mq-mb-none">2</td>
+                    <td class="nm mq-mb-none">-</td>
+                    <td class="nm">-</td>
+                    <td class="nm">
+                      <input class="inpt1 my" type="text" value="100,000">
+                    </td>
+                    <td class="nm mq-mb-none">2</td>
+                    <td class="nm mq-mb-none">2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--// 테이블 영역(e) -->
+            <!-- paging(s) -->
+            <div class="page_wrap">
+              <div class="paging">
+                <a class="arr first" href="#"><span>처음으로</span></a>
+                <a class="arr prev" href="#"><span>이전</span></a>
+                <a class="num" href="#">3</a>
+                <a class="num" href="#">4</a>
+                <a class="num current" href="#">5</a>
+                <a class="num" href="#">6</a>
+                <a class="num" href="#">7</a>
+                <a class="arr next" href="#"><span>다음</span></a>
+                <a class="arr last" href="#"><span>마지막으로</span></a>
+              </div>
+              <div class="page_btnwrap">
+                <div class="right">
+                  <a class="bts2 btcol1" href="app_write.html"><span>등록</span></a>
+                </div>
+              </div>
+            </div>
+            <!--// paging(e) -->
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../resources/js/common.js" type="text/javascript"></script>
+    <script src="../resources/js/gnb.js" type="text/javascript"></script>
+    <script src="../../front/resources/js/love.js"></script>
+    <!-- 사용자 접수 내용 상세보기 관련 css 호출 -->
+  </body>
+</html>

@@ -82,6 +82,21 @@
   }
 }
 
+.bts3 {
+  color: $white;
+  border: 1px solid $skyBlue;
+  background-color: $skyBlue;
+  display: inline-block;
+  padding: 2px 15px 3px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  text-align: center;
+
+  @include mq("deskTop") {
+    font-size: 1rem;
+  }
+}
+
 .icobtn {
   display: inline-block;
   vertical-align: middle;
