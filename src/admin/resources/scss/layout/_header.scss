@@ -116,12 +116,12 @@
                 color: $white;
                 background-color: $orange;
               }
+            }
 
-              &.current {
-                & > a {
-                  color: $white;
-                  background-color: $orange;
-                }
+            &.current {
+              & > a {
+                color: $white;
+                background-color: $orange;
               }
             }
           }

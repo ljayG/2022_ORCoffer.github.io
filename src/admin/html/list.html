@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통계 &gt; 사랑의 헌금 관리시스템</title>
+    <link href="../resources/css/styles.min.css" rel="stylesheet">
+    <link href="../../front/resources/css/love_apply.css" rel="stylesheet"> <!-- 사용자 접수 내용 상세보기 관련 css 호출 -->
+    <script src="../resources/js/lib/jquery-3.6.0.min.js"></script>
+    <!-- JQ ui-->
+    <link href="../resources/plugins/ui/jquery-ui.css" rel="stylesheet">
+    <link href="../resources/plugins/ui/jquery-ui.theme.css" rel="stylesheet">
+    <link href="../resources/plugins/ui/jquery-ui.structure.css" rel="stylesheet">
+    <script src="../resources/plugins/ui/jquery-ui.js"></script>
+    <script src="../resources/plugins/pop/jquery.popupoverlay.js"></script>
+  </head>
+  <body>
+    <!-- skip Navigation(s) -->
+    <div id="skipNavigation">
+      <ul>
+        <li>
+          <a href="#contents">본문바로가기</a>
+        </li>
+      </ul>
+    </div>
+    <!--// skip Navigation(e) -->
+    <div id="wrapper">
+      <!-- Header Area(s) -->
+      <header id="header">
+        <div class="hinner">
+          <h1 class="logo">
+            <a href="#"> <strong>사랑의 헌금</strong> 관리시스템 </a>
+          </h1>
+          <div class="nav">
+            <ul class="gnb">
+              <li><a href="app_list.html">신청서</a></li>
+              <li class="mn2"><a href="rec_list.html">접수</a></li>
+              <li class="mn3 current"><a href="list.html">통계</a></li>
+            </ul>
+            <ul class="mymenu">
+              <li class="myface">
+                <div class="face">
+                  <img src="../resources/images/temp/face.jpg" alt>
+                </div>
+                <div class="name">
+                  <span>운영간사</span>
+                  <strong>홍길동</strong>
+                </div>
+              </li>
+              <li>
+                <a href="#">로그아웃</a>
+              </li>
+              <li>
+                <a href="#">마이페이지</a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn-menu btn-nav-position" type="button">
+            <span>메뉴</span>
+          </button>
+        </div>
+      </header>
+      <!--// Header Area(e) -->
+      <!-- Mobile Navigation(s) -->
+      <nav id="menu">
+        <h2>메뉴</h2>
+        <ul class="mo-gnb">
+          <li>
+            <a href="#">
+              <div class="ico ic1"></div>
+              <p>HOME</p>
+            </a>
+          </li>
+          <li>
+            <a href="app_list.html">
+              <div class="ico ic2"></div>
+              <p>신청서</p>
+            </a>
+          </li>
+          <li>
+            <a href="rec_list.html">
+              <div class="ico ic3"></div>
+              <p>접수</p>
+            </a>
+          </li>
+          <li>
+            <a href="list.html">
+              <div class="ico ic4"></div>
+              <p>통계</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ico ic5"></div>
+              <p>회원관리</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="ico ic6"></div>
+              <p>로그아웃</p>
+            </a>
+          </li>
+        </ul>
+        <button class="btn-menuclose btn-nav-position" type="button">
+          <span>닫기</span>
+        </button>
+      </nav>
+      <!--// Mobile Navigation(e) -->
+      <main id="contents">
+        <div class="inner">
+          <section class="sect1">
+            <div class="tit-wrap">
+              <h3 class="stit1">월별 현황</h3>
+              <div class="right">
+                <button class="btn_exc" type="button">
+                  <span>엑셀파일 다운로드</span>
+                </button>
+                <select class="selector">
+                  <option>년도선택</option>
+                </select>
+              </div>
+            </div>
+            <!-- 테이블 영역(s) -->
+            <div class="ad-tbl">
+              <!-- PC 화면(s) -->
+              <div class="tablet-show">
+                <table>
+                  <caption>
+                    월별 현황
+                  </caption>
+                  <colgroup>
+                    <col style="width: 7.6%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                    <col style="width: 7.7%">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">1</th>
+                      <th scope="col">2</th>
+                      <th scope="col">3</th>
+                      <th scope="col">4</th>
+                      <th scope="col">5</th>
+                      <th scope="col">6</th>
+                      <th scope="col">7</th>
+                      <th scope="col">8</th>
+                      <th scope="col">9</th>
+                      <th scope="col">10</th>
+                      <th scope="col">11</th>
+                      <th scope="col">12</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nm" scope="row">신청(명)</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">선정(명)</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">금액(명)</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--// PC 화면(e) -->
+              <!-- 모바일 화면(s) -->
+              <div class="onlymobile-show">
+                <table>
+                  <caption>
+                    월별 현황
+                  </caption>
+                  <colgroup>
+                    <col style="width: 25%">
+                    <col style="width: 25%">
+                    <col style="width: 25%">
+                    <col style="width: 25%">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">월</th>
+                      <th scope="col">신청(명)</th>
+                      <th scope="col">선정(명)</th>
+                      <th scope="col">금액(원)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="nm" scope="row">1</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">2</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">3</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">4</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">5</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">6</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">7</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">8</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">9</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">10</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">11</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                    <tr>
+                      <td class="nm" scope="row">12</td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                      <td class="nm"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--// 모바일 화면(e) -->
+            </div>
+            <!--// 테이블 영역(e) -->
+          </section>
+
+          <section class="sect1">
+            <div class="tit-wrap">
+              <h3 class="stit1">사업별 현황</h3>
+              <div class="right">
+                <button class="btn_exc" type="button">
+                  <span>엑셀파일 다운로드</span>
+                </button>
+                <select class="selector">
+                  <option>년도선택</option>
+                </select>
+              </div>
+            </div>
+            <!-- 테이블 영역(s) -->
+            <div class="ad-tbl">
+              <table>
+                <caption>
+                  사업별 현황
+                </caption>
+                <colgroup class="mq-colgroup-none">
+                  <col style="width: 5%">
+                  <col style="width: 50%">
+                  <col style="width: 10%">
+                  <col style="width: 10%">
+                  <col style="width: 25%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">사업명</th>
+                    <th scope="col">신청(명)</th>
+                    <th scope="col">선정(명)</th>
+                    <th scope="col">금액(원)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="nm">1</td>
+                    <td class="tx">사업명 사업명1213141241</td>
+                    <td class="nm">10</td>
+                    <td class="nm">10</td>
+                    <td class="my">1,000,000</td>
+                  </tr>
+                  <tr>
+                    <td class="nm">2</td>
+                    <td class="tx">사업명 사업명121 사업 사업3141241</td>
+                    <td class="nm">20</td>
+                    <td class="nm">20</td>
+                    <td class="my">5,000,000</td>
+                  </tr>
+                  <tr>
+                    <td class="nm">3</td>
+                    <td class="tx">사업명 사업명121 사업 사업3141241</td>
+                    <td class="nm">20</td>
+                    <td class="nm">20</td>
+                    <td class="my">5,000,000</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th class="nm" colspan="2">합계</th>
+                    <td class="nm"></td>
+                    <td class="nm"></td>
+                    <td class="my"></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!--// 테이블 영역(e) -->
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../resources/js/common.js" type="text/javascript"></script>
+    <script src="../resources/js/gnb.js" type="text/javascript"></script>
+    <script src="../../front/resources/js/love.js"></script> <!-- 사용자 접수 내용 상세보기 관련 css 호출 -->
+  </body>
+</html>

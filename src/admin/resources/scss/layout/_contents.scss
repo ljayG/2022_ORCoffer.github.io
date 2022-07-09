@@ -39,6 +39,36 @@ body {
   }
 }
 
+.desk-show {
+  display: none;
+
+  @include mq("deskTop") {
+    display: block;
+  }
+}
+
+.tablet-show {
+  display: none;
+
+  @include mq("tablet") {
+    display: block;
+  }
+}
+
+.onlymobile-show {
+  display: none;
+
+  @include mq("onlyMobile") {
+    display: block;
+  }
+}
+
+@include mq("deskTop") {
+  .mobile-show {
+    display: none;
+  }
+}
+
 .roundbox {
   background-color: $white;
   box-shadow: rgba($blue, 0.2) 3px 0 10px;

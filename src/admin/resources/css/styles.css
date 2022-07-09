@@ -742,16 +742,20 @@ img.maxw100 {
   background-color: #fff;
   display: inline-block;
   height: 25px;
-  padding: 0 10px;
+  padding: 0 25px 0 10px;
   font-size: 0.75rem;
   line-height: 24px;
   box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("../images/common/select_arr.png") no-repeat 93% center;
 }
 @media screen and (min-width: 1024px) {
   .selector {
     height: 31px;
     font-size: 1rem;
-    line-height: 30pc;
+    line-height: 30px;
   }
 }
 
@@ -978,7 +982,7 @@ img.maxw100 {
     color: #fff;
     background-color: #f6864c;
   }
-  #header .nav .gnb > li.mn3 > a.current > a {
+  #header .nav .gnb > li.mn3.current > a {
     color: #fff;
     background-color: #f6864c;
   }
@@ -1234,6 +1238,38 @@ body .mainbody {
   }
 }
 
+.desk-show {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .desk-show {
+    display: block;
+  }
+}
+
+.tablet-show {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .tablet-show {
+    display: block;
+  }
+}
+
+.onlymobile-show {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .onlymobile-show {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-show {
+    display: none;
+  }
+}
 .roundbox {
   background-color: #fff;
   box-shadow: rgba(104, 144, 184, 0.2) 3px 0 10px;
@@ -1931,6 +1967,31 @@ body .mainbody {
 }
 .ad-tbl table .my {
   text-align: right;
+}
+.ad-tbl table tfoot th {
+  color: #f6864c;
+}
+.ad-tbl table tfoot th,
+.ad-tbl table tfoot td {
+  border-top: 1px solid #f6864c;
+  position: relative;
+}
+.ad-tbl table tfoot th::before,
+.ad-tbl table tfoot td::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #dfe5eb;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50%;
+  left: 0;
+}
+.ad-tbl table tfoot th:first-child::before, .ad-tbl table tfoot th.noneline::before,
+.ad-tbl table tfoot td:first-child::before,
+.ad-tbl table tfoot td.noneline::before {
+  display: none;
 }
 @media screen and (min-width: 1024px) {
   .ad-tbl table tbody tr:hover td {

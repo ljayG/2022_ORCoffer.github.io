@@ -3,15 +3,17 @@
   background-color: $white;
   display: inline-block;
   height: 25px;
-  padding: 0 10px;
+  padding: 0 25px 0 10px;
   font-size: 0.75rem;
   line-height: 24px;
   box-sizing: border-box;
+  appearance: none;
+  background: url("../images/common/select_arr.png") no-repeat 93% center;
 
   @include mq("deskTop") {
     height: 31px;
     font-size: 1rem;
-    line-height: 30pc;
+    line-height: 30px;
   }
 }
 
