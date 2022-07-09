@@ -1229,6 +1229,9 @@ body .mainbody {
   #contents .inner.type2 {
     max-width: 1252px;
   }
+  #contents .inner.type3 {
+    max-width: 1178px;
+  }
 }
 
 .roundbox {
@@ -1285,6 +1288,18 @@ body .mainbody {
   left: 0;
   border-radius: 4px;
 }
+.stit1 .smallin {
+  display: inline-block;
+  position: relative;
+  font-size: 0.813rem;
+  font-weight: 400;
+  margin-left: 5px;
+}
+.stit1 .smallin::before {
+  content: ">";
+  display: inline-block;
+  margin-right: 8px;
+}
 @media screen and (min-width: 1024px) {
   .stit1 {
     margin-bottom: 15px;
@@ -1292,6 +1307,9 @@ body .mainbody {
   }
   .stit1::before {
     top: 8px;
+  }
+  .stit1 .smallin {
+    font-size: 1.125rem;
   }
 }
 
