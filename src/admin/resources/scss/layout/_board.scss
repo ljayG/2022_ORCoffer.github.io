@@ -146,6 +146,10 @@
         position: absolute;
         top: -4px;
         right: 0;
+
+        &.top-m {
+          top: 0;
+        }
       }
 
       @include mq("deskTop") {
@@ -242,6 +246,10 @@
       td {
         padding: 10px;
         font-size: 0.813rem;
+
+        @include mq("deskTop-wide") {
+          font-size: 0.875rem;
+        }
       }
     }
   }

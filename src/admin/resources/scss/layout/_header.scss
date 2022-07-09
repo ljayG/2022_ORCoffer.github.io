@@ -170,28 +170,28 @@
           display: flex;
         }
 
-        .face {
-          position: relative;
-          flex: 0 0 33px;
-          width: 33px;
-          height: 33px;
-          margin-right: 7px;
-          border-radius: 50%;
-          background: url("../images/common/noface.png") no-repeat;
-          background-size: cover;
-          overflow: hidden;
-
-          img {
-            width: 100%;
-          }
-        }
-
         .name {
           color: $gray;
           flex: 0 0 auto;
         }
       }
     }
+  }
+}
+
+.face {
+  position: relative;
+  flex: 0 0 33px;
+  width: 33px;
+  height: 33px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: url("../images/common/noface.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  img {
+    width: 100%;
   }
 }
 

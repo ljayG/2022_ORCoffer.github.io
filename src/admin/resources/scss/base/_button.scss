@@ -1,3 +1,11 @@
+.btn-wrap {
+  @include clearfix();
+
+  .right {
+    float: right;
+  }
+}
+
 .btn_exc {
   display: inline-block;
   width: 25px;
@@ -75,8 +83,29 @@
     border-color: $skyBlue;
   }
 
+  &.btcol3 {
+    color: $red;
+    background-color: $white;
+    border-color: $red;
+  }
+
+  &.btcol4 {
+    color: $white;
+    background-color: $red;
+    border-color: $red;
+  }
+
+  &.btcol5 {
+    background-color: $gray3;
+    border-color: $gray;
+  }
+
+  & + & {
+    margin-left: 8px;
+  }
+
   @include mq("deskTop") {
-    min-width: 134px;
+    min-width: 100px;
     padding: 7px 15px;
     font-size: 1rem;
   }
@@ -156,4 +185,73 @@
   font-weight: 100;
   text-align: center;
   border-radius: 6px;
+}
+
+.sbtn {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.upfile {
+    background-image: url("../images/btn/sbtn_upload.png");
+  }
+  &.memo {
+    background-image: url("../images/btn/sbtn_memo.png");
+  }
+  &.print {
+    background-image: url("../images/btn/sbtn_print.png");
+  }
+
+  span {
+    @include blind();
+  }
+}
+
+.txt-btn {
+  color: $gray4;
+  position: relative;
+  display: inline-block;
+  font-size: 0.813rem;
+  box-sizing: border-box;
+
+  &.download {
+    padding-right: 35px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 28px;
+      height: 19px;
+      top: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-image: url("../images/btn/sbtn_download.png");
+      background-size: contain;
+    }
+
+    &.on {
+      color: $color-primary;
+      font-weight: 700;
+
+      &::after {
+        background-image: url("../images/btn/sbtn_download_on.png");
+      }
+    }
+  }
+
+  @include mq("deskTop") {
+    font-size: 1rem;
+
+    &.download {
+      padding-right: 45px;
+
+      &::after {
+        width: 37px;
+        height: 25px;
+      }
+    }
+  }
 }

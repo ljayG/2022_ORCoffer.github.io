@@ -48,4 +48,37 @@
 
 .pop-contents {
   padding: 30px 25px 40px;
+
+  &.p-center {
+    text-align: center;
+  }
+
+  .pop-note {
+    color: $color-primary;
+    margin-bottom: 20px;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 30px auto 15px;
+      background-image: url("../images/common/ico_mark.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @include mq("deskTop") {
+    .pop-note {
+      margin-bottom: 40px;
+      font-size: 1.25rem;
+
+      &::before {
+        width: 54px;
+        height: 54px;
+      }
+    }
+  }
 }

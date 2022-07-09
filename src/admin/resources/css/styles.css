@@ -425,6 +425,20 @@ img.maxw100 {
   margin-right: auto;
 }
 
+.btn-wrap::after {
+  content: "";
+  display: block;
+  float: none;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+.btn-wrap .right {
+  float: right;
+}
+
 .btn_exc {
   display: inline-block;
   width: 25px;
@@ -504,9 +518,26 @@ img.maxw100 {
   background-color: #3899ec;
   border-color: #3899ec;
 }
+.bts2.btcol3 {
+  color: #e43e3e;
+  background-color: #fff;
+  border-color: #e43e3e;
+}
+.bts2.btcol4 {
+  color: #fff;
+  background-color: #e43e3e;
+  border-color: #e43e3e;
+}
+.bts2.btcol5 {
+  background-color: #f2f4f8;
+  border-color: #dfe5eb;
+}
+.bts2 + .bts2 {
+  margin-left: 8px;
+}
 @media screen and (min-width: 1024px) {
   .bts2 {
-    min-width: 134px;
+    min-width: 100px;
     padding: 7px 15px;
     font-size: 1rem;
   }
@@ -595,6 +626,75 @@ img.maxw100 {
   font-weight: 100;
   text-align: center;
   border-radius: 6px;
+}
+
+.sbtn {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.sbtn.upfile {
+  background-image: url("../images/btn/sbtn_upload.png");
+}
+.sbtn.memo {
+  background-image: url("../images/btn/sbtn_memo.png");
+}
+.sbtn.print {
+  background-image: url("../images/btn/sbtn_print.png");
+}
+.sbtn span {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  height: 0;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -9999em;
+  overflow: hidden;
+}
+
+.txt-btn {
+  color: #9b9b9b;
+  position: relative;
+  display: inline-block;
+  font-size: 0.813rem;
+  box-sizing: border-box;
+}
+.txt-btn.download {
+  padding-right: 35px;
+}
+.txt-btn.download::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 28px;
+  height: 19px;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-image: url("../images/btn/sbtn_download.png");
+  background-size: contain;
+}
+.txt-btn.download.on {
+  color: #383f4f;
+  font-weight: 700;
+}
+.txt-btn.download.on::after {
+  background-image: url("../images/btn/sbtn_download_on.png");
+}
+@media screen and (min-width: 1024px) {
+  .txt-btn {
+    font-size: 1rem;
+  }
+  .txt-btn.download {
+    padding-right: 45px;
+  }
+  .txt-btn.download::after {
+    width: 37px;
+    height: 25px;
+  }
 }
 
 .selector {
@@ -864,24 +964,25 @@ img.maxw100 {
   #header .nav .mymenu .myface {
     display: flex;
   }
-  #header .nav .mymenu .face {
-    position: relative;
-    flex: 0 0 33px;
-    width: 33px;
-    height: 33px;
-    margin-right: 7px;
-    border-radius: 50%;
-    background: url("../images/common/noface.png") no-repeat;
-    background-size: cover;
-    overflow: hidden;
-  }
-  #header .nav .mymenu .face img {
-    width: 100%;
-  }
   #header .nav .mymenu .name {
     color: #dfe5eb;
     flex: 0 0 auto;
   }
+}
+
+.face {
+  position: relative;
+  flex: 0 0 33px;
+  width: 33px;
+  height: 33px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: url("../images/common/noface.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.face img {
+  width: 100%;
 }
 
 .hinner {
@@ -1144,6 +1245,11 @@ body .mainbody {
   padding-bottom: 8px;
   margin-bottom: 15px;
   font-size: 1rem;
+}
+.stit2 .face {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 @media screen and (min-width: 1024px) {
   .stit2 {
@@ -1623,6 +1729,9 @@ body .mainbody {
   top: -4px;
   right: 0;
 }
+.list-comm.btrm > li .btnw-r.top-m {
+  top: 0;
+}
 @media screen and (min-width: 1024px) {
   .list-comm.btrm > li p {
     padding-right: 190px;
@@ -1697,6 +1806,12 @@ body .mainbody {
 .ad-tbl table td {
     padding: 10px;
     font-size: 0.813rem;
+  }
+}
+@media screen and (min-width: 1024px) and (min-width: 1410px) {
+  .ad-tbl table th,
+.ad-tbl table td {
+    font-size: 0.875rem;
   }
 }
 
@@ -1952,4 +2067,32 @@ body .mainbody {
 
 .pop-contents {
   padding: 30px 25px 40px;
+}
+.pop-contents.p-center {
+  text-align: center;
+}
+.pop-contents .pop-note {
+  color: #383f4f;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.pop-contents .pop-note::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 30px auto 15px;
+  background-image: url("../images/common/ico_mark.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 1024px) {
+  .pop-contents .pop-note {
+    margin-bottom: 40px;
+    font-size: 1.25rem;
+  }
+  .pop-contents .pop-note::before {
+    width: 54px;
+    height: 54px;
+  }
 }
