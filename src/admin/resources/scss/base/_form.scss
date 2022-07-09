@@ -128,3 +128,18 @@
     }
   }
 }
+
+.txaera1 {
+  background-color: $white;
+  border: 1px solid $gray;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  box-sizing: border-box;
+
+  @include mq("deskTop") {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}

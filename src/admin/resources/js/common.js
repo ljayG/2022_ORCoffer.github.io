@@ -79,3 +79,17 @@ $(function () {
     $("#" + result).addClass("on");
   });
 });
+
+const MemoWrt = document.querySelectorAll(".memowrt--btn");
+const MemoPop = document.querySelector(".memowrite");
+
+for (var i = 0; i < MemoWrt.length; i++) {
+  MemoWrt[i].addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!MemoPop.classList.contains("wrtopen")) {
+      MemoPop.classList.add("wrtopen");
+    } else {
+      MemoPop.classList.remove("wrtopen");
+    }
+  });
+}

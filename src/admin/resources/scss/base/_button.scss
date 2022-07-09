@@ -255,3 +255,38 @@
     }
   }
 }
+
+.img-btn {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.submit {
+    background-image: url("../images/btn/sbtn_submit.png");
+  }
+  &.cancel {
+    background-image: url("../images/btn/sbtn_cancel.png");
+  }
+  &.setup {
+    background-image: url("../images/btn/sbtn_set.png");
+  }
+  &.deleted {
+    background-image: url("../images/btn/sbtn_del.png");
+  }
+
+  span {
+    @include blind();
+  }
+
+  & + & {
+    margin-left: 5px;
+  }
+
+  @include mq("deskTop") {
+    width: 37px;
+    height: 25px;
+  }
+}

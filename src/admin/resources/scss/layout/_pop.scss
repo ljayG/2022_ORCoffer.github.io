@@ -10,7 +10,7 @@
 
   &.widtype2 {
     width: 90%;
-    max-width: 680px;
+    max-width: 690px;
   }
 
   .pop-close {
@@ -47,7 +47,7 @@
 }
 
 .pop-contents {
-  padding: 30px 25px 40px;
+  padding: 50px 25px;
 
   &.p-center {
     text-align: center;
@@ -79,6 +79,22 @@
         width: 54px;
         height: 54px;
       }
+    }
+  }
+
+  #memoWrt {
+    display: block;
+
+    @at-root .wrtopen & {
+      display: none;
+    }
+  }
+
+  .memo-wrt {
+    display: none;
+
+    @at-root .wrtopen & {
+      display: block;
     }
   }
 }

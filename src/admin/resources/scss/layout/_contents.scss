@@ -106,6 +106,7 @@ body {
 .stit2 {
   color: $color-primary;
   border-bottom: 2px solid $color-primary;
+  position: relative;
   padding-bottom: 8px;
   margin-bottom: 15px;
   font-size: 1rem;
@@ -116,8 +117,32 @@ body {
     margin-right: 5px;
   }
 
+  .notice {
+    border-left: 2px dotted $gray;
+    display: inline-block;
+    margin-left: 8px;
+    padding-left: 10px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1;
+
+    em {
+      color: $orange;
+    }
+  }
+
+  .btnwrap-r {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   @include mq("deskTop") {
     font-size: 1.5rem;
+
+    .notice {
+      font-size: 1.125rem;
+    }
   }
 }
 
@@ -521,5 +546,59 @@ body {
 
   @include mq("deskTop") {
     margin: 0 20px 0 0;
+  }
+}
+
+.memo-wrt,
+.memowrap {
+  .btn-wrap {
+    margin-top: 8px;
+  }
+}
+
+.memowrap {
+  .item-list {
+    & > li {
+      margin-top: 16px;
+    }
+
+    .item {
+      border: 1px solid $gray;
+      background-color: $gray3;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+
+      .wrt-info {
+        color: $gray4;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        .info {
+          strong {
+            color: $color-primary;
+          }
+        }
+      }
+
+      .memo-modify {
+        border: 1px solid $gray;
+        background-color: $white;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.75rem;
+      }
+
+      @include mq("deskTop") {
+        padding: 15px;
+        font-size: 1rem;
+
+        .memo-modify {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }
