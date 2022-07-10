@@ -1292,3 +1292,75 @@
     font-size: 1rem;
   }
 }
+
+.lv_ico {
+  width: 40px;
+  height: 41px;
+  margin: 0 auto 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.save {
+    background-image: url("../images/love/ico_save.png");
+  }
+  &.submit {
+    background-image: url("../images/love/ico_submit.png");
+  }
+
+  @media all and (min-width: 1178px) {
+    width: 75px;
+    height: 76px;
+  }
+}
+
+.lv_alrment {
+  text-align: center;
+
+  .lv_hment1 {
+    margin-bottom: 24px;
+    color: #232937;
+    font-size: 0.875rem;
+    letter-spacing: -0.1em;
+
+    .name {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    strong {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    @media all and (min-width: 1178px) {
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+
+      .name {
+        font-size: 1.875rem;
+      }
+
+      strong {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  ul {
+    margin-bottom: 20px;
+
+    & > li {
+      font-size: 0.75rem;
+      color: #f6864c;
+    }
+
+    @media all and (min-width: 1178px) {
+      margin-bottom: 35px;
+
+      & > li {
+        font-size: 1rem;
+      }
+    }
+  }
+}
