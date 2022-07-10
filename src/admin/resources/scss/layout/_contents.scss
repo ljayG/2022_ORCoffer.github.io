@@ -1,7 +1,7 @@
 body {
   background-color: $white;
 
-  .mainbody {
+  &.mainbody {
     background-color: $gray;
   }
 }

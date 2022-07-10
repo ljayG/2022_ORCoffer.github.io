@@ -1204,7 +1204,7 @@ img.maxw100 {
 body {
   background-color: #fff;
 }
-body .mainbody {
+body.mainbody {
   background-color: #dfe5eb;
 }
 
@@ -2306,4 +2306,180 @@ body .mainbody {
 }
 .wrtopen .pop-contents .memo-wrt {
   display: block;
+}
+
+#loginContents {
+  position: relative;
+  height: 100vh;
+}
+
+.loginwrap {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  max-width: 640px;
+  max-height: 1154px;
+  background: url("../images/common/log_bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.log-inner {
+  position: absolute;
+  min-height: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+}
+.log-inner h1 {
+  width: 62.0313vw;
+  height: 10vw;
+  max-width: 397px;
+  max-height: 64px;
+  margin: auto;
+}
+.log-inner h1 span {
+  text-indent: -9999em;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/common/login_head.png") no-repeat;
+  background-size: contain;
+}
+.log-inner h2 {
+  color: #383f4f;
+  font-size: 1.5rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .log-inner h2 {
+    font-size: 3rem;
+  }
+}
+
+.log-box {
+  width: 82.5vw;
+  max-width: 528px;
+  margin: 30px auto 0;
+}
+.log-box p {
+  padding-left: 15px;
+  margin-top: 10px;
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .log-box p {
+    padding-left: 25px;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .log-box {
+    margin-top: 55px;
+  }
+}
+
+.loginput {
+  border: 1px solid #383f4f;
+  position: relative;
+}
+.loginput input[type=text],
+.loginput input[type=password] {
+  border: none;
+  width: 100%;
+  padding: 0 20px 0 35px;
+  font-size: 1rem;
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 768px) {
+  .loginput input[type=text],
+.loginput input[type=password] {
+    padding-left: 67px;
+    font-size: 1.25rem;
+    line-height: 70px;
+  }
+}
+.loginput::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 16px;
+  height: 18px;
+  left: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 768px) {
+  .loginput::before {
+    width: 26px;
+    height: 30px;
+    left: 20px;
+  }
+}
+.loginput.id::before {
+  background-image: url("../images/common/log_id.png");
+}
+.loginput.pw {
+  margin-top: 30px;
+}
+.loginput.pw::before {
+  background-image: url("../images/common/log_pw.png");
+}
+
+.log-btn {
+  margin-top: 30px;
+  text-align: center;
+}
+.log-btn button {
+  color: #fff;
+  background-color: #f6864c;
+  display: inline-block;
+  width: 39.6875vw;
+  height: 11.4063vw;
+  max-width: 254px;
+  max-height: 73px;
+  border-radius: 40px;
+}
+@media screen and (min-width: 768px) {
+  .log-btn button {
+    font-size: 1.75rem;
+  }
+}
+
+.log-customer {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.log-customer p {
+  font-size: 1rem;
+}
+.log-customer p::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  background: url("../images/common/ico_que.png") no-repeat;
+  background-size: contain;
+}
+.log-customer p strong {
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .log-customer {
+    margin-top: 45px;
+  }
+  .log-customer p {
+    font-size: 1.25rem;
+  }
+  .log-customer p::before {
+    width: 20px;
+    height: 20px;
+  }
 }
