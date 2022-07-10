@@ -136,6 +136,10 @@
   background-color: #f0f2f5;
   border-bottom-color: #dfe1e5;
 }
+.appl_box.type3 {
+  background-color: #edeff2;
+  border: 1px solid #d2d3d9;
+}
 .appl_box .aplv_txtfield {
   border: none;
 }
@@ -193,6 +197,14 @@
 }
 .appl_dl .radio + label {
   margin-left: 4px;
+}
+@media all and (min-width: 1178px) {
+  .appl_dl.mode2 > dt {
+    flex-basis: 108px;
+  }
+  .appl_dl.mode2 > dd {
+    flex-basis: calc(100% - 108px);
+  }
 }
 @media all and (min-width: 1178px) {
   .appl_dl {
@@ -273,6 +285,126 @@
   }
   .appl_dl2 .type2 .size_l {
     flex: 0 0 620px;
+  }
+}
+
+.appl_ul {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  border: 1px solid #d2d3d9;
+  background-color: #fff;
+  color: #222;
+  font-size: 0.75rem;
+}
+.appl_ul.type2 {
+  background-color: #e5e7eb;
+}
+.appl_ul > li {
+  flex: 1 20%;
+  border-right: 2px dotted #d2d3d9;
+  padding: 0 15px;
+}
+.appl_ul > li.title {
+  flex: 3 45%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.appl_ul > li.name, .appl_ul > li.status {
+  border-right: none;
+}
+.appl_ul > li.name {
+  flex: 1 10%;
+}
+.appl_ul > li.status {
+  flex: 1 25%;
+  padding-left: 0;
+  text-align: right;
+}
+.appl_ul > li.status .completed {
+  position: relative;
+  color: #747578;
+  font-size: 0.688rem;
+  padding-left: 10px;
+}
+.appl_ul > li.status .completed::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 5px;
+  left: 0;
+  top: 50%;
+  transform: translateX(-50%);
+  background: url("../images/love/check.png") no-repeat;
+  background-size: contain;
+}
+@media all and (min-width: 1178px) {
+  .appl_ul > li.status .completed {
+    font-size: 1rem;
+    padding-left: 18px;
+  }
+  .appl_ul > li.status .completed::before {
+    width: 14px;
+    height: 10px;
+  }
+  .appl_ul > li.status .lv_btnset {
+    margin-top: 4px;
+  }
+}
+.appl_ul > li:last-of-type {
+  border-right: none;
+}
+@media all and (min-width: 1178px) {
+  .appl_ul {
+    padding: 12px 0;
+    min-height: 50px;
+    font-size: 1rem;
+  }
+  .appl_ul > li {
+    padding: 0 30px;
+  }
+  .appl_ul > li.date {
+    flex-basis: 70px;
+  }
+  .appl_ul > li.title {
+    flex-basis: 435px;
+  }
+  .appl_ul > li.name {
+    flex: 1 10%;
+  }
+}
+
+.lv_btnset {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #f6864c;
+  overflow: hidden;
+}
+.lv_btnset span {
+  display: block;
+  margin: 5px auto;
+  width: 15px;
+  height: 15px;
+  background: url("../images/love/ico_set.png") no-repeat center;
+  background-size: contain;
+  color: transparent;
+  font-size: 1px;
+  text-indent: -9999rem;
+}
+@media all and (min-width: 1178px) {
+  .lv_btnset {
+    width: 40px;
+    height: 40px;
+  }
+  .lv_btnset span {
+    margin: 8px auto;
+    width: 22px;
+    height: 23px;
   }
 }
 
@@ -602,6 +734,11 @@
 .btn_aplv2.bg3 {
   background-color: #383f4f;
   border: 1px solid #383f4f;
+  color: #fff;
+}
+.btn_aplv2.bg4 {
+  background-color: #525a6c;
+  border: 1px solid #525a6c;
   color: #fff;
 }
 @media all and (min-width: 1178px) {
@@ -1170,6 +1307,12 @@
 .lv_ico.submit {
   background-image: url("../images/love/ico_submit.png");
 }
+.lv_ico.doc {
+  background-image: url("../images/love/ico_doc.png");
+}
+.lv_ico.doccheck {
+  background-image: url("../images/love/ico_doc_check.png");
+}
 @media all and (min-width: 1178px) {
   .lv_ico {
     width: 75px;
@@ -1220,5 +1363,33 @@
   }
   .lv_alrment ul > li {
     font-size: 1rem;
+  }
+}
+
+.lv_ptxt {
+  margin: 15px 0 25px;
+  font-size: 0.75rem;
+  color: #f6864c;
+  text-align: center;
+}
+@media all and (min-width: 1178px) {
+  .lv_ptxt {
+    margin: 30px 0 40px;
+    font-size: 1rem;
+  }
+}
+
+.lv_stit3 {
+  position: relative;
+  margin-bottom: 15px;
+  color: #232937;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media all and (min-width: 1178px) {
+  .lv_stit3 {
+    margin-bottom: 30px;
+    font-size: 2.25rem;
   }
 }

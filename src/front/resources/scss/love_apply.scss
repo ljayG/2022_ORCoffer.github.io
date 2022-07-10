@@ -138,6 +138,11 @@
     border-bottom-color: #dfe1e5;
   }
 
+  &.type3 {
+    background-color: #edeff2;
+    border: 1px solid #d2d3d9;
+  }
+
   .aplv_txtfield {
     border: none;
   }
@@ -197,6 +202,18 @@
   }
   .radio + label {
     margin-left: 4px;
+  }
+
+  @media all and (min-width: 1178px) {
+    &.mode2 {
+      & > dt {
+        flex-basis: 108px;
+      }
+
+      & > dd {
+        flex-basis: calc(100% - 108px);
+      }
+    }
   }
 
   @media all and (min-width: 1178px) {
@@ -293,6 +310,143 @@
       .size_l {
         flex: 0 0 620px;
       }
+    }
+  }
+}
+
+.appl_ul {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  border: 1px solid #d2d3d9;
+  background-color: #fff;
+  color: #222;
+  font-size: 0.75rem;
+
+  &.type2 {
+    background-color: #e5e7eb;
+  }
+
+  & > li {
+    flex: 1 20%;
+    border-right: 2px dotted #d2d3d9;
+    padding: 0 15px;
+
+    &.title {
+      flex: 3 45%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.name,
+    &.status {
+      border-right: none;
+    }
+
+    &.name {
+      flex: 1 10%;
+    }
+
+    &.status {
+      flex: 1 25%;
+      padding-left: 0;
+      text-align: right;
+
+      .completed {
+        position: relative;
+        color: #747578;
+        font-size: 0.688rem;
+        padding-left: 10px;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 7px;
+          height: 5px;
+          left: 0;
+          top: 50%;
+          transform: translateX(-50%);
+          background: url("../images/love/check.png") no-repeat;
+          background-size: contain;
+        }
+      }
+
+      @media all and (min-width: 1178px) {
+        .completed {
+          font-size: 1rem;
+          padding-left: 18px;
+
+          &::before {
+            width: 14px;
+            height: 10px;
+          }
+        }
+
+        .lv_btnset {
+          margin-top: 4px;
+        }
+      }
+    }
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+
+  @media all and (min-width: 1178px) {
+    padding: 12px 0;
+    min-height: 50px;
+    font-size: 1rem;
+
+    & > li {
+      padding: 0 30px;
+
+      &.date {
+        flex-basis: 70px;
+      }
+
+      &.title {
+        flex-basis: 435px;
+      }
+
+      &.name {
+        flex: 1 10%;
+      }
+    }
+  }
+}
+
+.lv_btnset {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #f6864c;
+  overflow: hidden;
+
+  span {
+    display: block;
+    margin: 5px auto;
+    width: 15px;
+    height: 15px;
+    background: url("../images/love/ico_set.png") no-repeat center;
+    background-size: contain;
+    color: transparent;
+    font-size: 1px;
+    text-indent: -9999rem;
+  }
+
+  @media all and (min-width: 1178px) {
+    width: 40px;
+    height: 40px;
+
+    span {
+      margin: 8px auto;
+      width: 22px;
+      height: 23px;
     }
   }
 }
@@ -653,6 +807,12 @@
   &.bg3 {
     background-color: #383f4f;
     border: 1px solid #383f4f;
+    color: #fff;
+  }
+
+  &.bg4 {
+    background-color: #525a6c;
+    border: 1px solid #525a6c;
     color: #fff;
   }
 
@@ -1306,6 +1466,12 @@
   &.submit {
     background-image: url("../images/love/ico_submit.png");
   }
+  &.doc {
+    background-image: url("../images/love/ico_doc.png");
+  }
+  &.doccheck {
+    background-image: url("../images/love/ico_doc_check.png");
+  }
 
   @media all and (min-width: 1178px) {
     width: 75px;
@@ -1362,5 +1528,31 @@
         font-size: 1rem;
       }
     }
+  }
+}
+
+.lv_ptxt {
+  margin: 15px 0 25px;
+  font-size: 0.75rem;
+  color: #f6864c;
+  text-align: center;
+
+  @media all and (min-width: 1178px) {
+    margin: 30px 0 40px;
+    font-size: 1rem;
+  }
+}
+
+.lv_stit3 {
+  position: relative;
+  margin-bottom: 15px;
+  color: #232937;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+
+  @media all and (min-width: 1178px) {
+    margin-bottom: 30px;
+    font-size: 2.25rem;
   }
 }
