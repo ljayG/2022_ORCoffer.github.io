@@ -1686,3 +1686,20 @@
     margin-bottom: 10px;
   }
 }
+
+.visual_space .love_sub01 {
+  background-image: url("../images/love/sub01.jpg");
+}
+
+.lv_orgchart {
+  margin-top: 45px;
+  text-align: center;
+}
+.lv_orgchart img {
+  max-width: 100%;
+}
+@media all and (min-width: 1178px) {
+  .lv_orgchart {
+    margin-top: 90px;
+  }
+}
