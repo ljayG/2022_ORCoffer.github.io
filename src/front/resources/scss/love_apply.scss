@@ -843,6 +843,29 @@
   }
 }
 
+.btn_aplv4 {
+  display: inline-block;
+  min-width: 80px;
+  padding: 4px 15px;
+  text-align: center;
+  font-size: 0.875rem;
+  border: 1px solid #383f4f;
+  background-color: #fff;
+  color: #383f4f;
+  border-radius: 30px;
+
+  &.bg1 {
+    color: #fff;
+    background-color: #383f4f;
+    border: 1px solid #383f4f;
+  }
+
+  @media all and (min-width: 1178px) {
+    padding: 7px 20px;
+    font-size: 1.125rem;
+  }
+}
+
 .icaplv_plus {
   background: url("../images/love/ico_plus.png") no-repeat center;
 }
@@ -1140,12 +1163,12 @@
 
   &.widtype1 {
     width: 90%;
-    max-width: 545px;
+    max-width: 547px;
   }
 
   &.widtype2 {
     width: 90%;
-    max-width: 615px;
+    max-width: 617px;
   }
 
   .lvpop_colse {
@@ -1303,7 +1326,7 @@
 .lvpop_srchwrap {
   position: relative;
   width: 90%;
-  max-width: 360px;
+  max-width: 367px;
   height: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -1453,6 +1476,19 @@
   }
 }
 
+.lv_btr2 {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  color: #f6864c;
+  border: 1px solid #f6864c;
+  border-radius: 20px;
+
+  @media all and (min-width: 1178px) {
+    font-size: 1rem;
+  }
+}
+
 .lv_ico {
   width: 40px;
   height: 41px;
@@ -1554,5 +1590,325 @@
   @media all and (min-width: 1178px) {
     margin-bottom: 30px;
     font-size: 2.25rem;
+  }
+}
+
+.lv_infob {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 5px 12px;
+  background-color: #edeff2;
+  border-radius: 1px;
+
+  p {
+    flex: 0 100%;
+    color: #222;
+    font-size: 0.75rem;
+  }
+
+  .lv_btnr {
+    flex: 0 100%;
+    margin-top: 10px;
+  }
+
+  @media all and (min-width: 768px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      flex: 2;
+    }
+
+    .lv_btnr {
+      flex: 1;
+      margin-top: 0;
+      text-align: right;
+    }
+  }
+
+  @media all and (min-width: 1178px) {
+    padding: 10px 25px;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.lvlist_wrap {
+  margin-top: 15px;
+
+  .lvlbtn_wrap {
+    text-align: right;
+    margin-bottom: 8px;
+
+    .btn_gright {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: #525a6c;
+      text-align: center;
+
+      span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-size: 1px;
+        color: transparent;
+        text-indent: -9999rem;
+      }
+
+      &.type_list {
+        span {
+          background-image: url("../images/love/ico_list.png");
+        }
+      }
+      &.type_gallery {
+        span {
+          background-image: url("../images/love/ico_gallery.png");
+        }
+      }
+    }
+  }
+}
+
+.lvapp_list {
+  border-top: 1px solid #383f4f;
+  border-bottom: 1px solid #383f4f;
+
+  & > li {
+    border-top: 1px solid #e5e6eb;
+
+    &:first-of-type {
+      border-top: none;
+    }
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+
+    @media all and (min-width: 1178px) {
+      padding: 24px 23px;
+    }
+  }
+
+  &.type_gallery {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .item {
+      .desc {
+        flex: 0 calc(100% - 110px);
+        padding-right: 15px;
+        font-size: 0.75rem;
+
+        h4 {
+          margin-bottom: 5px;
+          font-size: 0.875rem;
+          font-weight: 700;
+          color: #222;
+        }
+
+        .txt {
+          margin-bottom: 5px;
+          word-break: keep-all;
+          color: #444;
+        }
+
+        .date {
+          color: #222;
+        }
+
+        .lvlist_btnwrap {
+          margin-top: 10px;
+        }
+      }
+
+      .thumb {
+        position: relative;
+        flex: 1 110px;
+
+        .sticker {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    @media all and (min-width: 768px) {
+      display: none;
+      flex-wrap: wrap;
+
+      &.active {
+        display: flex;
+      }
+
+      & > li {
+        position: relative;
+        flex: 0 50%;
+
+        &:nth-of-type(even) {
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 15px;
+            bottom: 15px;
+            border-left: 1px dotted #666b78;
+          }
+        }
+      }
+    }
+
+    @media all and (min-width: 1178px) {
+      & > li {
+        &:nth-of-type(even) {
+          &::before {
+            top: 24px;
+            bottom: 24px;
+          }
+        }
+      }
+
+      .item {
+        .desc {
+          flex-basis: calc(100% - 220px);
+          padding-right: 50px;
+          font-size: 1rem;
+
+          h4 {
+            margin-bottom: 10px;
+            font-size: 1.125rem;
+          }
+
+          .txt {
+            margin-bottom: 10px;
+          }
+
+          .lvlist_btnwrap {
+            margin-top: 15px;
+          }
+        }
+
+        .thumb {
+          flex-basis: 220px;
+        }
+      }
+    }
+  }
+
+  .sticker {
+    min-width: 55px;
+    padding: 2px 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+
+    &.ing {
+      color: #fff;
+      background-color: #f6864c;
+    }
+
+    &.end {
+      color: #525a6c;
+      background-color: #c7ccd7;
+    }
+
+    @media all and (min-width: 1178px) {
+      font-size: 1rem;
+    }
+  }
+
+  &.type_list {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .desc {
+      font-size: 0.75rem;
+
+      h4 {
+        margin-bottom: 5px;
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: #222;
+
+        .sticker {
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+
+      .txt {
+        margin-bottom: 5px;
+        word-break: keep-all;
+        color: #444;
+      }
+
+      .date {
+        color: #222;
+      }
+    }
+
+    .lvlist_btnwrap {
+      margin-top: 15px;
+    }
+
+    @media all and (max-width: 767px) {
+      .item {
+        display: block;
+      }
+    }
+
+    @media all and (min-width: 768px) {
+      .item {
+        align-items: center;
+      }
+
+      .desc {
+        flex-basis: calc(100% - 140px);
+        padding-right: 20px;
+      }
+
+      .lvlist_btnwrap {
+        flex-basis: 140px;
+        margin-top: 0;
+        text-align: right;
+      }
+    }
+
+    @media all and (min-width: 1178px) {
+      .desc {
+        font-size: 1rem;
+        padding-right: 50px;
+
+        h4 {
+          margin-bottom: 10px;
+          font-size: 1.125rem;
+        }
+
+        .txt {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }

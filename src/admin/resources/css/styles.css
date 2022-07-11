@@ -109,8 +109,7 @@ mark,
 audio,
 video {
   margin: 0;
-  padding: 0;
-  /*vertical-align:baseline;*/
+  padding: 0; /*vertical-align:baseline;*/
   box-sizing: border-box;
   word-break: keep-all;
 }
@@ -260,8 +259,7 @@ button {
 
 input,
 textarea {
-  font-family: "Noto Sans KR", sans-serif;
-  /*border-radius: 0; appearance:none; -webkit-appearance:none;*/
+  font-family: "Noto Sans KR", sans-serif; /*border-radius: 0; appearance:none; -webkit-appearance:none;*/
 }
 
 button,
@@ -310,8 +308,7 @@ input[type=search] {
 select {
   position: relative;
   display: block;
-  border: 0 none;
-  /*appearance:none;*/
+  border: 0 none; /*appearance:none;*/
   box-sizing: border-box;
   padding-left: 3px;
   background-color: transparent;
@@ -2022,7 +2019,6 @@ body.mainbody {
   .mq-colgroup-none {
     display: table-column-group;
   }
-
   .mq-mb-none {
     display: table-cell;
   }
