@@ -72,12 +72,12 @@ $(function () {
     transition: "all 0.3s",
   });
 
-  $("#searchDateType").change(function () {
-    let result = $("#searchDateType option:selected").val();
-    let selector = $(".date-select");
-    selector.removeClass("on");
-    $("#" + result).addClass("on");
-  });
+  // $("#searchDateType").change(function () {
+  //   let result = $("#searchDateType option:selected").val();
+  //   let selector = $(".date-select");
+  //   selector.removeClass("on");
+  //   $("#" + result).addClass("on");
+  // });
 });
 
 const MemoWrt = document.querySelectorAll(".memowrt--btn");
@@ -93,3 +93,17 @@ for (var i = 0; i < MemoWrt.length; i++) {
     }
   });
 }
+
+const BtnDetSearch = document.querySelector("#btnDtSrc");
+const DetailSearch = document.querySelector("#detailSeatch");
+
+BtnDetSearch.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (!DetailSearch.classList.contains("open")) {
+    BtnDetSearch.classList.add("on");
+    DetailSearch.classList.add("open");
+  } else {
+    BtnDetSearch.classList.remove("on");
+    DetailSearch.classList.remove("open");
+  }
+});

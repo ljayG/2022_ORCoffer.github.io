@@ -113,59 +113,94 @@
         <div class="inner">
           <section class="sect1">
             <h3 class="stit1">접수</h3>
-            <div class="tit-wrap">
-              <p>등록 : 9,836</p>
-              <div class="list-search">
-                <form>
-                  <fieldset>
-                    <legend>목록검색</legend>
+            <form>
+              <fieldset>
+                <div class="tit-wrap">
+                  <p>등록 : 9,836</p>
+                  <div class="list-search">
                     <button class="btn_exc" type="button">
                       <span>엑셀파일 다운로드</span>
                     </button>
-                    <label class="blind" for="searchDateType">기간 검색방법선택</label>
-                    <select class="selector" id="searchDateType" name="selectSrcType">
-                      <option value="srcType1">년도선택</option>
-                      <option value="srcType2">기간선택</option>
-                    </select>
 
-                    <!-- 년도선택시(Default)(s) -->
-                    <div class="dib date-select on" id="srcType1">
-                      <label class="blind" for="searchYear">년도검색</label>
-                      <select class="selector" id="searchYear">
-                        <option value="">2022</option>
-                        <option value="">2021</option>
-                        <option value="">2020</option>
-                        <option value="">2019</option>
-                      </select>
+                    <div class="dib vam">
+                      <button class="dta-srcbtnwrap" id="btnDtSrc" type="button">상세검색</button>
                     </div>
-                    <!--// 년도선택시(Default)(e) -->
-
-                    <!-- 기간선택시(s) -->
-                    <div class="dib date-select" id="srcType2">
-                      <label class="blind" for="searchDate">기간검색</label>
-                      <select class="selector" id="searchDate">
-                        <option value="">전체</option>
-                        <option value="">1 주일</option>
-                        <option value="">1 개월</option>
-                        <option value="">3 개월</option>
-                        <option value="">6 개월</option>
-                        <option value="">1년</option>
-                        <option value="">직접입력</option>
-                      </select>
-                      <input class="inpt2 datepicker" type="text" title="시작일" placeholder="YYYY.MM.DD">
-                      ~
-                      <input class="inpt2 datepicker" type="text" title="시작일" placeholder="YYYY.MM.DD">
-                    </div>
-                    <!--// 기간선택시(e) -->
 
                     <input class="inpt2 search-inp" type="text" placeholder="검색어 입력">
                     <button class="bts3" type="button">
                       <span>검색</span>
                     </button>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
+                  </div>
+                </div>
+                <!-- 상세검색 영역(s) -->
+                <section class="detail-searhwrap" id="detailSeatch">
+                  <h2 class="blind">상세검색</h2>
+                  <div class="flexinn">
+                    <div class="innf">
+                      <div class="s-item">
+                        <label for="detailSrc1">고유번호</label>
+                        <input class="inpt2" id="detailSrc1" type="text" placeholder="고유번호 입력">
+                      </div>
+                      <div class="s-item">
+                        <label for="detailSrc2">분류</label>
+                        <select class="selector" id="detailSrc2">
+                          <option value="">선택</option>
+                        </select>
+                      </div>
+                      <div class="s-item">
+                        <label for="detailSrc3">구분(대상)</label>
+                        <select class="selector" id="detailSrc3">
+                          <option value="">선택</option>
+                        </select>
+                      </div>
+                      <div class="s-item">
+                        <label for="detailSrc4">성명</label>
+                        <input class="inpt2" id="detailSrc4" type="text" placeholder="이름을 입력해주세요.">
+                      </div>
+                      <div class="s-item">
+                        <label for="detailSrc5">연락처</label>
+                        <input class="inpt2 wmt1" id="detailSrc5" type="tel" placeholder="- 빼고 입력해주세요.">
+                      </div>
+                    </div>
+                    <div class="innf">
+                      <div class="s-item">
+                        <label for="detailSrc6">주소</label>
+                        <input class="inpt2 wmt2" id="detailSrc6" type="text" placeholder="주소를 입력해주세요.">
+                      </div>
+                      <div class="s-item">
+                        <label for="detailSrc7">선정여부</label>
+                        <select class="selector" id="detailSrc7">
+                          <option value="">선택</option>
+                        </select>
+                      </div>
+                      <div class="s-item">
+                        <label for="detailSrc8">지원금액</label>
+                        <input class="inpt2" id="detailSrc8" type="number" placeholder="지원금액을 입력해주세요.">
+                      </div>
+                      <div class="s-item">
+                        <label for="searchDate">기간검색</label>
+                        <select class="selector" id="searchDate">
+                          <option value="">전체</option>
+                          <option value="">1 주일</option>
+                          <option value="">1 개월</option>
+                          <option value="">3 개월</option>
+                          <option value="">6 개월</option>
+                          <option value="">1년</option>
+                          <option value="">직접입력</option>
+                        </select>
+                        <input class="inpt2 datepicker" type="text" title="시작일" placeholder="YYYY.MM.DD">
+                        ~
+                        <input class="inpt2 datepicker" type="text" title="시작일" placeholder="YYYY.MM.DD">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-dtwp">
+                    <button class="btn-dtsearch" type="submit"><span>상세검색</span></button>
+                  </div>
+                </section>
+                <!--// 상세검색 영역(e) -->
+              </fieldset>
+            </form>
             <!-- 테이블 영역(s) -->
             <div class="ad-tbl">
               <table>
@@ -195,7 +230,7 @@
                 </colgroup>
                 <thead>
                   <tr>
-                    <th scope="col" rowspan="2">선택</th>
+                    <th scope="col" rowspan="2"><input class="checkbox" id name type="checkbox" title="전체선택"></th>
                     <th class="mq-mb-none" scope="col" rowspan="2">번호</th>
                     <th scope="col" rowspan="2">고유번호</th>
                     <th class="mq-mb-none" scope="col" rowspan="2">분류</th>
@@ -229,7 +264,7 @@
                     <td class="nm mq-mb-none">다니엘</td>
                     <td class="nm mq-mb-none">목회자</td>
                     <td class="nm mq-mb-none">본인</td>
-                    <td class="nm">홍길동</td>
+                    <td class="nm"><a href="list.html">홍길동</a></td>
                     <td class="nm mq-mb-none">000-0000-0000</td>
                     <td class="nm mq-mb-none">50</td>
                     <td class="nm mq-mb-none">경기</td>
@@ -263,7 +298,7 @@
                     <td class="nm mq-mb-none">청단</td>
                     <td class="nm mq-mb-none">선교사</td>
                     <td class="nm mq-mb-none">가족</td>
-                    <td class="nm">홍길동</td>
+                    <td class="nm"><a href="list.html">홍길동</a></td>
                     <td class="nm mq-mb-none">000-0000-0000</td>
                     <td class="nm mq-mb-none">50</td>
                     <td class="nm mq-mb-none"></td>
@@ -273,17 +308,10 @@
                     <td class="nm mq-mb-none">-</td>
                     <td class="nm mq-mb-none">-</td>
                     <td class="tx">
-                      <p>
-                        <input class="radio" id="radA2_0" name="radA2" type="radio" value="0">
-                        <label for="radA2_0">선정</label>
-                      </p>
-                      <p>
-                        <input class="radio" id="radA2_1" name="radA2" type="radio" value="1" checked>
-                        <label for="radA2_1">미선정</label>
-                      </p>
+                      미선정
                     </td>
                     <td class="nm">
-                      <input class="inpt1 my" type="text" value="500,000">
+                      -
                     </td>
                     <td class="nm mq-mb-none">-</td>
                     <td class="nm mq-mb-none"><button class="sbtn print" type="button"><span>출력</span></button></td>
@@ -307,17 +335,10 @@
                     <td class="nm mq-mb-none">2 <button class="sbtn upfile popDownload_open" type="button"><span>첨부파일</span></button></td>
                     <td class="nm mq-mb-none">-</td>
                     <td class="tx">
-                      <p>
-                        <input class="radio" id="radA3_0" name="radA3" type="radio" value="0">
-                        <label for="radA3_0">선정</label>
-                      </p>
-                      <p>
-                        <input class="radio" id="radA3_1" name="radA3" type="radio" value="1" checked>
-                        <label for="radA3_1">미선정</label>
-                      </p>
+                      선정
                     </td>
                     <td class="nm">
-                      <input class="inpt1 my" type="text" value="1,000,000">
+                      1,000,000
                     </td>
                     <td class="nm mq-mb-none">2 <button class="sbtn memo popMemo_open" type="button"><span>메모</span></button></td>
                     <td class="nm mq-mb-none"><button class="sbtn print" type="button"><span>출력</span></button></td>
@@ -341,7 +362,7 @@
               </div>
               <div class="page_btnwrap">
                 <div class="right">
-                  <button class="bts2 btcol4" type="button"><span>출력</span></button>
+                  <button class="bts2 btcol4" type="button"><span>선택출력</span></button>
                   <button class="bts2 btcol2" type="button"><span>적용</span></button>
                   <button class="bts2 btcol3 popRealDeleted_open" type="button"><span>삭제</span></button>
                 </div>

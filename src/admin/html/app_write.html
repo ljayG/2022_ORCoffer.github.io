@@ -114,7 +114,7 @@
           <section class="sect1">
             <h3 class="stit1">신청서 만들기</h3>
             <div class="tit-wrap">
-              <p>※ 필수 입력일 경우 체크해주세요.</p>
+              <p></p>
               <div class="right">
                 <button class="bts popPrevLoad_open" type="button">이전 신청서 불러오기</button>
               </div>
@@ -159,17 +159,12 @@
                     </td>
                     <td class="noneline"><b>헤더이미지</b></td>
                     <td class="noneline">
-                      <div>
-                        <button class="icobtn ic-pc" type="button">
-                          <span>PC 헤더이미지</span>
-                        </button>
-                        <button class="icobtn ic-mobile" type="button">
-                          <span>모바일 헤더이미지</span>
-                        </button>
+                      <div class="mt10">
+                        <input class="admbtn-upload" id="upload2" name="upload2" type="file">
+                        <label for="upload2"><span>첨부파일</span></label>
                       </div>
                       <p class="mt5">
-                        PC용 1920px X 150px, 모바일용 640px X 480px 를
-                        권장합니다.
+                        ※ 640px X 480px 를 권장합니다.
                       </p>
                     </td>
                     <td>
@@ -208,24 +203,36 @@
                     </td>
                     <td class="noneline"><b>대상</b></td>
                     <td class="noneline">
-                      <div class="dib mg-sp10">
-                        <label class="dib1" for="applyA4_1">대상 1</label>
-                        <select class="selector" id="applyA4_1">
-                          <option value="">선택</option>
-                          <option value="">목회자</option>
-                          <option value="">선교사</option>
-                          <option value="">일반</option>
-                        </select>
-                      </div>
-                      <div class="dib mg-sp10">
-                        <label class="dib1" for="applyA4_2">대상 2</label>
-                        <select class="selector" id="applyA4_2">
-                          <option value="">선택</option>
-                          <option value="">본인</option>
-                          <option value="">가족</option>
-                          <option value="">기타</option>
-                        </select>
-                      </div>
+                      <ul class="chklist">
+                        <li>
+                          <input id="appchkA4_1" name="appchkA4" type="checkbox" value="1">
+                          <label for="appchkA4_1">일반</label>
+                        </li>
+                        <li>
+                          <input id="appchkA4_2" name="appchkA4" type="checkbox" value="2">
+                          <label for="appchkA4_2">목회자</label>
+                        </li>
+                        <li>
+                          <input id="appchkA4_3" name="appchkA4" type="checkbox" value="3">
+                          <label for="appchkA4_3">목회자가족</label>
+                        </li>
+                        <li>
+                          <input id="appchkA4_4" name="appchkA4" type="checkbox" value="4">
+                          <label for="appchkA4_4">홀사모</label>
+                        </li>
+                        <li>
+                          <input id="appchkA4_5" name="appchkA4" type="checkbox" value="5">
+                          <label for="appchkA4_5">선교사</label>
+                        </li>
+                        <li>
+                          <input id="appchkA4_6" name="appchkA4" type="checkbox" value="6">
+                          <label for="appchkA4_6">선교사가족</label>
+                        </li>
+                        <li>
+                          <input id="appchkA4_7" name="appchkA4" type="checkbox" value="7">
+                          <label for="appchkA4_7">기관</label>
+                        </li>
+                      </ul>
                     </td>
                     <td>
                       <span class="dib1"></span>
@@ -259,7 +266,49 @@
                   </tr>
                   <tr>
                     <td class="nm">
-                      <input class="checkbox" id="appltCheckA6" name type="checkbox" title="선택 6">
+                      <input class="checkbox" id="appltCheckANew1" name type="checkbox" title="선택 6">
+                    </td>
+                    <td class="noneline"><b>신청유형</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioANew1_1" name="applyRadioANew1" type="radio">
+                      <label for="applyRadioANew1_1">사용</label>
+                      <input class="radio ml10" id="applyRadioANew1_2" name="applyRadioANew1" type="radio">
+                      <label for="applyRadioANew1_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckANew2" name type="checkbox" title="선택 7">
+                    </td>
+                    <td class="noneline"><b>기본정보</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioANew2_1" name="applyRadioANew2" type="radio">
+                      <label for="applyRadioANew2_1">사용</label>
+                      <input class="radio ml10" id="applyRadioANew2_2" name="applyRadioANew2" type="radio">
+                      <label for="applyRadioANew2_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckANew3" name type="checkbox" title="선택 8">
+                    </td>
+                    <td class="noneline"><b>종교사역정보</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioANew3_1" name="applyRadioANew3" type="radio">
+                      <label for="applyRadioANew3_1">사용</label>
+                      <input class="radio ml10" id="applyRadioANew3_2" name="applyRadioANew3" type="radio">
+                      <label for="applyRadioANew3_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA6" name type="checkbox" title="선택 9">
                     </td>
                     <td class="noneline"><b>의료정보</b></td>
                     <td class="noneline"></td>
@@ -273,7 +322,35 @@
                   </tr>
                   <tr>
                     <td class="nm">
-                      <input class="checkbox" id="appltCheckA7" name type="checkbox" title="선택 7">
+                      <input class="checkbox" id="appltCheckANew4" name type="checkbox" title="선택 10">
+                    </td>
+                    <td class="noneline"><b>가족사항</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioANew4_1" name="applyRadioANew4" type="radio">
+                      <label for="applyRadioANew4_1">사용</label>
+                      <input class="radio ml10" id="applyRadioANew4_2" name="applyRadioANew4" type="radio">
+                      <label for="applyRadioANew4_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckANew5" name type="checkbox" title="선택 11">
+                    </td>
+                    <td class="noneline"><b>산출내용</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioANew5_1" name="applyRadioANew5" type="radio">
+                      <label for="applyRadioANew5_1">사용</label>
+                      <input class="radio ml10" id="applyRadioANew5_2" name="applyRadioANew5" type="radio">
+                      <label for="applyRadioANew5_2">미사용</label>
+                    </td>
+                  </tr>
+                  <!-- <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA7" name type="checkbox" title="선택 12">
                     </td>
                     <td class="noneline"><b>주소</b></td>
                     <td class="noneline"></td>
@@ -287,7 +364,7 @@
                   </tr>
                   <tr>
                     <td class="nm">
-                      <input class="checkbox" id="appltCheckA8" name type="checkbox" title="선택 8">
+                      <input class="checkbox" id="appltCheckA8" name type="checkbox" title="선택 13">
                     </td>
                     <td class="noneline"><b>연락처</b></td>
                     <td class="noneline"></td>
@@ -301,7 +378,7 @@
                   </tr>
                   <tr>
                     <td class="nm">
-                      <input class="checkbox" id="appltCheckA9" name type="checkbox" title="선택 9">
+                      <input class="checkbox" id="appltCheckA9" name type="checkbox" title="선택 14">
                     </td>
                     <td class="noneline"><b>이메일</b></td>
                     <td class="noneline"></td>
@@ -315,7 +392,7 @@
                   </tr>
                   <tr>
                     <td class="nm">
-                      <input class="checkbox" id="appltCheckA10" name type="checkbox" title="선택 10">
+                      <input class="checkbox" id="appltCheckA10" name type="checkbox" title="선택 15">
                     </td>
                     <td class="noneline"><b>은행정보</b></td>
                     <td class="noneline"></td>
@@ -326,10 +403,10 @@
                       <input class="radio ml10" id="applyRadioA10_2" name="applyRadioA10" type="radio">
                       <label for="applyRadioA10_2">미사용</label>
                     </td>
-                  </tr>
+                  </tr> -->
                   <tr>
                     <td class="nm">
-                      <input class="checkbox" id="appltCheckA11" name type="checkbox" title="선택 11">
+                      <input class="checkbox" id="appltCheckA11" name type="checkbox" title="선택 16">
                     </td>
                     <td class="noneline"><b>신청내용</b></td>
                     <td class="noneline"></td>
@@ -337,13 +414,13 @@
                       <span class="dib1"></span>
                       <input class="radio" id="applyRadioA11_1" name="applyRadioA11" type="radio">
                       <label for="applyRadioA11_1">사용</label>
-                      <input class="radio ml11" id="applyRadioA11_2" name="applyRadioA11" type="radio">
+                      <input class="radio ml10" id="applyRadioA11_2" name="applyRadioA11" type="radio">
                       <label for="applyRadioA11_2">미사용</label>
                     </td>
                   </tr>
-                  <tr>
+                  <!-- <tr>
                     <td class="nm">
-                      <input class="checkbox" id="appltCheckA12" name type="checkbox" title="선택 12">
+                      <input class="checkbox" id="appltCheckA12" name type="checkbox" title="선택 17">
                     </td>
                     <td class="noneline">
                       <label for="applyA12"><b>가족등록</b></label>
@@ -365,10 +442,10 @@
                       <input class="radio ml12" id="applyRadioA12_2" name="applyRadioA12" type="radio">
                       <label for="applyRadioA12_2">미사용</label>
                     </td>
-                  </tr>
+                  </tr> -->
                   <tr>
                     <td class="nm">
-                      <input class="checkbox" id="appltCheckA13" name type="checkbox" title="선택 13">
+                      <input class="checkbox" id="appltCheckA13" name type="checkbox" title="선택 18">
                     </td>
                     <td class="noneline"><b>첨부파일</b></td>
                     <td class="noneline"></td>
@@ -376,7 +453,7 @@
                       <span class="dib1"></span>
                       <input class="radio" id="applyRadioA13_1" name="applyRadioA13" type="radio">
                       <label for="applyRadioA13_1">사용</label>
-                      <input class="radio ml12" id="applyRadioA13_2" name="applyRadioA13" type="radio">
+                      <input class="radio ml10" id="applyRadioA13_2" name="applyRadioA13" type="radio">
                       <label for="applyRadioA13_2">미사용</label>
                     </td>
                   </tr>
@@ -384,7 +461,18 @@
                     <td colspan="4">
                       <div class="flexbp">
                         <dl>
-                          <dt>목회자 &middot; 일반</dt>
+                          <dt>
+                            <select class="selector" id="applyA12">
+                              <option value="">선택</option>
+                              <option value="">목회자</option>
+                              <option value="">목회자가족</option>
+                              <option value="">홀사모</option>
+                              <option value="">선교사</option>
+                              <option value="">선교사가족</option>
+                              <option value="">기관</option>
+                              <option value="">전부</option>
+                            </select>
+                          </dt>
                           <dd>
                             <span class="item">
                               3개월이내 진단서 1부
@@ -407,45 +495,49 @@
                             </div>
                           </dd>
                         </dl>
-                        <dl>
-                          <dt>선교사</dt>
-                          <dd>
-                            <span class="item">
-                              3개월이내 진단서 1부
-                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
-                            </span>
-                            <span class="item">
-                              재직증명서
-                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
-                            </span>
-                            <span class="item">
-                              최근 병원진료비 납입 영수증 1부
-                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
-                            </span>
-                            <span class="item">
-                              주민등록 등본 1부
-                              <button class="btndel" type="button" title="삭제"><span>삭제</span></button>
-                            </span>
-                            <div>
-                              <button class="btn-add" type="button" title="추가"><span>+</span></button>
-                            </div>
-                          </dd>
-                        </dl>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td class="nm">
-                      <input class="checkbox" id="appltCheckA11" name type="checkbox" title="선택 14">
+                      <input class="checkbox" id="appltCheckA11" name type="checkbox" title="선택 19">
                     </td>
-                    <td class="noneline"><b>추천자</b></td>
+                    <td class="noneline"><b>추천자정보</b></td>
                     <td class="noneline"></td>
                     <td>
                       <span class="dib1"></span>
                       <input class="radio" id="applyRadioA14_1" name="applyRadioA14" type="radio">
                       <label for="applyRadioA14_1">사용</label>
-                      <input class="radio ml14" id="applyRadioA14_2" name="applyRadioA14" type="radio">
+                      <input class="radio ml10" id="applyRadioA14_2" name="applyRadioA14" type="radio">
                       <label for="applyRadioA14_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA20" name type="checkbox" title="선택 20">
+                    </td>
+                    <td class="noneline"><b>담당자정보</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA20_1" name="applyRadioA20" type="radio">
+                      <label for="applyRadioA20_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA20_2" name="applyRadioA20" type="radio">
+                      <label for="applyRadioA20_2">미사용</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="nm">
+                      <input class="checkbox" id="appltCheckA21" name type="checkbox" title="선택 21">
+                    </td>
+                    <td class="noneline"><b>개인정보동의서</b></td>
+                    <td class="noneline"></td>
+                    <td>
+                      <span class="dib1"></span>
+                      <input class="radio" id="applyRadioA21_1" name="applyRadioA21" type="radio">
+                      <label for="applyRadioA21_1">사용</label>
+                      <input class="radio ml10" id="applyRadioA21_2" name="applyRadioA21" type="radio">
+                      <label for="applyRadioA21_2">미사용</label>
                     </td>
                   </tr>
                 </tbody>
@@ -468,6 +560,111 @@
       <section class="pop-contents">
         <h3 class="stit2">신청서 목록</h3>
         <ul class="list-comm btrm">
+          <li>
+            <p>22년 사랑의 헌금(상시) 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 청년다니엘기도회 1차 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 다니엘기도회 사랑의 헌금 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 사랑의 헌금(상시) 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 청년다니엘기도회 1차 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 다니엘기도회 사랑의 헌금 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 사랑의 헌금(상시) 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 청년다니엘기도회 1차 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 다니엘기도회 사랑의 헌금 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 사랑의 헌금(상시) 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 청년다니엘기도회 1차 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 다니엘기도회 사랑의 헌금 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 사랑의 헌금(상시) 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 청년다니엘기도회 1차 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
+          <li>
+            <p>22년 다니엘기도회 사랑의 헌금 신청서</p>
+            <div class="btnw-r">
+              <a class="bts" href="#">미리보기</a>
+              <a class="bts btcol3" href="#">사용하기</a>
+            </div>
+          </li>
           <li>
             <p>22년 사랑의 헌금(상시) 신청서</p>
             <div class="btnw-r">

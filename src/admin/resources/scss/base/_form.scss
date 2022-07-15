@@ -15,6 +15,10 @@
     font-size: 1rem;
     line-height: 30px;
   }
+
+  &.wtxtp70 {
+    width: 70%;
+  }
 }
 
 .inpt1 {
@@ -110,6 +114,36 @@
     }
   }
 
+  .dta-srcbtnwrap {
+    border: 1px solid $gray;
+    position: relative;
+    display: block;
+    padding: 3px 30px 2px 12px;
+    font-size: 0.75rem;
+
+    &::after {
+      @include posiCenter("v");
+      @include transition();
+      content: "";
+      display: block;
+      width: 10px;
+      height: 6px;
+      right: 6px;
+      background: url("../images/common/select_arr.png") no-repeat;
+      background-size: contain;
+    }
+
+    &.on {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+
+    @include mq("deskTop") {
+      font-size: 1rem;
+    }
+  }
+
   .datepicker {
     width: 85px;
   }
@@ -143,5 +177,124 @@
   @include mq("deskTop") {
     padding: 15px;
     font-size: 1rem;
+  }
+}
+
+.chklist {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > li {
+    flex: 0 100%;
+    margin: 2px 0 3px;
+
+    @include mq("tablet") {
+      flex-basis: 33%;
+    }
+
+    @include mq("deskTop") {
+      flex-basis: auto;
+
+      & + li {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+.detail-searhwrap {
+  display: none;
+  border: 1px solid $gray;
+  background-color: $gray3;
+  padding: 20px 15px;
+  margin-bottom: 10px;
+  font-size: 0.813rem;
+
+  &.open {
+    display: block;
+  }
+
+  .s-item {
+    margin-top: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .selector {
+    width: 100%;
+    background-color: $white;
+  }
+
+  .btn-dtwp {
+    margin-top: 10px;
+  }
+
+  .btn-dtsearch {
+    color: $white;
+    background-color: $skyBlue;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+
+  @include mq("deskTop") {
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    &.open {
+      display: flex;
+    }
+
+    .flexinn {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 0 calc(100% - 120px);
+
+      .innf {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex: 0 100%;
+      }
+    }
+
+    .btn-dtwp {
+      flex: 0 120px;
+      margin: 0;
+
+      .btn-dtsearch {
+        height: 100%;
+      }
+    }
+
+    .s-item {
+      flex: auto;
+      margin: 0 30px 10px 0;
+    }
+
+    label {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+
+    .selector {
+      width: 120px;
+    }
+
+    .inpt2 {
+      width: 120px;
+
+      &.wmt1 {
+        width: 220px;
+      }
+      &.wmt2 {
+        width: 300px;
+      }
+    }
   }
 }
