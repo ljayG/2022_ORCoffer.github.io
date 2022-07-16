@@ -36,6 +36,17 @@
   font-size: 1.125rem;
   font-weight: 700;
   color: #383f4f;
+
+  .tit_btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    font-size: 0.875rem;
+    padding: 2px 8px;
+    color: #383f4f;
+    border: 1px solid #d2d3d9;
+    border-radius: 2px;
+  }
 }
 
 .aplv_tit5 {
@@ -229,6 +240,10 @@
 
     &.type3 {
       flex: 0 0 (100% /3) * 2;
+    }
+
+    &.type4 {
+      flex: 0 0 50%;
     }
   }
 }
@@ -579,7 +594,8 @@
   .wtxt_mq3,
   .wtxt_mq4,
   .wtxt_mq5,
-  .wtxt_mq6 {
+  .wtxt_mq6,
+  .wtxt_mq8 {
     width: 100%;
   }
   .wtxt_mq7 {
@@ -593,6 +609,9 @@
   }
   .ftxt_mq3 {
     flex: 3;
+  }
+  .flx_w100 {
+    flex-basis: 100%;
   }
 
   @media all and (min-width: 1178px) {
@@ -627,6 +646,10 @@
 
     .wtxt_mq7 {
       width: 18%;
+    }
+
+    .wtxt_mq8 {
+      width: 48%;
     }
 
     .ftxt_mq1 {
@@ -942,6 +965,7 @@
   border: 1px solid #d2d3d9;
 
   .apl_textarea {
+    position: relative;
     background-color: #fff;
     border: 1px solid #d2d3d9;
 
@@ -989,6 +1013,18 @@
     }
   }
 
+  .text_byte {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.75rem;
+    color: #989aa2;
+
+    span {
+      color: #383f4f;
+    }
+  }
+
   @media all and (min-width: 1178px) {
     padding: 31px 31px 32px;
 
@@ -1006,6 +1042,11 @@
       .btn_txt_expend {
         height: 27px;
       }
+    }
+
+    .text_byte {
+      right: 15px;
+      bottom: 12px;
     }
   }
 }

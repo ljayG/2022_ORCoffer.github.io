@@ -608,18 +608,36 @@
           <form id name role="form" method="GET">
             <div class="sect02">
               <h3 class="tit01">
-                신청서 작성하기
+                일반 신청서 작성하기
               </h3>
               <div class="love_applywrap">
                 <p class="ap_ntxt1">※표시는 필수 입력 정보입니다.</p>
                 <p class="ap_ntxt2">
                   아래 기재사항은 진료 받는 대상을 중심으로 작성 합니다. *신청서 작성은 저장 후 수정 할 수 없습니다.<br>
-                  <span class="ap_under1">첨부자료 등 확인 후 접수</span> 하여 주시기 바랍니다. (신청자는 진료자입니다.)
+                  <span class="ap_under1">첨부자료 등 확인 후 접수</span> 하여 주시기 바랍니다.
                 </p>
                 <!-- 기본입력사항(s) -->
                 <section class="aplv_sect">
-                  <h4 class="blind">신청자 정보 입력</h4>
+                  <h4 class="aplv_tit4">기본정보 <span class="aplv_intxt">(신청자는 대상자(진료자)입니다.)</span></h4>
                   <div class="appl_box">
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew1">구분(대상)</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew1">
+                            <option value="">선택하세요.</option>
+                            <option value="">일반</option>
+                            <option value="">목회자</option>
+                            <option value="">목회자가족</option>
+                            <option value="">선교사</option>
+                            <option value="">선교사가족</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
                     <dl class="appl_dl">
                       <dt>
                         <span class="ipt_attr" title="필수입력">*</span>
@@ -658,28 +676,11 @@
                     <dl class="appl_dl">
                       <dt>
                         <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyA4">주민등록번호</label>
+                        <label for="userApplyA4">생년월일</label>
                       </dt>
                       <dd>
                         <div class="input_wrtwrap size_full">
-                          <input class="inptype1 size_full" id="userApplyA4" name="userApplyA4" type="number" placeholder="앞 6자리 입력">
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl">
-                      <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyA5">결혼유무</label>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap size_full">
-                          <select class="seltype1 size_full" id="userApplyA5">
-                            <option value="">선택하세요.</option>
-                            <option value="">기혼</option>
-                            <option value="">미혼</option>
-                            <option value="">이혼</option>
-                            <option value="">재혼</option>
-                          </select>
+                          <input class="inptype1 size_full" id="userApplyA4" name="userApplyA4" type="number" maxlength="8" placeholder="8자리 입력">
                         </div>
                       </dd>
                     </dl>
@@ -690,31 +691,26 @@
                       </dt>
                       <dd>
                         <div class="input_wrtwrap">
-                          <input class="inptype1 wtxt1" id="userApplyA6" name="userApplyA6" type="number" placeholder="나이 (숫자)"> 세
+                          <input class="inptype1 wtxt1" id="userApplyA6" name="userApplyA6" type="number" placeholder="나이"> 세
                         </div>
                       </dd>
                     </dl>
-                    <dl class="appl_dl type2">
+                    <dl class="appl_dl">
                       <dt>
                         <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyA7">의료정보</label>
+                        <label for="userApplyA5">대상자현황</label>
                       </dt>
                       <dd>
-                        <div class="input_wrtwrap wtxt_mq1">
-                          <select class="seltype1 wtxt100" id="userApplyA7">
+                        <div class="input_wrtwrap size_full">
+                          <select class="seltype1 size_full" id="userApplyA5">
                             <option value="">선택하세요.</option>
-                            <option value="">산정특례</option>
-                            <option value="">기초수급</option>
-                            <option value="">건강보험</option>
-                            <option value="">일반</option>
-                            <option value="">해외</option>
+                            <option value="">소아 1~2세 미만</option>
+                            <option value="">소아 3~13세 미만</option>
+                            <option value="">청소년 19세 미만</option>
+                            <option value="">기혼</option>
+                            <option value="">미혼</option>
                           </select>
                         </div>
-                        <div class="ml5">
-                          <input class="btn_upload" id="fileUpload1" type="file">
-                          <label for="fileUpload1"><span class="blind">파일 첨부하기</span></label>
-                        </div>
-                        <p class="flex_wid1 mdmgt1 ap_ftc1">※ 해당자는 근거자료를 필수로 첨부해주세요.</p>
                       </dd>
                     </dl>
                     <dl class="appl_dl type2">
@@ -737,6 +733,38 @@
                         </div>
                       </dd>
                     </dl>
+                    <!-- 해외 주소 입력시(s) -->
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyA81">해외주소</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq2">
+                          <select class="seltype1 size_full" id="userApplyA81">
+                            <option value="">선택하세요.</option>
+                          </select>
+                        </div>
+                        <div class="flex_wid1 mdmgt1">
+                          <input class="check" id="userApplyA81_2" name="userApplyA81_2" type="checkbox" checked>
+                          <label for="userApplyA81_2">해외주소 입력</label>
+                        </div>
+                        <div class="flex_wid2"><span class="lvfs12">※ 국가코드는 EMS 신청이 가능한 100개 국가만 제공합니다.</span></div>
+                        <div class="input_wrtwrap wtxt_mq8 mt5">
+                          <input class="inptype1 size_full" id="userApplyA81_3" name="userApplyA81_3" type="text" placeholder="ZipCode">
+                        </div>
+                        <div class="input_wrtwrap wtxt_mq8 mdmgt2 mt5">
+                          <input class="inptype1 size_full" id="userApplyA81_4" name="userApplyA81_4" type="text" placeholder="Detail[60] : 60글자까지 입력할 수 있습니다.">
+                        </div>
+                        <div class="input_wrtwrap wtxt_mq8 mt5">
+                          <input class="inptype1 size_full" id="userApplyA81_5" name="userApplyA81_5" type="text" placeholder="City[150] : 150글자까지 입력할 수 있습니다.">
+                        </div>
+                        <div class="input_wrtwrap wtxt_mq8 mdmgt2 mt5">
+                          <input class="inptype1 size_full" id="userApplyA81_6" name="userApplyA81_6" type="text" placeholder="Detail[60] : 60글자까지 입력할 수 있습니다.">
+                        </div>
+                      </dd>
+                    </dl>
+                    <!--// 해외 주소 입력시(e) -->
                     <dl class="appl_dl type2">
                       <dt>
                         <span class="ipt_attr" title="필수입력">*</span>
@@ -746,14 +774,14 @@
                         <div class="input_wrtwrap ftxt_mq1">
                           <input class="inptype1 size_full" id="userApplyA9_1" name="userApplyA9_1" type="tel" title="연락처 국번" value="010" disabled>
                         </div>
-                        <div class="input_wrtwrap ftxt_mq2 ml5">
+                        <div class="input_wrtwrap ftxt_mq2 mdmgt2">
                           <input class="inptype1 size_full" id="userApplyA9_1" name="userApplyA9_1" type="tel" title="연락처 중간, 나머지 번호" placeholder="- 없이 번호만 입력해주세요">
                         </div>
                       </dd>
                     </dl>
                     <dl class="appl_dl type2">
                       <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
+                        <span class="ipt_attr">&nbsp;</span>
                         <label for="userApplyA14">이메일</label>
                       </dt>
                       <dd>
@@ -822,8 +850,798 @@
                 </section>
                 <!--// 기본입력사항(e) -->
 
-                <!-- 가족사항(s) -->
+                <!-- 종교/사역정보(s) -->
                 <section class="aplv_sect">
+                  <h4 class="aplv_tit4">종교/사역정보 <span class="aplv_intxt">(일반)</span></h4>
+                  <div class="appl_box">
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew21">종교</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew21">
+                            <option value="">선택하세요.</option>
+                            <option value="">기독교</option>
+                            <option value="">카톨릭</option>
+                            <option value="">불교</option>
+                            <option value="">무교</option>
+                            <option value="">기타( )</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <!-- 기독교 선택시(s) -->
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyG1">교회명</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyG1" name="userApplyG1" type="text" placeholder="교회명">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type3">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyG2">담임목사</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap ftxt_mq2">
+                          <input class="inptype1 size_full" id="userApplyG2" name="userApplyG2" type="text" placeholder="이름을 입력해주세요.">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyA9">연락처</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq4">
+                          <select class="seltype1 size_full" id="userApplyNew21">
+                            <option value="">연락처선택</option>
+                            <option value="">02</option>
+                            <option value="">031</option>
+                            <option value="">032</option>
+                          </select>
+                        </div>
+                        <div class="input_wrtwrap ftxt_mq2 mdmgt2">
+                          <input class="inptype1 size_full" id="userApplyA9_1" name="userApplyA9_1" type="tel" title="연락처 중간, 나머지 번호" placeholder="- 없이 번호만 입력해주세요">
+                        </div>
+                      </dd>
+                    </dl>
+                    <!--// 기독교 선택시(e) -->
+                  </div>
+                </section>
+                <!--// 종교/사역정보(e) -->
+
+                <!-- 종교/사역정보(s) -->
+                <section class="aplv_sect">
+                  <h4 class="aplv_tit4">종교/사역정보 <span class="aplv_intxt">(목회자/목회자 가족일 경우)</span></h4>
+                  <div class="appl_box">
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew21">종교</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew21">
+                            <option value="">선택하세요.</option>
+                            <option value="">기독교</option>
+                            <option value="">카톨릭</option>
+                            <option value="">불교</option>
+                            <option value="">무교</option>
+                            <option value="">기타( )</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <!-- 기독교 선택시(s) -->
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyF21">교회명</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyF21" name="userApplyF21" type="text" placeholder="교회명">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyF22">교단명</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyF22">
+                            <option value="">선택하세요.</option>
+                            <option value="">예장</option>
+                            <option value="">합동</option>
+                            <option value="">고신</option>
+                            <option value="">예하성</option>
+                            <option value="">순복음</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyF23">사역기간</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyF23" name="userApplyF23" type="text" placeholder="0년 0월">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyF24">교회연락처</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq4">
+                          <select class="seltype1 size_full" id="userApplyF24">
+                            <option value="">연락처선택</option>
+                            <option value="">02</option>
+                            <option value="">031</option>
+                            <option value="">032</option>
+                          </select>
+                        </div>
+                        <div class="input_wrtwrap ftxt_mq2 mdmgt2">
+                          <input class="inptype1 size_full" id="userApplyF24_1" name="userApplyF24_1" type="tel" title="연락처 중간, 나머지 번호" placeholder="- 없이 번호만 입력해주세요">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyF25">담임연락처</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq4">
+                          <select class="seltype1 size_full" id="userApplyF25">
+                            <option value="">연락처선택</option>
+                            <option value="">02</option>
+                            <option value="">031</option>
+                            <option value="">032</option>
+                          </select>
+                        </div>
+                        <div class="input_wrtwrap ftxt_mq2 mdmgt2">
+                          <input class="inptype1 size_full" id="userApplyF25_1" name="userApplyF25_1" type="tel" title="연락처 중간, 나머지 번호" placeholder="- 없이 번호만 입력해주세요">
+                        </div>
+                      </dd>
+                    </dl>
+                    <!--// 기독교 선택시(e) -->
+                  </div>
+                </section>
+                <!--// 종교/사역정보(e) -->
+
+                <!-- 종교/사역정보(s) -->
+                <section class="aplv_sect">
+                  <h4 class="aplv_tit4">종교/사역정보 <span class="aplv_intxt">(선교사/선교사 가족일 경우)</span></h4>
+                  <div class="appl_box">
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew31">파송기관</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq1">
+                          <select class="seltype1 wtxt100" id="userApplyNew31">
+                            <option value="">선택하세요.</option>
+                            <option value="">교단</option>
+                          </select>
+                        </div>
+                        <div class="ml5">
+                          <input class="btn_upload" id="fileUpload1" type="file">
+                          <label for="fileUpload1"><span class="blind">파일 첨부하기</span></label>
+                        </div>
+                        <p class="flex_wid1 mdmgt1 ap_ftc1">※ 해당자는 근거자료를 필수로 첨부해주세요.</p>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew32">파송단체(교회명)</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyNew32" name="userApplyNew32" type="text" placeholder="국제선교단체(O.M)">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew33">주소</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq2">
+                          <select class="seltype1 size_full" id="userApplyNew33">
+                            <option value="">주소검색</option>
+                          </select>
+                        </div>
+                        <div class="input_wrtwrap wtxt_mq6 mdmgt2">
+                          <input class="inptype1 size_full" id="userApplyNew33_1" name="userApplyNew33_1" type="text" title="나머지주소" placeholder="나머지주소 (예: 402호)">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew34">연락처</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq4">
+                          <select class="seltype1 size_full" id="userApplyNew34">
+                            <option value="">연락처선택</option>
+                            <option value="">02</option>
+                            <option value="">031</option>
+                            <option value="">032</option>
+                          </select>
+                        </div>
+                        <div class="input_wrtwrap ftxt_mq2 mdmgt2">
+                          <input class="inptype1 size_full" id="userApplyNew34_1" name="userApplyNew34_1" type="tel" title="연락처 중간, 나머지 번호" placeholder="- 없이 번호만 입력해주세요">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt class="flx_w100">
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        세계선교협의회 등록여부(KWMA)
+                      </dt>
+                    </dl>
+                    <dl class="appl_dl type4">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew35">파송국</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyNew35" name="userApplyNew35" type="text">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type4">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew36">세부직분</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew36">
+                            <option value="">선택</option>
+                            <option value="">정규(3년 이상)</option>
+                            <option value="">전문(3개월 이상)</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type4">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew37">파송기간(재직증명서기준)</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew37">
+                            <option value="">선택</option>
+                            <option value="">1년 미만</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type4">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew38">현재활동상황(22년도 기준)</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew38">
+                            <option value="">선택</option>
+                            <option value="">1년 미만</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew39">파송지주소</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq2">
+                          <select class="seltype1 size_full" id="userApplyNew39">
+                            <option value="">주소검색</option>
+                          </select>
+                        </div>
+                        <div class="input_wrtwrap wtxt_mq2 mdmgt2">
+                          <input class="inptype1 size_full" id="userApplyNew39_1" name="userApplyNew39_1" type="text" title="나머지주소" placeholder="나머지주소 (예: 402호)">
+                        </div>
+                        <div class="flex_wid1 mdmgt1">
+                          <input class="check" id="userApplyNew39_2" name="userApplyNew39_2" type="checkbox">
+                          <label for="userApplyNew39_2">해외주소 입력</label>
+                        </div>
+                      </dd>
+                    </dl>
+                    <!-- 해외 주소 입력시(s) -->
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew40">파송지주소</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq2">
+                          <select class="seltype1 size_full" id="userApplyNew40">
+                            <option value="">선택하세요.</option>
+                          </select>
+                        </div>
+                        <div class="flex_wid1 mdmgt1">
+                          <input class="check" id="userApplyNew40_2" name="userApplyNew40_2" type="checkbox" checked>
+                          <label for="userApplyNew40_2">해외주소 입력</label>
+                        </div>
+                        <div class="flex_wid2"><span class="lvfs12">※ 국가코드는 EMS 신청이 가능한 100개 국가만 제공합니다.</span></div>
+                        <div class="input_wrtwrap wtxt_mq8 mt5">
+                          <input class="inptype1 size_full" id="userApplyNew40_3" name="userApplyNew40_3" type="text" placeholder="ZipCode">
+                        </div>
+                        <div class="input_wrtwrap wtxt_mq8 mdmgt2 mt5">
+                          <input class="inptype1 size_full" id="userApplyNew40_4" name="userApplyNew40_4" type="text" placeholder="Detail[60] : 60글자까지 입력할 수 있습니다.">
+                        </div>
+                        <div class="input_wrtwrap wtxt_mq8 mt5">
+                          <input class="inptype1 size_full" id="userApplyNew40_5" name="userApplyNew40_5" type="text" placeholder="City[150] : 150글자까지 입력할 수 있습니다.">
+                        </div>
+                        <div class="input_wrtwrap wtxt_mq8 mdmgt2 mt5">
+                          <input class="inptype1 size_full" id="userApplyNew40_6" name="userApplyNew40_6" type="text" placeholder="Detail[60] : 60글자까지 입력할 수 있습니다.">
+                        </div>
+                      </dd>
+                    </dl>
+                    <!--// 해외 주소 입력시(e) -->
+                  </div>
+                </section>
+                <!--// 종교/사역정보(e) -->
+
+                <!-- 의료정보(s) -->
+                <section class="aplv_sect">
+                  <h4 class="aplv_tit4">의료정보</h4>
+                  <div class="appl_box">
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyA7">의료정보</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq1">
+                          <select class="seltype1 wtxt100" id="userApplyA7">
+                            <option value="">선택하세요.</option>
+                            <option value="">일반</option>
+                            <option value="">차상위</option>
+                            <option value="">기초</option>
+                            <option value="">산정특례</option>
+                            <option value="">기타</option>
+                          </select>
+                        </div>
+                        <div class="ml5">
+                          <input class="btn_upload" id="fileUpload1" type="file">
+                          <label for="fileUpload1"><span class="blind">파일 첨부하기</span></label>
+                        </div>
+                        <p class="flex_wid1 mdmgt1 ap_ftc1">※ 해당자는 근거자료를 필수로 첨부해주세요.</p>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew41">건&middot;보 납입액</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq1">
+                          <select class="seltype1 wtxt100" id="userApplyNew41">
+                            <option value="">선택하세요.</option>
+                            <option value="">5만원 미만</option>
+                            <option value="">8만원 미만</option>
+                            <option value="">10만원 미만</option>
+                            <option value="">13만원 미만</option>
+                            <option value="">15만원 미만</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew42">진단일자</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyNew42" name="userApplyNew42" type="date" placeholder="YYYY-MM-DD">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type3">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew43">진단명</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyNew43" name="userApplyNew43" type="text">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew44">병원명</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyNew44" name="userApplyNew44" type="text">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew45">병원지역</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew45">
+                            <option value="">선택하세요.</option>
+                            <option value="">서울특별시</option>
+                            <option value="">부산광역시</option>
+                            <option value="">대구광역시</option>
+                            <option value="">인천광역시</option>
+                            <option value="">광주광역시</option>
+                            <option value="">대전광역시</option>
+                            <option value="">울산광역시</option>
+                            <option value="">세종특별자치시</option>
+                            <option value="">경기도</option>
+                            <option value="">강원도</option>
+                            <option value="">충청북도</option>
+                            <option value="">충청남도</option>
+                            <option value="">전라북도</option>
+                            <option value="">전라남도</option>
+                            <option value="">경상북도</option>
+                            <option value="">경상남도</option>
+                            <option value="">제주특별자치도</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew46">병원유형</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew46">
+                            <option value="">선택하세요.</option>
+                            <option value="">대학병원</option>
+                            <option value="">지역종합병원</option>
+                            <option value="">개인병원</option>
+                            <option value="">기타(  )</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew47">진료과</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyNew47" name="userApplyNew47" type="text">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew48">의료상황</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew48">
+                            <option value="">선택하세요.</option>
+                            <option value="">수술전</option>
+                            <option value="">수술후</option>
+                            <option value="">재수술</option>
+                            <option value="">통원</option>
+                            <option value="">요양</option>
+                            <option value="">간병</option>
+                            <option value="">입원</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew49">입원기간</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew49">
+                            <option value="">선택하세요.</option>
+                            <option value="">1주 미만</option>
+                            <option value="">2주 미만</option>
+                            <option value="">3주 미만</option>
+                            <option value="">4주 미만</option>
+                            <option value="">한 달 이상</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </section>
+                <!--// 의료정보(e) -->
+
+                <!-- 신청내용 작성(s) -->
+                <section class="aplv_sect">
+                  <h4 class="aplv_tit4">신청내용 작성</h4>
+                  <div class="aplv_box2">
+                    <div class="first">
+                      <div class="atten">주의사항</div>
+                    </div>
+                    <div class="atten_note">
+                      진단명(내용은 한글로 번역) - 초기진료일자(필수) - 치료과정 - 현재상황 순으로 작성해 주시고 사진은 일체 첨부하지 않습니다.<br>
+                      추천자와 부재시 신청자에 대한 지원이 제한 될 수 있습니다. (일반전화로 확인) 02-6413로 연락함
+                    </div>
+                  </div>
+
+                  <div class="aplv_txtfield">
+                    <div class="apl_textarea">
+                      <label class="blind" for="userApplyC3">내용을 작성해 주세요.</label>
+                      <textarea id="userApplyC3" placeholder="내용을 작성해 주세요."></textarea>
+                      <button class="btn_txt_expend" type="button"><span>내용작성 영역 늘리기</span></button>
+                      <div class="text_byte"><span>1</span>/1,000</div>
+                    </div>
+                    <div class="aplv_btnwrap right mt8">
+                      <input class="btn_upload" id="fileUpload2" type="file">
+                      <label for="fileUpload2"><span class="blind">파일 첨부하기</span></label>
+                      <button class="btn_aplv1 bg3 on" type="button"><span class="icaplv_check">등록</span></button>
+                    </div>
+                  </div>
+                </section>
+                <!--// 신청내용 작성(e) -->
+
+                <!-- 첨부파일 등록(s) -->
+                <section class="aplv_sect">
+                  <h4 class="aplv_tit4">첨부파일 등록 <a class="tit_btn" href="#">등록방법안내</a> <span class="aplv_intxt">※ 아래의 파일을 전부 등록하셔야 됩니다.</span></h4>
+                  <div class="appl_box2">
+                    <dl class="appl_dl2">
+                      <dt>
+                        <span>1</span>
+                      </dt>
+                      <dd class="type2">
+                        <div class="input_wrtwrap size_l">
+                          3개월 이내 진단서 1부
+                        </div>
+                        <div class="size_r">
+                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl2">
+                      <dt>
+                        <span>2</span>
+                      </dt>
+                      <dd class="type2">
+                        <div class="input_wrtwrap size_l">
+                          3개월간 건강보험 납입증명서 1부
+                        </div>
+                        <div class="size_r">
+                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl2">
+                      <dt>
+                        <span>3</span>
+                      </dt>
+                      <dd class="type2">
+                        <div class="input_wrtwrap size_l">
+                          최근 병원진료비 납입 영수증 1부
+                        </div>
+                        <div class="size_r">
+                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl2">
+                      <dt>
+                        <span>4</span>
+                      </dt>
+                      <dd class="type2">
+                        <div class="input_wrtwrap size_l">
+                          주민등록 등본 1부
+                        </div>
+                        <div class="size_r">
+                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
+                        </div>
+                      </dd>
+                    </dl>
+
+                    <div class="aplv_btnwrap right mb8">
+                      <p class="ap_ftc1 stxt1">※첨부파일 추가등록은 추가 버튼을 클릭하여 등록해주세요.</p>
+                      <button class="btn_aplv1 bg1" type="button">
+                        <span class="icaplv_plus">추가</span>
+                      </button>
+                    </div>
+
+                    <dl class="appl_dl2">
+                      <dt>
+                        <span>5</span>
+                      </dt>
+                      <dd class="type2">
+                        <div class="input_wrtwrap size_l">
+                          <input class="inptype1 size_full" id="userApplyD1_1" type="text" title="자료명" value placeholder="자료명을 입력해주세요.">
+                        </div>
+                        <div class="size_r">
+                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </section>
+                <!--//  첨부파일 등록(e) -->
+
+                <!-- 추천자 정보입력(s) -->
+                <section class="aplv_sect">
+                  <h4 class="aplv_tit4">추천자 정보입력</h4>
+                  <div class="appl_box type2">
+                    <dl class="appl_dl type3">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyF1">추천자명(기관명)</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyF1" name="userApplyF1" type="text" placeholder="이름을 입력해주세요.">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew51">추천자 자격</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew51">
+                            <option value="">선택하세요.</option>
+                            <option value="">목사</option>
+                            <option value="">단체장</option>
+                            <option value="">가족</option>
+                            <option value="">본인</option>
+                            <option value="">지인</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyF6">연락처</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap ftxt_mq1">
+                          <input class="inptype1 size_full" id="userApplyF6_1" name="userApplyF6_1" type="tel" title="연락처 국번" value="010" disabled>
+                        </div>
+                        <div class="input_wrtwrap ftxt_mq2 ml5">
+                          <input class="inptype1 size_full" id="userApplyF6_1" name="userApplyF6_1" type="tel" title="연락처 중간, 나머지 번호" placeholder="- 없이 번호만 입력해주세요">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type2">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyF2">신청자와의 관계</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap size_full">
+                          <input class="inptype1 size_full" id="userApplyF3" name="userApplyF3" type="text">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type3">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyF5">교회명/단체명</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap ftxt_mq2">
+                          <input class="inptype1 size_full" id="userApplyF5" name="userApplyF5" type="text" placeholder="이름을 입력해주세요.">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew52">교단</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyNew52">
+                            <option value="">선택하세요.</option>
+                            <option value="">예장</option>
+                            <option value="">합동</option>
+                            <option value="">고신</option>
+                            <option value="">예하성</option>
+                            <option value="">순복음</option>
+                            <option value="">성결</option>
+                            <option value="">침례</option>
+                            <option value="">감리</option>
+                            <option value="">초교파기타(  )</option>
+                          </select>
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl type3">
+                      <dt>
+                        <span class="ipt_attr" title="필수입력">*</span>
+                        <label for="userApplyNew53">연락처</label>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap wtxt_mq2">
+                          <select class="seltype1 size_full" id="userApplyNew53">
+                            <option value="">연락처선택</option>
+                            <option value="">02</option>
+                            <option value="">031</option>
+                            <option value="">032</option>
+                          </select>
+                        </div>
+                        <div class="input_wrtwrap ftxt_mq2 mdmgt2">
+                          <input class="inptype1 size_full" id="userApplyNew53_1" name="userApplyNew53_1" type="tel" title="연락처 중간, 나머지 번호" placeholder="- 없이 번호만 입력해주세요">
+                        </div>
+                      </dd>
+                    </dl>
+                    <dl class="appl_dl">
+                      <dt>
+                        다니엘기도회 참여교회
+                      </dt>
+                      <dd>
+                        <input class="radio" id="userApplyF2_1" name="userApplyF2" type="radio" value="1">
+                        <label for="userApplyF2_1">참여</label>
+                        <input class="radio ml35" id="userApplyF2_2" name="userApplyF2" type="radio" value="2">
+                        <label for="userApplyF2_2">미참여</label>
+                      </dd>
+                    </dl>
+                    <div class="aplv_txtfield flwid100">
+                      <div class="apl_textarea">
+                        <label class="blind" for="userApplyF9">추천사유를 작성해 주세요.</label>
+                        <textarea id="userApplyF9" placeholder="추천사유를 작성해 주세요."></textarea>
+                        <button class="btn_txt_expend" type="button"><span>내용작성 영역 늘리기</span></button>
+                        <div class="text_byte"><span>1</span>/1,000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="aplv_argwrap">
+                    <p class="argtxt">* 위 내용에 미 기재시 접수 및 심의에 제외 되며 연락이 되지 않는 신청자 또는 추천자는 본 신청을 취소합니다. 이에 동의 합니다.</p>
+                    <div class="argchk">
+                      <input class="radio" id="userChk1_1" name="userChk1" type="radio" value="1">
+                      <label for="userChk1_1">동의함</label>
+                      <input class="radio ml35" id="userChk1_2" name="userChk1" type="radio" value="2">
+                      <label for="userChk1_2">동의 하지 않음</label>
+                    </div>
+                  </div>
+                </section>
+                <!--// 추천자 정보입력(e) -->
+
+                <!-- 가족사항(s) -->
+                <!-- <section class="aplv_sect">
                   <h4 class="aplv_tit4">가족사항 <span class="aplv_intxt">(순서는 신청자가 '1'으로 작성 최대 5인까지만 작성) 주민등록 등본'상 기재된 모든 가족 작성</span></h4>
                   <div class="appl_box2">
                     <dl class="appl_dl2 bg2">
@@ -889,120 +1707,11 @@
                       </button>
                     </div>
                   </div>
-                </section>
+                </section> -->
                 <!--// 가족사항(e) -->
 
-                <!-- 신청내용 작성(s) -->
-                <section class="aplv_sect">
-                  <h4 class="aplv_tit4">신청내용 작성</h4>
-                  <div class="aplv_box2">
-                    <div class="first">
-                      <div class="atten">주의사항</div>
-                    </div>
-                    <div class="atten_note">
-                      진단명(내용은 한글로 번역) - 초기진료일자(필수) - 치료과정 - 현재상황 순으로 작성해 주시고 사진은 일체 첨부하지 않습니다.<br>
-                      추천자와 부재시 신청자에 대한 지원이 제한 될 수 있습니다. (일반전화로 확인) 02-6413로 연락함
-                    </div>
-                  </div>
-
-                  <div class="aplv_txtfield">
-                    <div class="apl_textarea">
-                      <label class="blind" for="userApplyC3">내용을 작성해 주세요.</label>
-                      <textarea id="userApplyC3" placeholder="내용을 작성해 주세요."></textarea>
-                      <button class="btn_txt_expend" type="button"><span>내용작성 영역 늘리기</span></button>
-                    </div>
-                    <div class="aplv_btnwrap right mt8">
-                      <input class="btn_upload" id="fileUpload2" type="file">
-                      <label for="fileUpload2"><span class="blind">파일 첨부하기</span></label>
-                      <button class="btn_aplv1 bg3 on" type="button"><span class="icaplv_check">등록</span></button>
-                    </div>
-                  </div>
-                </section>
-                <!--// 신청내용 작성(e) -->
-
-                <!-- 첨부파일 등록(s) -->
-                <section class="aplv_sect">
-                  <h4 class="aplv_tit4">첨부파일 등록 <span class="aplv_intxt">(일반, 목회자)</span></h4>
-                  <div class="appl_box2">
-                    <dl class="appl_dl2">
-                      <dt>
-                        <span>1</span>
-                      </dt>
-                      <dd class="type2">
-                        <div class="input_wrtwrap size_l">
-                          3개월 이내 진단서 1부
-                        </div>
-                        <div class="size_r">
-                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl2">
-                      <dt>
-                        <span>2</span>
-                      </dt>
-                      <dd class="type2">
-                        <div class="input_wrtwrap size_l">
-                          3개월간 건강보험 납입증명서 1부
-                        </div>
-                        <div class="size_r">
-                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl2">
-                      <dt>
-                        <span>3</span>
-                      </dt>
-                      <dd class="type2">
-                        <div class="input_wrtwrap size_l">
-                          최근 병원진료비 납입 영수증 1부
-                        </div>
-                        <div class="size_r">
-                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl2">
-                      <dt>
-                        <span>3</span>
-                      </dt>
-                      <dd class="type2">
-                        <div class="input_wrtwrap size_l">
-                          주민등록 등본 1부
-                        </div>
-                        <div class="size_r">
-                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
-                        </div>
-                      </dd>
-                    </dl>
-
-                    <div class="aplv_btnwrap right mb8">
-                      <p class="ap_ftc1 stxt1">※첨부파일 추가등록은 추가 버튼을 클릭하여 등록해주세요.</p>
-                      <button class="btn_aplv1 bg1" type="button">
-                        <span class="icaplv_plus">추가</span>
-                      </button>
-                    </div>
-
-                    <dl class="appl_dl2">
-                      <dt>
-                        <span>5</span>
-                      </dt>
-                      <dd class="type2">
-                        <div class="input_wrtwrap size_l">
-                          <input class="inptype1 size_full" id="userApplyD1_1" type="text" title="자료명" value placeholder="자료명을 입력해주세요.">
-                        </div>
-                        <div class="size_r">
-                          <button class="btn_aplv1 bg3" type="button"><span class="icaplv_check">등록</span></button>
-                        </div>
-                      </dd>
-                    </dl>
-                  </div>
-                </section>
-                <!--//  첨부파일 등록(e) -->
-
                 <!-- 첨부파일 등록(선교사)(s) -->
-                <section class="aplv_sect">
+                <!-- <section class="aplv_sect">
                   <h4 class="aplv_tit4">첨부파일 등록(선교사) <span class="aplv_intxt">※한글번역본으로 등록</span></h4>
                   <div class="appl_box2">
                     <dl class="appl_dl2">
@@ -1079,128 +1788,8 @@
                       </dd>
                     </dl>
                   </div>
-                </section>
+                </section> -->
                 <!--//  첨부파일 등록(선교사)(e) -->
-
-                <!-- 추천자 정보입력(s) -->
-                <section class="aplv_sect">
-                  <h4 class="aplv_tit4">추천자 정보입력</h4>
-                  <div class="appl_box type2">
-                    <dl class="appl_dl">
-                      <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyF1">이름</label>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap size_full">
-                          <input class="inptype1 size_full" id="userApplyF1" name="userApplyF1" type="text" placeholder="이름을 입력해주세요.">
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl">
-                      <dt>
-                        다니엘기도회 참여교회
-                      </dt>
-                      <dd>
-                        <input class="radio" id="userApplyF2_1" name="userApplyF2" type="radio" value="1">
-                        <label for="userApplyF2_1">참여</label>
-                        <input class="radio ml35" id="userApplyF2_2" name="userApplyF2" type="radio" value="2">
-                        <label for="userApplyF2_2">미참여</label>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl">
-                      <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyF2">관계</label>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap size_full">
-                          <input class="inptype1 size_full" id="userApplyF3" name="userApplyF3" type="text">
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl">
-                      <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyF4">교단</label>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap size_full">
-                          <input class="inptype1 size_full" id="userApplyF4" name="userApplyF4" type="text" placeholder="이름을 입력해주세요.">
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl type3">
-                      <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyF5">교회명</label>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap ftxt_mq2">
-                          <input class="inptype1 size_full" id="userApplyF5" name="userApplyF5" type="text" placeholder="이름을 입력해주세요.">
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl type2">
-                      <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyF6">연락처</label>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap ftxt_mq1">
-                          <input class="inptype1 size_full" id="userApplyF6_1" name="userApplyF6_1" type="tel" title="연락처 국번" value="010" disabled>
-                        </div>
-                        <div class="input_wrtwrap ftxt_mq2 ml5">
-                          <input class="inptype1 size_full" id="userApplyF6_1" name="userApplyF6_1" type="tel" title="연락처 중간, 나머지 번호" placeholder="- 없이 번호만 입력해주세요">
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl">
-                      <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyF7">이메일</label>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap size_full">
-                          <input class="inptype1 size_full" id="userApplyF7" name="userApplyF7" type="email">
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl type3">
-                      <dt>
-                        연락가능여부
-                      </dt>
-                      <dd>
-                        <input class="radio" id="userApplyF8_1" name="userApplyF8" type="radio" value="1">
-                        <label for="userApplyF8_1">가능</label>
-                        <input class="radio ml35" id="userApplyF8_2" name="userApplyF8" type="radio" value="2">
-                        <label for="userApplyF8_2">불가능</label>
-                      </dd>
-                    </dl>
-                    <div class="aplv_txtfield flwid100">
-                      <div class="apl_textarea">
-                        <label class="blind" for="userApplyF9">내용을 작성해 주세요.</label>
-                        <textarea id="userApplyF9" placeholder="내용을 작성해 주세요."></textarea>
-                        <button class="btn_txt_expend" type="button"><span>내용작성 영역 늘리기</span></button>
-                      </div>
-                      <div class="aplv_btnwrap right mt8">
-                        <input class="btn_upload" id="fileUpload2" type="file">
-                        <label for="fileUpload2"><span class="blind">파일 첨부하기</span></label>
-                        <button class="btn_aplv1 bg3 on" type="button"><span class="icaplv_check">등록</span></button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="aplv_argwrap">
-                    <p class="argtxt">* 위 내용에 미 기재시 접수 및 심의에 제외 되며 연락이 되지 않는 신청자 또는 추천자는 본 신청을 취소합니다.</p>
-                    <div class="argchk">
-                      <input class="radio" id="userChk1_1" name="userChk1" type="radio" value="1">
-                      <label for="userChk1_1">동의함</label>
-                      <input class="radio ml35" id="userChk1_2" name="userChk1" type="radio" value="2">
-                      <label for="userChk1_2">동의 하지 않음</label>
-                    </div>
-                  </div>
-                </section>
-                <!--// 추천자 정보입력(e) -->
 
                 <!-- 개인정보 수집&middot;이용 및 결과 동의서(s) -->
                 <section class="aplv_sect">
