@@ -614,7 +614,6 @@
                 <p class="ap_ntxt1">※표시는 필수 입력 정보입니다.</p>
                 <div class="lv_search">
                   <p class="ap_ntxt2">
-                    최초 신청이 아닌 경우 반드시 기관 검색을 통해 기존정보를 불러와서 작성을 해주세요.<br>
                     <span class="ap_under1">첨부자료 등 확인 후 접수</span> 하여 주시기 바랍니다.
                   </p>
                   <div class="ap_searchfrm">
@@ -714,7 +713,7 @@
                     <dl class="appl_dl">
                       <dt>
                         <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyB4">대상자</label>
+                        <label for="userApplyB4">사업장구분</label>
                       </dt>
                       <dd>
                         <div class="input_wrtwrap size_full">
@@ -732,7 +731,7 @@
                     <dl class="appl_dl">
                       <dt>
                         <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyB5">대상자</label>
+                        <label for="userApplyB5">사업장유형</label>
                       </dt>
                       <dd>
                         <div class="input_wrtwrap size_full">
@@ -791,12 +790,12 @@
                     <dl class="appl_dl type3">
                       <dt>
                         <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyB9">연락처</label>
+                        <label for="userApplyB9">기관연락처</label>
                       </dt>
                       <dd>
                         <div class="input_wrtwrap ftxt_mq4">
                           <select class="seltype1 size_full" id="userApplyB9" title="국번 선택">
-                            <option value="">선택하세요.</option>
+                            <option value="">지역번호선택</option>
                             <option value="">02</option>
                             <option value="">031</option>
                             <option value="">041</option>
@@ -887,55 +886,13 @@
                 </section>
                 <!--// 기관정보(e) -->
 
-                 <!-- 사랑의 헌금 신청 현황(년,월)기재(s) -->
-                 <section class="aplv_sect">
-                  <h4 class="aplv_tit4">사랑의 헌금 신청 현황(년,월)기재</h4>
-                  <div class="appl_box2">
-                    <dl class="appl_dl2 bg2">
-                      <dt>
-                        <span>1</span>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap">
-                          <select class="seltype1 size_full" id="userApplyB1_1" title="1. 날짜">
-                            <option value="">날짜</option>
-                          </select>
-                        </div>
-                        <div class="input_wrtwrap">
-                          <select class="seltype1 size_full" id="userApplyB1_2" title="1. 지원여부">
-                            <option value="">지원여부</option>
-                            <option value="">지원</option>
-                            <option value="">미지원</option>
-                          </select>
-                        </div>
-                        <div class="input_wrtwrap">
-                          <input class="inptype1 size_full" id="userApplyB1_3" type="number" title="1. 지원금" value>
-                        </div>
-                      </dd>
-                    </dl>
-                    <div class="aplv_btnwrap right">
-                      <button class="btn_aplv1 bg1" type="button">
-                        <span class="icaplv_plus">추가</span>
-                      </button>
-                    </div>
-                    <div class="lvfsm12 mt5">
-                      <strong class="lvfc2 mr15">※ 바로 이전 지원 금액</strong>
-                      <input class="radio" id="userApplyB0_1" name="userApplyB0" type="radio">
-                      <label for="userApplyB0_1">있음(&#8361; )</label>
-                      <input class="radio ml10" id="userApplyB0_2" name="userApplyB0" type="radio">
-                      <label for="userApplyB0_2">없음</label>
-                    </div>
-                  </div>
-                </section>
-                <!--// 사랑의 헌금 신청 현황(년,월)기재(e) -->
-
-                 <!-- 산출내용(s) -->
-                 <section class="aplv_sect">
+                <!-- 산출내용(s) -->
+                <section class="aplv_sect">
                   <h4 class="aplv_tit4">산출내용</h4>
                   <div class="appl_box3">
                     <div class="ap_ftc1 mb10">
                       산출내용작성시 시장조사 및 요청하신 금액을 자세하게 조사 하시고 실지급액 기준으로 하시면 됩니다.<br>
-                      (기타, 예비비는 자부담으로 하시므로 본 신청에는 금액을 넣지 않습니다)
+                      (기타, 예비비는 자부담으로 하시므로 본 신청에는 금액을 넣지 않습니다.)
                     </div>
                     <div class="ta_01">
                       <table>
@@ -1020,28 +977,28 @@
                   </div>
 
                   <div class="appl_box type2">
-                    <dl class="appl_dl type2">
-                      <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyC1">목적</label>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap size_full">
-                          <input class="inptype1 size_full" id="userApplyC1" name="userApplyC1" type="text" placeholder="사용목적을 작성해주세요.">
-                        </div>
-                      </dd>
-                    </dl>
-                    <dl class="appl_dl type2">
-                      <dt>
-                        <span class="ipt_attr" title="필수입력">*</span>
-                        <label for="userApplyC2">적용과정</label>
-                      </dt>
-                      <dd>
-                        <div class="input_wrtwrap size_full">
-                          <input class="inptype1 size_full" id="userApplyC2" name="userApplyC2" type="text" placeholder="어떻게 사용할지 간단하게 작성해주세요.">
-                        </div>
-                      </dd>
-                    </dl>
+                    <div class="athtit1">
+                      <span class="ipt_attr" title="필수입력">*</span>
+                      <label for="userApplyC1">목적</label>
+                    </div>
+                    <div class="aplv_txtfield type2 flwid100">
+                      <div class="apl_textarea">
+                        <textarea id="userApplyC1" placeholder="내용을 작성해 주세요."></textarea>
+                        <button class="btn_txt_expend" type="button"><span>내용작성 영역 늘리기</span></button>
+                        <div class="text_byte"><span>1</span>/1,000</div>
+                      </div>
+                    </div>
+                    <div class="athtit1">
+                      <span class="ipt_attr" title="필수입력">*</span>
+                      <label for="userApplyC2">적용과정</label>
+                    </div>
+                    <div class="aplv_txtfield type2 flwid100">
+                      <div class="apl_textarea">
+                        <textarea id="userApplyC2" placeholder="내용을 작성해 주세요."></textarea>
+                        <button class="btn_txt_expend" type="button"><span>내용작성 영역 늘리기</span></button>
+                        <div class="text_byte"><span>1</span>/1,000</div>
+                      </div>
+                    </div>
                     <div class="athtit1">
                       <span class="ipt_attr" title="필수입력">*</span>
                       <label for="userApplyC3">신청내용</label>
@@ -1050,6 +1007,7 @@
                       <div class="apl_textarea">
                         <textarea id="userApplyC3" placeholder="내용을 작성해 주세요."></textarea>
                         <button class="btn_txt_expend" type="button"><span>내용작성 영역 늘리기</span></button>
+                        <div class="text_byte"><span>1</span>/1,000</div>
                       </div>
                       <div class="aplv_btnwrap right mt8">
                         <input class="btn_upload" id="fileUpload2" type="file">
@@ -1063,7 +1021,7 @@
 
                 <!-- 첨부파일 등록(s) -->
                 <section class="aplv_sect">
-                  <h4 class="aplv_tit4">첨부파일 등록 <span class="aplv_intxt">(일반, 목회자)</span></h4>
+                  <h4 class="aplv_tit4">첨부파일 등록 <a class="tit_btn" href="#">등록방법안내</a> <span class="aplv_intxt">※ 아래의 파일을 전부 등록하셔야 됩니다.</span></h4>
                   <div class="appl_box2">
                     <dl class="appl_dl2">
                       <dt>
@@ -1196,6 +1154,48 @@
                   </div>
                 </section>
                 <!--// 담당자 정보입력(e) -->
+
+                <!-- 사랑의 헌금 신청 현황(년,월)기재(s) -->
+                <!-- <section class="aplv_sect">
+                  <h4 class="aplv_tit4">사랑의 헌금 신청 현황(년,월)기재</h4>
+                  <div class="appl_box2">
+                    <dl class="appl_dl2 bg2">
+                      <dt>
+                        <span>1</span>
+                      </dt>
+                      <dd>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyB1_1" title="1. 날짜">
+                            <option value="">날짜</option>
+                          </select>
+                        </div>
+                        <div class="input_wrtwrap">
+                          <select class="seltype1 size_full" id="userApplyB1_2" title="1. 지원여부">
+                            <option value="">지원여부</option>
+                            <option value="">지원</option>
+                            <option value="">미지원</option>
+                          </select>
+                        </div>
+                        <div class="input_wrtwrap">
+                          <input class="inptype1 size_full" id="userApplyB1_3" type="number" title="1. 지원금" value>
+                        </div>
+                      </dd>
+                    </dl>
+                    <div class="aplv_btnwrap right">
+                      <button class="btn_aplv1 bg1" type="button">
+                        <span class="icaplv_plus">추가</span>
+                      </button>
+                    </div>
+                    <div class="lvfsm12 mt5">
+                      <strong class="lvfc2 mr15">※ 바로 이전 지원 금액</strong>
+                      <input class="radio" id="userApplyB0_1" name="userApplyB0" type="radio">
+                      <label for="userApplyB0_1">있음(&#8361; )</label>
+                      <input class="radio ml10" id="userApplyB0_2" name="userApplyB0" type="radio">
+                      <label for="userApplyB0_2">없음</label>
+                    </div>
+                  </div>
+                </section> -->
+                <!--// 사랑의 헌금 신청 현황(년,월)기재(e) -->
 
                 <!-- 개인정보 수집&middot;이용 및 결과 동의서(s) -->
                 <section class="aplv_sect">
@@ -1346,7 +1346,7 @@
                       </table>
                     </div>
                     <div class="aplv_argwrap type2">
-                      <p class="argtxt">*  위의 영상물 제작 보관(이용)에 대한 동의를 거부할 권리가 있습니다. 신청(추천)자 중 선정되며, 영상제작은 신청(추천)자 중심으로만 됩니다. 후원연계 및 지급금액에 추가산정됩니다(심의후 금액결정) 지급금액은 1회에 한함.</p>
+                      <p class="argtxt">* 위의 영상물 제작 보관(이용)에 대한 동의를 거부할 권리가 있습니다. 신청(추천)자 중 선정되며, 영상제작은 신청(추천)자 중심으로만 됩니다. 후원연계 및 지급금액에 추가산정됩니다(심의후 금액결정) 지급금액은 1회에 한함.</p>
                       <div class="argchk">
                         <input class="radio" id="userChk5_1" name="userChk5" type="radio" value="1">
                         <label for="userChk5_1">동의함</label>
