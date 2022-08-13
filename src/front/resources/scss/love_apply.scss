@@ -47,6 +47,23 @@
     border: 1px solid #d2d3d9;
     border-radius: 2px;
   }
+
+  .aplv_btnwrap {
+    margin-top: 10px;
+
+    .btn_aplv1 {
+      display: inline-block;
+
+      & + .btn_aplv1 {
+        margin-left: 3px;
+      }
+    }
+
+    @media all and (min-width: 1178px) {
+      display: inline-block;
+      margin: 0 0 0 15px;
+    }
+  }
 }
 
 .aplv_tit5 {
@@ -891,6 +908,10 @@
 
 .icaplv_plus {
   background: url("../images/love/ico_plus.png") no-repeat center;
+}
+
+.icaplv_minus {
+  background: url("../images/love/ico_minus.png") no-repeat center;
 }
 
 .icaplv_check {
@@ -2180,6 +2201,53 @@
           font-size: 24px;
         }
       }
+    }
+  }
+}
+
+.lv_filewrap {
+  margin: 15px 0;
+}
+
+.lvdownload {
+  display: block;
+  line-height: 1;
+
+  .file {
+    display: inline-block;
+    vertical-align: middle;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 0.875rem;
+      color: #222;
+    }
+  }
+
+  .btndel {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.inpt5 {
+  width: 98%;
+  padding: 0 5px;
+  height: 30px;
+  border: 1px solid #d2d3d9;
+  box-sizing: border-box;
+  line-height: 28px;
+  background-color: #fff;
+
+  @at-root td.my {
+    .inpt5 {
+      text-align: right;
     }
   }
 }

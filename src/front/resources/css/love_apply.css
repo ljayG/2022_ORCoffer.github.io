@@ -47,6 +47,21 @@
   border: 1px solid #d2d3d9;
   border-radius: 2px;
 }
+.aplv_tit4 .aplv_btnwrap {
+  margin-top: 10px;
+}
+.aplv_tit4 .aplv_btnwrap .btn_aplv1 {
+  display: inline-block;
+}
+.aplv_tit4 .aplv_btnwrap .btn_aplv1 + .btn_aplv1 {
+  margin-left: 3px;
+}
+@media all and (min-width: 1178px) {
+  .aplv_tit4 .aplv_btnwrap {
+    display: inline-block;
+    margin: 0 0 0 15px;
+  }
+}
 
 .aplv_tit5 {
   margin: 30px 0 22px;
@@ -808,6 +823,10 @@
 
 .icaplv_plus {
   background: url("../images/love/ico_plus.png") no-repeat center;
+}
+
+.icaplv_minus {
+  background: url("../images/love/ico_minus.png") no-repeat center;
 }
 
 .icaplv_check {
@@ -1915,4 +1934,44 @@
   .ownlist > li .item p {
     font-size: 24px;
   }
+}
+
+.lv_filewrap {
+  margin: 15px 0;
+}
+
+.lvdownload {
+  display: block;
+  line-height: 1;
+}
+.lvdownload .file {
+  display: inline-block;
+  vertical-align: middle;
+}
+.lvdownload .file span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  color: #222;
+}
+.lvdownload .btndel {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.lvdownload + .lvdownload {
+  margin-top: 10px;
+}
+
+.inpt5 {
+  width: 98%;
+  padding: 0 5px;
+  height: 30px;
+  border: 1px solid #d2d3d9;
+  box-sizing: border-box;
+  line-height: 28px;
+  background-color: #fff;
+}
+td.my .inpt5 {
+  text-align: right;
 }
