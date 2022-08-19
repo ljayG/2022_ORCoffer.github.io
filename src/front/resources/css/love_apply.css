@@ -171,6 +171,43 @@
   position: relative;
 }
 
+.downfile {
+  display: block;
+  margin-top: 5px;
+  line-height: 1;
+}
+.downfile .file {
+  display: inline-block;
+  margin-right: 5px;
+  line-height: 1;
+}
+.downfile .btndel {
+  display: inline-block;
+  vertical-align: bottom !important;
+}
+@media all and (min-width: 1178px) {
+  .downfile {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 12px;
+    margin: -3px 0 0 8px;
+  }
+  .downfile::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #d2d3d9;
+  }
+  .downfile .file {
+    line-height: 23px;
+  }
+}
+
 .appl_dl {
   display: flex;
   flex: 0 0 100%;

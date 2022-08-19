@@ -209,6 +209,39 @@
   }
 }
 
+.sbtn2 {
+  border: 1px solid $gray4;
+  background-color: $white;
+  display: block;
+  width: 100%;
+  padding: 0 5px;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 22px;
+  border-radius: 6px;
+
+  &.btcol3 {
+    color: $white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  @at-root .inpt1 + & {
+    margin-top: 5px;
+  }
+
+  @include mq("deskTop") {
+    display: inline-block;
+    width: auto;
+    line-height: 29px;
+
+    @at-root .inpt1 + & {
+      margin-top: 0;
+      margin-left: 4px;
+    }
+  }
+}
+
 .txt-btn {
   color: $gray4;
   position: relative;

@@ -652,6 +652,38 @@ img.maxw100 {
   overflow: hidden;
 }
 
+.sbtn2 {
+  border: 1px solid #9b9b9b;
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  padding: 0 5px;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 22px;
+  border-radius: 6px;
+}
+.sbtn2.btcol3 {
+  color: #fff;
+  background-color: #383f4f;
+  border-color: #383f4f;
+}
+.inpt1 + .sbtn2 {
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+  .sbtn2 {
+    display: inline-block;
+    width: auto;
+    line-height: 29px;
+  }
+  .inpt1 + .sbtn2 {
+    margin-top: 0;
+    margin-left: 4px;
+  }
+}
+
 .txt-btn {
   color: #9b9b9b;
   position: relative;
@@ -775,6 +807,9 @@ img.maxw100 {
     height: 31px;
     font-size: 1rem;
     line-height: 30px;
+  }
+  .inpt1.wtxt-desk1 {
+    width: 50%;
   }
 }
 .inpt1.wtxtp70 {
@@ -2084,6 +2119,11 @@ body.mainbody {
 .ad-tbl table tbody td:first-child::before,
 .ad-tbl table tbody td.noneline::before {
   display: none;
+}
+.ad-tbl table tbody th a,
+.ad-tbl table tbody td a {
+  color: #3899ec;
+  text-decoration: underline;
 }
 .ad-tbl table tbody td {
   background-color: #fff;
