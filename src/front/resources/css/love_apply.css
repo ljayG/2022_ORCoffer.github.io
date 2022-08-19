@@ -346,6 +346,9 @@
   .appl_dl2 .type2 .size_l {
     flex: 0 0 620px;
   }
+  .appl_dl2 .type2 .size_r {
+    flex: 0 0 40px;
+  }
 }
 
 .appl_ul {
